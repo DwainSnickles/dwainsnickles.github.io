@@ -2,7 +2,7 @@
   "owner": "DwainSnickles",
   "generated": "2026-11-07",
   "totals": {
-    "repos": 28,
+    "repos": 29,
     "stars": 16,
     "forks": 7,
     "languages": 4
@@ -157,6 +157,24 @@
       "url": "https://github.com/DwainSnickles/AutoUpdater.NET.XML-Creator-master",
       "featured": true,
       "featuredRank": 3
+    },
+    {
+      "name": "DissolvingPanel",
+      "title": "DissolvingPanel",
+      "description": "WinForms panel that dissolves its contents away and back with 21 PowerPoint-style transitions, an optional slide-in and a designer smart tag. Published as DissolvingPanel.",
+      "language": "C#",
+      "category": "ui",
+      "categoryLabel": "UI components",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": true,
+      "topics": [],
+      "updated": "2026-11-07",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/DissolvingPanel",
+      "featured": false,
+      "featuredRank": -1
     },
     {
       "name": "dwainsnickles.github.io",

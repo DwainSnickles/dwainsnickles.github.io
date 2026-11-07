@@ -36,6 +36,13 @@ const OVERRIDES = {
     category: "ui",
     nuget: true
   },
+  DissolvingPanel: {
+    title: "DissolvingPanel",
+    description:
+      "WinForms panel that dissolves its contents away and back with 21 PowerPoint-style transitions, an optional slide-in and a designer smart tag. Published as DissolvingPanel.",
+    category: "ui",
+    nuget: true
+  },
   GraphicsWorkshop: {
     title: "Graphics Workshop",
     description:
