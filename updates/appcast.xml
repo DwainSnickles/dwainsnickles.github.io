@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+  <version>1.0.1.0</version>
+  <url>https://dwainsnickles.github.io/updates/AutoUpdaterStudioTest-1.0.1.zip</url>
+  <changelog>https://dwainsnickles.github.io/repo.html?r=AutoUpdater.NET.XML-Creator-master</changelog>
+  <mandatory>false</mandatory>
+  <checksum algorithm="SHA256">0BAA76E0EE02A44F78157A17D3C5525D7630E2EA23AB1AB36B9BDBA68E852163</checksum>
+</item>
