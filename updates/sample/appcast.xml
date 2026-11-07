@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+  <version>1.0.1.0</version>
+  <url>https://dwainsnickles.github.io/updates/sample/AutoUpdaterSample-1.0.1.zip</url>
+  <mandatory mode="2">true</mandatory>
+  <checksum algorithm="SHA256">BA3DEB723E1CC723A9C17953CD98A8C2D727360C75D0C3BCEEE54DDAB7FC1FCB</checksum>
+</item>
