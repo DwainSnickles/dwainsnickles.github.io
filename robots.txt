@@ -1,0 +1,7 @@
+# https://dwainsnickles.github.io/robots.txt
+User-agent: *
+Allow: /
+
+# The case-study pages (repo.html?r=<repo>) are linked from the home page and the
+# repository index, so they are crawled through those links rather than listed here.
+Sitemap: https://dwainsnickles.github.io/sitemap.xml

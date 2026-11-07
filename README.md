@@ -23,9 +23,13 @@ js/repo.js               renders one case study from data/repos.json + data/deta
 data/repos.json          generated repository index (committed)
 data/details.json        hand-written case studies: summary, highlights, install steps, shots
 assets/repos/            screenshots copied from the repositories themselves
+assets/og-image.png      social share card (1200x630) for og:image / twitter:image
 scripts/fetch-repos.mjs  regenerates data/repos.json from the GitHub API
 scripts/fetch-shots.mjs  re-downloads the case-study screenshots
+scripts/make-og-image.ps1 redraws assets/og-image.png with GDI+ (Windows PowerShell)
 favicon.svg              diamond "D" mark
+sitemap.xml              the five public pages, for search engines
+robots.txt               allows crawling and points at the sitemap
 ```
 
 Featured repositories open `repo.html?r=<repo name>`; everything else links straight to

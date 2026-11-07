@@ -189,6 +189,8 @@
     setMeta("property", "og:type", "article");
     setMeta("name", "twitter:title", pageTitle);
     setMeta("name", "twitter:description", detail.tagline);
+    setMeta("property", "og:image:alt", title + " — " + detail.tagline);
+    setMeta("name", "twitter:image:alt", title + " — " + detail.tagline);
 
     var canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) canonicalLink.setAttribute("href", canonical);
