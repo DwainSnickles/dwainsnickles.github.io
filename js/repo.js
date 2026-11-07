@@ -22,6 +22,16 @@
     return months[Number(parts[1]) - 1] + " " + Number(parts[2]) + ", " + parts[0];
   };
 
+  function setMeta(attribute, key, value) {
+    var element = document.head.querySelector("meta[" + attribute + '="' + key + '"]');
+    if (!element) {
+      element = document.createElement("meta");
+      element.setAttribute(attribute, key);
+      document.head.appendChild(element);
+    }
+    element.setAttribute("content", value);
+  }
+
   var slug = "";
   try {
     slug = (new URLSearchParams(window.location.search).get("r") || "").trim();
@@ -34,6 +44,9 @@
   }
 
   function renderNotFound() {
+    var robots = document.getElementById("robotsMeta");
+    if (robots) robots.setAttribute("content", "noindex, follow");
+    setMeta("property", "og:title", "Repository detail — Dwain Snickles");
     if (crumb) crumb.textContent = "Unknown repository";
     if (head) {
       head.innerHTML = '<p class="eyebrow">Repository detail</p>'
@@ -164,9 +177,42 @@
     }
 
     var title = repo.title || repo.name;
-    document.title = title + " — Dwain Snickles";
-    var description = document.querySelector('meta[name="description"]');
-    if (description) description.setAttribute("content", detail.tagline);
+    var pageTitle = title + " — Dwain Snickles";
+    var canonical = "https://dwainsnickles.github.io/repo.html?r=" + encodeURIComponent(repo.name);
+
+    document.title = pageTitle;
+    setMeta("name", "description", detail.tagline);
+    setMeta("name", "robots", "index, follow, max-image-preview:large");
+    setMeta("property", "og:title", pageTitle);
+    setMeta("property", "og:description", detail.tagline);
+    setMeta("property", "og:url", canonical);
+    setMeta("property", "og:type", "article");
+    setMeta("name", "twitter:title", pageTitle);
+    setMeta("name", "twitter:description", detail.tagline);
+
+    var canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) canonicalLink.setAttribute("href", canonical);
+
+    var schema = document.getElementById("repoSchema");
+    if (schema) {
+      schema.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        name: title,
+        description: detail.tagline,
+        url: canonical,
+        codeRepository: repo.url,
+        programmingLanguage: repo.language,
+        dateModified: repo.updated,
+        keywords: (repo.topics || []).join(", "),
+        author: {
+          "@type": "Person",
+          name: "Dwain Snickles",
+          url: "https://dwainsnickles.github.io/about.html"
+        }
+      });
+    }
+
     if (crumb) crumb.textContent = title;
 
     var badges = []
