@@ -1,0 +1,61 @@
+name: Refresh repository index
+
+# Rebuilds data/repos.json from the GitHub API and commits it, so the site's
+# index picks up new repositories, stars and push dates without a manual run.
+on:
+  schedule:
+    # Every day at 06:17 UTC. GitHub runs scheduled jobs on the default branch.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-repos
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Rebuild data/repos.json
+        env:
+          # The workflow token raises the API rate limit; no extra secret needed.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/fetch-repos.mjs
+
+      - name: Commit the refreshed index
+        run: |
+          if git diff --quiet -- data/repos.json; then
+            echo "data/repos.json is already current — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/repos.json
+          git commit -m "Refresh repository index"
+          git push
+
+      - name: Validate the payload
+        run: |
+          node -e '
+            const data = require("./data/repos.json");
+            if (!Array.isArray(data.repos) || !data.repos.length) {
+              console.error("data/repos.json has no repositories");
+              process.exit(1);
+            }
+            if (!data.totals || data.totals.repos !== data.repos.length) {
+              console.error("totals.repos does not match the repository count");
+              process.exit(1);
+            }
+            console.log(`index ok: ${data.repos.length} repositories, generated ${data.generated}`);
+          '

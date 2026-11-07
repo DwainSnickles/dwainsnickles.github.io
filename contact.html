@@ -1,4 +1,169 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>contact</title></head><body><br>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Dwain Snickles</title>
+<meta name="description" content="Open a channel with Dwain Snickles — GitHub, repository issues, and the NuGet package.">
+<meta name="theme-color" content="#04060c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progress"></span></div>
+<div class="spotlight" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Dwain Snickles — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+      </span>
+      <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="projects.html">Repositories</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link is-active" href="contact.html">Contact</a>
+      <a class="btn btn--sm btn--ghost" href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Open channel</p>
+      <h1>Transmit a <span class="grad">message.</span></h1>
+      <p>
+        Bugs, feature requests and "why does Windows do this" questions are all welcome.
+        The fastest route is a GitHub issue on the relevant repository — this page composes
+        one for you.
+      </p>
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap grid-2">
+      <div>
+        <a class="contact-link" href="https://github.com/DwainSnickles" target="_blank" rel="noopener" data-reveal>
+          <span class="contact-link__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </span>
+          <span>
+            <span class="contact-link__label">Profile</span>
+            <span class="contact-link__value">github.com/DwainSnickles</span>
+          </span>
+          <span class="contact-link__arrow" aria-hidden="true">↗</span>
+        </a>
+        <div style="height:0.75rem"></div>
+
+        <a class="contact-link" href="https://github.com/DwainSnickles/dwainsnickles.github.io/issues/new" target="_blank" rel="noopener" data-reveal>
+          <span class="contact-link__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+          </span>
+          <span>
+            <span class="contact-link__label">Site feedback</span>
+            <span class="contact-link__value">Open an issue on this repo</span>
+          </span>
+          <span class="contact-link__arrow" aria-hidden="true">↗</span>
+        </a>
+        <div style="height:0.75rem"></div>
+
+        <a class="contact-link" href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener" data-reveal>
+          <span class="contact-link__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12 4 7.5M12 12v9M12 12l8-4.5"/></svg>
+          </span>
+          <span>
+            <span class="contact-link__label">Package</span>
+            <span class="contact-link__value">nuget.org · Dwain.RibbonLib</span>
+          </span>
+          <span class="contact-link__arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <div class="card" style="margin-top:1.2rem" data-reveal>
+          <p class="eyebrow eyebrow--muted" style="margin-bottom:0.5rem">Response window</p>
+          <p style="margin:0">
+            This is a side project, so replies happen between builds — usually within a few
+            days. A minimal reproduction gets a much faster answer than a screenshot.
+          </p>
+        </div>
+      </div>
+
+      <div class="card form-card" data-reveal>
+        <p class="eyebrow eyebrow--muted" style="margin-bottom:0.5rem">New transmission</p>
+        <h3 style="margin-bottom:1.3rem">Compose a GitHub issue</h3>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Call sign</label>
+            <input id="name" name="name" type="text" placeholder="Your name or handle" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Short summary of the problem">
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="What happened, what you expected, and which repo or app it relates to."></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--solid" type="submit">Open in GitHub</button>
+            <button class="btn btn--ghost" type="button" id="copyBtn">Copy message</button>
+          </div>
+          <p class="form-note" style="margin-top:0.9rem">
+            No backend, no tracking: the button opens a prefilled GitHub issue. You'll need a
+            GitHub account to submit it.
+          </p>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+          </span>
+          <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+        </a>
+        <p>Desktop software, .NET tooling and the occasional utility that should have
+           shipped with Windows.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Index</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Repositories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener">NuGet: Dwain.RibbonLib ↗</a>
+        <a href="https://github.com/DwainSnickles?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Dwain Snickles</span>
+      <span><span class="ok">●</span> static build · GitHub Pages · no trackers</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

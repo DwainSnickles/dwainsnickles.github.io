@@ -1,45 +1,250 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>about</title></head><body>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Dwain Snickles</title>
+<meta name="description" content="About Dwain Snickles: C# and .NET desktop developer working in Windows Forms, .NET MAUI, graphics and media pipelines.">
+<meta name="theme-color" content="#04060c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progress"></span></div>
+<div class="spotlight" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
 
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Dwain Snickles — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+      </span>
+      <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="projects.html">Repositories</a>
+      <a class="nav__link is-active" href="about.html">About</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="btn btn--sm btn--ghost" href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
 
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Profile</p>
+      <h1>Desktop first,<br><span class="grad">details always.</span></h1>
+      <p>
+        I'm Dwain. I write C# and .NET for Windows — mostly Windows Forms, increasingly
+        .NET MAUI — and I publish the pieces I get tired of rebuilding. The repos here are
+        working code, not demos: each one solves a problem I hit on a real machine.
+      </p>
+    </div>
+  </section>
 
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap grid-2">
+      <div class="card" data-reveal>
+        <p class="eyebrow eyebrow--muted">Current focus</p>
+        <h3 style="font-size:1.5rem">Ribbon, .NET 10,<br>and a graphics workstation</h3>
+        <p>
+          The 2026 work is a fork of RibbonWinForms ported to .NET 10 with out-of-process
+          designer support, published as <strong>Dwain.RibbonLib</strong> on NuGet. It's the
+          control layer under <strong>GraphicsWorkshop</strong>, a work-in-progress editor where
+          graphics get placed on a design surface and rotated in place.
+        </p>
+        <a class="card__link" href="https://github.com/DwainSnickles/RibbonWinForms" target="_blank" rel="noopener">See the ribbon fork</a>
+      </div>
 
+      <div class="card" data-reveal style="--delay:80ms">
+        <p class="eyebrow eyebrow--muted">How I work</p>
+        <h3 style="font-size:1.5rem">Three rules I keep</h3>
+        <div style="padding-top:1rem">
+          <p style="margin-bottom:0.8rem"><strong>1. Ship something runnable.</strong> Every repo opens, builds, and shows the problem being solved.</p>
+          <p style="margin-bottom:0.8rem"><strong>2. Stay native.</strong> Custom controls, real GDI+ painting, no wrapper around a wrapper.</p>
+          <p style="margin-bottom:0"><strong>3. Keep the tool small.</strong> A utility that fixes one Windows annoyance should not need an installer, an account, or a cloud.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <meta charset="UTF-8"><title>About Me</title>
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">01 / Trajectory</p>
+          <h2>Nine years of repos,<br>in order</h2>
+        </div>
+        <p>Reconstructed from public repository history — the experiments that turned into
+           libraries, and the libraries that turned into tools.</p>
+      </div>
 
-  
+      <div class="grid-2">
+        <div class="timeline">
+          <div class="tl-item" data-reveal>
+            <span class="tl-year">2017</span>
+            <h3>Bifrost — .NET Core on IoT</h3>
+            <p>An experiment in writing one .NET Core 2 app that targets Ubuntu and Windows
+               with the same code. First attempt at cross-platform hardware access.</p>
+          </div>
+          <div class="tl-item" data-reveal>
+            <span class="tl-year">2020</span>
+            <h3>ZXing scanning, with overlays</h3>
+            <p>Three repos of barcode scanner work: custom overlays, runtime torch toggles,
+               and a flash example — validated on Android 9 hardware.</p>
+          </div>
+          <div class="tl-item" data-reveal>
+            <span class="tl-year">2022</span>
+            <h3>ControlCrop, TextEffects, SharpUpdate</h3>
+            <p>The custom-control year: cropping for any control, GDI+ shadowed text baked to
+               an image, and a self-updater that reads a manifest and relaunches.</p>
+          </div>
+        </div>
 
-  <link rel="stylesheet" href="css/style.css">
+        <div class="timeline">
+          <div class="tl-item" data-reveal>
+            <span class="tl-year">2023</span>
+            <h3>AutoUpdater XML Creator — 10 stars</h3>
+            <p>The most-starred repo here. It generates the manifest XML that drives
+               AutoUpdater.NET, because getting that file right by hand is miserable.</p>
+          </div>
+          <div class="tl-item" data-reveal>
+            <span class="tl-year">2025</span>
+            <h3>LibVLCSharp in MAUI</h3>
+            <p>MP4 and HLS playback in .NET MAUI, plus a tutorial repo walking through wiring
+               VLC into a MAUI app on .NET 8.</p>
+          </div>
+          <div class="tl-item" data-reveal>
+            <span class="tl-year">2026</span>
+            <h3>.NET 10 ribbon + NuGet</h3>
+            <p>Office-style ribbon ported to .NET 10 with working out-of-process designer
+               support, published as Dwain.RibbonLib — and the design surface built on it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<header>
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">02 / Stack</p>
+          <h2>What I reach for</h2>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div>
+          <div class="stack-group" data-reveal>
+            <h3>Languages</h3>
+            <div class="pill-row">
+              <span class="pill">C#</span><span class="pill">PHP</span>
+              <span class="pill">HTML / CSS</span><span class="pill">JavaScript</span>
+            </div>
+          </div>
+          <div class="stack-group" data-reveal>
+            <h3>Frameworks</h3>
+            <div class="pill-row">
+              <span class="pill">.NET 10</span><span class="pill">.NET 8</span>
+              <span class="pill">Windows Forms</span><span class="pill">.NET MAUI</span>
+            </div>
+          </div>
+          <div class="stack-group" data-reveal>
+            <h3>Libraries</h3>
+            <div class="pill-row">
+              <span class="pill">LibVLCSharp</span><span class="pill">ZXing.Net</span>
+              <span class="pill">GDI+</span><span class="pill">ffmpeg</span>
+              <span class="pill">ScreenRecordLib</span><span class="pill">AutoUpdater.NET</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="stack-group" data-reveal>
+            <h3>Tooling</h3>
+            <div class="pill-row">
+              <span class="pill">Visual Studio 2022</span><span class="pill">NuGet</span>
+              <span class="pill">Git</span><span class="pill">GitHub Pages</span>
+            </div>
+          </div>
+          <div class="stack-group" data-reveal>
+            <h3>Platforms</h3>
+            <div class="pill-row">
+              <span class="pill">Windows 10 / 11</span><span class="pill">Android</span>
+              <span class="pill">Ubuntu (IoT)</span><span class="pill">Postfix / Linux mail</span>
+            </div>
+          </div>
+          <div class="card" data-reveal style="margin-top:1.2rem">
+            <p class="eyebrow eyebrow--muted" style="margin-bottom:0.6rem">Published</p>
+            <p style="margin-bottom:0.9rem">
+              <strong>Dwain.RibbonLib</strong> — the .NET 10 ribbon control library, installable
+              from NuGet.
+            </p>
+            <a class="card__link" href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener">Open on NuGet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </header><h1>About Me</h1>
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta" data-reveal>
+        <div>
+          <p class="eyebrow eyebrow--muted">Next step</p>
+          <h2>Browse the code.</h2>
+          <p>Every repository is public. The index page filters them by category, language
+             and recency.</p>
+        </div>
+        <a class="btn btn--solid" href="projects.html">Open the index</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <nav>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+          </span>
+          <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+        </a>
+        <p>Desktop software, .NET tooling and the occasional utility that should have
+           shipped with Windows.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Index</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Repositories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener">NuGet: Dwain.RibbonLib ↗</a>
+        <a href="https://github.com/DwainSnickles?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Dwain Snickles</span>
+      <span><span class="ok">●</span> static build · GitHub Pages · no trackers</span>
+    </div>
+  </div>
+</footer>
 
-      </nav><ul><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li></ul>
-
-    
-
-  
-
-
-
-  <main>
-
-    <section>
-
-      </section></main><p>Here&#8217;s where I&#8217;ll share my background, interests, and goals.</p>
-
-    
-
-  
-
-
-
-  <footer>
-
-    </footer><p>� 2025 Dwain</p>
-
-  </body></html>
+<script src="js/main.js" defer></script>
+</body>
+</html>

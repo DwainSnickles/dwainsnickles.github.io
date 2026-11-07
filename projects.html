@@ -1,45 +1,134 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>projects</title></head><body>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repositories — Dwain Snickles</title>
+<meta name="description" content="Every public repository from DwainSnickles: .NET 10 ribbon control, graphics design surface, MAUI VLC players, ZXing scanners, updaters and Windows utilities.">
+<meta name="theme-color" content="#04060c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progress"></span></div>
+<div class="spotlight" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
 
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Dwain Snickles — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+      </span>
+      <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link is-active" href="projects.html">Repositories</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="btn btn--sm btn--ghost" href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
 
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Repository index</p>
+      <h1>Everything, <span class="grad">indexed.</span></h1>
+      <p>
+        The full public archive — 28 repositories of .NET desktop work, from a .NET 10 ribbon
+        library published on NuGet to a one-file Mark-of-the-Web cleaner. Filter by category,
+        search by name or topic, and open any card on GitHub. The six featured projects open a
+        case study with screenshots and install steps.
+      </p>
+    </div>
+  </section>
 
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap">
+      <div class="controls">
+        <div class="controls__top">
+          <label class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="search" type="search" placeholder="Search repositories, topics, languages…" autocomplete="off" aria-label="Search repositories">
+          </label>
+          <select class="select" id="sort" aria-label="Sort repositories">
+            <option value="featured">Sort: curated</option>
+            <option value="updated">Sort: recently pushed</option>
+            <option value="stars">Sort: most starred</option>
+            <option value="name">Sort: name A–Z</option>
+          </select>
+          <select class="select" id="lang" aria-label="Filter by language">
+            <option value="all">Language: all</option>
+          </select>
+        </div>
+        <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+      </div>
 
+      <div class="result-meta">
+        <span><b id="count">—</b> repositories in view</span>
+        <span id="totals" class="mono">loading index…</span>
+      </div>
 
-  <meta charset="UTF-8"><title>Projects</title>
+      <div class="repo-grid" id="repoGrid" aria-live="polite" aria-busy="true">
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      </div>
 
-  
+      <p class="mono small" style="margin-top:1.8rem;color:var(--muted)">
+        Featured entries open a case study with screenshots and install instructions; the rest go
+        straight to GitHub. Data lives in <a href="data/repos.json">data/repos.json</a> and is
+        refreshed from the GitHub API with <code>scripts/fetch-repos.mjs</code>. Some entries are
+        forks of other projects and are labelled as such.
+      </p>
+    </div>
+  </section>
+</main>
 
-  <link rel="stylesheet" href="css/style.css">
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+          </span>
+          <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+        </a>
+        <p>Desktop software, .NET tooling and the occasional utility that should have
+           shipped with Windows.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Index</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Repositories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener">NuGet: Dwain.RibbonLib ↗</a>
+        <a href="https://github.com/DwainSnickles?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Dwain Snickles</span>
+      <span><span class="ok">●</span> static build · GitHub Pages · no trackers</span>
+    </div>
+  </div>
+</footer>
 
-<header>
-
-    </header><h1>Projects</h1>
-
-    <nav>
-
-      </nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li></ul>
-
-    
-
-  
-
-
-
-  <main>
-
-    <section>
-
-      </section></main><p>This page will showcase my work, experiments, and ideas.</p>
-
-    
-
-  
-
-
-
-  <footer>
-
-    </footer><p>� 2025 Dwain</p>
-
-  </body></html>
+<script src="js/main.js" defer></script>
+<script src="js/repos.js" defer></script>
+</body>
+</html>

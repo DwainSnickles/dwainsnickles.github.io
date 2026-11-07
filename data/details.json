@@ -1,0 +1,346 @@
+{
+  "updated": "2026-11-07",
+  "repos": {
+    "RibbonWinForms": {
+      "eyebrow": "UI components · .NET 10",
+      "tagline": "An Office-style ribbon for Windows Forms that still works inside the designer.",
+      "summary": [
+        "The ribbon draws a tabbed command bar — tabs, panels, buttons — on top of an ordinary Windows Forms window. The point of this fork is that it behaves the same at runtime and inside Visual Studio's out-of-process designer, which is where ribbon controls usually fall apart.",
+        "It is published as a package rather than a loose DLL: the package is what puts the control in the toolbox, so a project that adds the package and a project that references a DLL end up in different places. Per-panel spacing and padding knobs control how densely the groups sit."
+      ],
+      "highlights": [
+        {
+          "title": "Designer-safe by design",
+          "text": "Ported to .NET 10 and repaired so the control renders in the designer, not just at runtime — including the toolbox entry."
+        },
+        {
+          "title": "One package, every project",
+          "text": "The same dotnet add package call per project, so each one gets the toolbox reference instead of a hand-copied DLL."
+        },
+        {
+          "title": "Spacing you can tune",
+          "text": "Per-panel spacing and padding settings, plus a short guide in the README for keeping groups and buttons aligned."
+        },
+        {
+          "title": "Built on every push",
+          "text": "A GitHub Actions workflow compiles the branch so the .NET 10 port does not silently rot."
+        }
+      ],
+      "facts": [
+        { "label": "Package", "value": "Dwain.RibbonLib 1.0.2-net10" },
+        { "label": "Branch", "value": "net10" },
+        { "label": "Framework", "value": ".NET 10 · WinForms" },
+        { "label": "Published", "value": "nuget.org" }
+      ],
+      "quickstart": [
+        {
+          "label": "Install from NuGet",
+          "code": "dotnet add package Dwain.RibbonLib --version 1.0.2-net10",
+          "note": "Add it to each project that needs the ribbon, then the control appears in the toolbox."
+        },
+        {
+          "label": "Work on the source",
+          "code": "git clone https://github.com/DwainSnickles/RibbonWinForms\ncd RibbonWinForms",
+          "note": "The port lives on the net10 branch, which is the repository default."
+        }
+      ],
+      "requirements": [
+        "Windows 10 or 11",
+        ".NET 10 SDK",
+        "Visual Studio with the Windows Forms designer, for the toolbox"
+      ],
+      "shots": [
+        {
+          "src": "assets/repos/ribbon/ribbon.png",
+          "alt": "The ribbon control rendering tabs, groups and buttons in a Windows Forms window",
+          "caption": "docs/ribbon.png from the repository — the ribbon hosted in a WinForms window."
+        }
+      ],
+      "links": [
+        { "label": "NuGet: Dwain.RibbonLib", "url": "https://www.nuget.org/packages/Dwain.RibbonLib" },
+        { "label": "Repository", "url": "https://github.com/DwainSnickles/RibbonWinForms" }
+      ],
+      "related": ["GraphicsWorkshop", "DesignSurfaceCSharp"]
+    },
+
+    "GraphicsWorkshop": {
+      "eyebrow": "Graphics & design · work in progress",
+      "tagline": "A desktop graphics workstation: edit an image, place objects on a design surface, rotate them in place.",
+      "summary": [
+        "Graphics Workshop started years ago in VB.NET as a collection of half-finished experiments. It was rebuilt in C# on top of the .NET 10 ribbon fork, which is why both languages are still visible in the tree.",
+        "The app has two halves: a canvas for drawing and editing graphics, and a design surface where objects are added, positioned and rotated. It is explicitly unfinished — the README says so plainly and asks for contributors rather than pretending the thing is done."
+      ],
+      "highlights": [
+        {
+          "title": "Design surface, not just a canvas",
+          "text": "Objects are added to a surface, moved to a position and rotated — the object model lives in a separate control repository."
+        },
+        {
+          "title": "Powered by the ribbon fork",
+          "text": "The whole shell was rebuilt around the .NET 10 ribbon, so the command bar is the same control that ships as Dwain.RibbonLib."
+        },
+        {
+          "title": "A long road, kept public",
+          "text": "VB.NET roots, then C#; the repository is open in its unfinished state so the work can continue with help."
+        },
+        {
+          "title": "Honest about status",
+          "text": "Described by its author as incomplete — not a demo dressed up as a release."
+        }
+      ],
+      "facts": [
+        { "label": "Branch", "value": "master" },
+        { "label": "Framework", "value": ".NET 10 · WinForms" },
+        { "label": "History", "value": "VB.NET, later C#" },
+        { "label": "Status", "value": "work in progress" }
+      ],
+      "quickstart": [
+        {
+          "label": "Clone and open the solution",
+          "code": "git clone https://github.com/DwainSnickles/GraphicsWorkshop\ncd GraphicsWorkshop",
+          "note": "Open GraphicsWorkshop.sln in Visual Studio and let it restore the packages.config references, then run frmGraphicDesigner."
+        }
+      ],
+      "requirements": [
+        "Windows 10 or 11",
+        ".NET 10 SDK",
+        "Visual Studio 2022 with the Windows Forms workload"
+      ],
+      "shots": [
+        {
+          "src": "assets/repos/workshop/workshop.png",
+          "alt": "Graphics Workshop window with its ribbon and design surface",
+          "caption": "Screenshot from the repository README."
+        }
+      ],
+      "links": [{ "label": "Repository", "url": "https://github.com/DwainSnickles/GraphicsWorkshop" }],
+      "related": ["DesignSurfaceCSharp", "RibbonWinForms"]
+    },
+
+    "DesignSurfaceCSharp": {
+      "eyebrow": "Graphics & design · control library",
+      "tagline": "The object model and surface control that Graphics Workshop is built on.",
+      "summary": [
+        "Two projects do the real work here: GraphicObjects holds the shapes and their properties, and GraphicsSurface is the control that paints them, hit-tests them and hosts the rotation handles.",
+        "It ships as source rather than a package. There is no README, so the three sample apps — WindowsFormsApp1, WindowsFormsApp2 and WindowsFormsApp3 — are the documentation: each one drops the surface on a form so you can see what it does."
+      ],
+      "highlights": [
+        {
+          "title": "Reusable object model",
+          "text": "GraphicObjects describes the shapes independently of any window, so the model can be reused by another host."
+        },
+        {
+          "title": "A surface control",
+          "text": "GraphicsSurface owns painting, selection and manipulation, with its own rotation cursor art in the resources folder."
+        },
+        {
+          "title": "Three runnable samples",
+          "text": "The sample apps are the quickest way in: open one, run it, watch the surface behave."
+        },
+        {
+          "title": "Source-only, deliberately",
+          "text": "No package and no README — copy the projects you need rather than taking a dependency."
+        }
+      ],
+      "facts": [
+        { "label": "Branch", "value": "master" },
+        { "label": "Projects", "value": "GraphicObjects · GraphicsSurface" },
+        { "label": "Samples", "value": "WindowsFormsApp1–3" },
+        { "label": "Package", "value": "none — source only" }
+      ],
+      "quickstart": [
+        {
+          "label": "Clone the source",
+          "code": "git clone https://github.com/DwainSnickles/DesignSurfaceCSharp\ncd DesignSurfaceCSharp",
+          "note": "Open one of the sample projects directly in Visual Studio — there is no solution file."
+        }
+      ],
+      "requirements": ["Windows", "Visual Studio with the Windows Forms workload"],
+      "shots": [],
+      "shotsNote": "This repository ships source only — no README and no images. Run one of the three sample apps to see the surface in action.",
+      "links": [{ "label": "Repository", "url": "https://github.com/DwainSnickles/DesignSurfaceCSharp" }],
+      "related": ["GraphicsWorkshop", "RibbonWinForms"]
+    },
+
+    "MOTW-Cleaner": {
+      "eyebrow": "Security & fixes · Windows utility",
+      "tagline": "Strips Mark of the Web from downloaded files so Windows stops blocking them.",
+      "summary": [
+        "Files that arrive from the internet carry a Zone.Identifier stream — Mark of the Web. Windows uses it to open documents in Protected View and to refuse to run what it does not trust, which is why a perfectly fine download sits there refusing to open.",
+        "MOTW Cleaner removes that marker from the files and folders you choose, in a small WinForms window, and reports progress while it works. It is distributed as an MSI installer, with its own changelog page hosted on GitHub Pages."
+      ],
+      "highlights": [
+        {
+          "title": "Unblock in one pass",
+          "text": "Point it at files or folders and it clears the zone identifier instead of making you open file properties one by one."
+        },
+        {
+          "title": "Made for downloaded archives",
+          "text": "Drop a zip, extract, clean — the workflow the tool was built around."
+        },
+        {
+          "title": "Installer, not a zip of DLLs",
+          "text": "Ships as MOTW.Installer.msi from the 1.3.0 release, so it installs and uninstalls like normal software."
+        },
+        {
+          "title": "Its own changelog",
+          "text": "A separate HTML page under dwainsnickles.github.io/MOTW-Cleaner documents what changed in each version."
+        }
+      ],
+      "facts": [
+        { "label": "Installer", "value": "MOTW.Installer.msi · 1.3.0" },
+        { "label": "Built with", "value": "C# · WinForms" },
+        { "label": "Changelog", "value": "dwainsnickles.github.io/MOTW-Cleaner" },
+        { "label": "Platform", "value": "Windows" }
+      ],
+      "quickstart": [
+        {
+          "label": "Download the installer",
+          "code": "https://github.com/DwainSnickles/MOTW-Cleaner/releases/download/1.3.0/MOTW.Installer.msi",
+          "note": "Run the MSI, then open MOTW Cleaner and pick the files or folder to unblock."
+        },
+        {
+          "label": "Build it yourself",
+          "code": "git clone https://github.com/DwainSnickles/MOTW-Cleaner\ncd MOTW-Cleaner",
+          "note": "Open MOTW Cleaner.slnx in Visual Studio, restore packages.config, and run."
+        }
+      ],
+      "requirements": ["Windows 10 or 11", "Visual Studio, if you build it from source"],
+      "shots": [
+        {
+          "src": "assets/repos/motw/ui.png",
+          "alt": "MOTW Cleaner main window",
+          "caption": "The main window — images/page1.png from the repository."
+        },
+        {
+          "src": "assets/repos/motw/blocked.png",
+          "alt": "A downloaded file blocked by Windows",
+          "caption": "What it fixes: a file carrying Mark of the Web — images/Blocked.png."
+        },
+        {
+          "src": "assets/repos/motw/completed.png",
+          "alt": "MOTW Cleaner reporting a completed clean",
+          "caption": "Finished run — images/Completed.png."
+        }
+      ],
+      "links": [
+        { "label": "Releases and installer", "url": "https://github.com/DwainSnickles/MOTW-Cleaner/releases" },
+        { "label": "What's new", "url": "https://dwainsnickles.github.io/MOTW-Cleaner/" },
+        { "label": "Repository", "url": "https://github.com/DwainSnickles/MOTW-Cleaner" }
+      ],
+      "related": ["RibbonWinForms", "AutoUpdater.NET.XML-Creator-master"]
+    },
+
+    "Maui-basic-VLC-Player-Tutorial": {
+      "eyebrow": "Media & video · written walkthrough",
+      "tagline": "How to get VLC playing MP4 and HLS streams inside a .NET MAUI app, written down so nobody else loses the weeks.",
+      "summary": [
+        "This repository is a write-up, not a codebase: the README is the whole thing. It walks through wiring LibVLCSharp into .NET MAUI — the packages, the handler registration in MauiProgram.cs, the MediaPlayer setup, and the Grid layout with a control bar over a VideoView.",
+        "The author's note is refreshingly direct: MAUI video support was still rough, it took weeks to reach a working player, and this is part one of what is meant to become a series."
+      ],
+      "highlights": [
+        {
+          "title": "The packages that actually matter",
+          "text": "LibVLCSharp, LibVLCSharp.MAUI, plus the native VideoLAN.LibVLC builds for Android, Windows and iOS."
+        },
+        {
+          "title": "Handler registration",
+          "text": "The piece most tutorials skip: mapping VideoView to VideoViewHandler in MauiProgram.cs and calling Core.Initialize()."
+        },
+        {
+          "title": "A usable layout",
+          "text": "A two-row Grid — volume, mute, fullscreen and title-bar toggles above a VideoView that fills the rest."
+        },
+        {
+          "title": "HLS, not just MP4",
+          "text": "The sample plays an HLS test stream, which is where naive player samples usually stop working."
+        }
+      ],
+      "facts": [
+        { "label": "Format", "value": "written walkthrough" },
+        { "label": "Target", "value": ".NET 8 · MAUI" },
+        { "label": "Tooling", "value": "Visual Studio 2022" },
+        { "label": "Engine", "value": "LibVLCSharp" }
+      ],
+      "quickstart": [
+        {
+          "label": "Add the packages to your own MAUI app",
+          "code": "dotnet add package LibVLCSharp\ndotnet add package LibVLCSharp.MAUI\ndotnet add package VideoLAN.LibVLC.Android\ndotnet add package VideoLAN.LibVLC.Windows\ndotnet add package VideoLAN.LibVLC.iOS",
+          "note": "Then follow the README: register the VideoView handler, call Core.Initialize(), create the LibVLC and MediaPlayer instances."
+        },
+        {
+          "label": "Read the walkthrough",
+          "code": "https://github.com/DwainSnickles/Maui-basic-VLC-Player-Tutorial",
+          "note": "The README holds the full explanation, the XAML layout and the code samples."
+        }
+      ],
+      "requirements": [
+        "Visual Studio 2022",
+        ".NET 8 SDK and the MAUI workload",
+        "Android emulator or a physical device"
+      ],
+      "shots": [],
+      "shotsNote": "A written walkthrough: the README holds the explanation, the XAML layout and the code samples rather than screenshots.",
+      "links": [{ "label": "Repository", "url": "https://github.com/DwainSnickles/Maui-basic-VLC-Player-Tutorial" }],
+      "related": ["RibbonWinForms", "GraphicsWorkshop"]
+    },
+
+    "AutoUpdater.NET.XML-Creator-master": {
+      "eyebrow": "Updaters · most starred",
+      "tagline": "A form that writes the manifest XML AutoUpdater.NET needs, so you never hand-edit an update file again.",
+      "summary": [
+        "AutoUpdater.NET decides whether to update an app by reading an XML manifest: version, download URL, checksum, changelog. Getting that file right by hand is where self-updating desktop apps break.",
+        "This app builds the manifest in a guided form, then writes the file. The March 2023 pass added a version picker that reads the new executable, an algorithm generator for every supported hash type, radio buttons for the update types, support for the <args> tag, and required-field enforcement on the first two steps."
+      ],
+      "highlights": [
+        {
+          "title": "Version read from the build",
+          "text": "A button picks the new exe and fills in its version, instead of you copying it out of the assembly info."
+        },
+        {
+          "title": "Checksums generated, not guessed",
+          "text": "One button creates the algorithm value for all supported types."
+        },
+        {
+          "title": "Guided, and it enforces it",
+          "text": "The first two steps cannot be skipped — they are the minimum a manifest needs to work."
+        },
+        {
+          "title": "Every tag, including optional ones",
+          "text": "Update types, <args>, changelog URL and the optional tags are all exposed in the form."
+        }
+      ],
+      "facts": [
+        { "label": "Solution", "value": "AutoUpdater.NET.sln" },
+        { "label": "Output", "value": "AutoUpdater.NET manifest XML" },
+        { "label": "Built with", "value": "C# · WinForms" },
+        { "label": "Sample", "value": "AutoUpdaterXML.xml" }
+      ],
+      "quickstart": [
+        {
+          "label": "Clone and build",
+          "code": "git clone https://github.com/DwainSnickles/AutoUpdater.NET.XML-Creator-master\ncd AutoUpdater.NET.XML-Creator-master",
+          "note": "Open AutoUpdater.NET.sln, build AutoUpdaterTest, and run it. AutoUpdaterXML.xml in the root shows the shape of the output."
+        }
+      ],
+      "requirements": ["Windows", "Visual Studio with the Windows Forms workload"],
+      "shots": [
+        {
+          "src": "assets/repos/updater/creator.png",
+          "alt": "The XML creator form with update type options",
+          "caption": "The creator form — from AutoUpdaterTest/Resources in the repository."
+        },
+        {
+          "src": "assets/repos/updater/manifest.png",
+          "alt": "An AutoUpdater.NET XML manifest",
+          "caption": "The manifest it produces, as illustrated in the repository."
+        }
+      ],
+      "links": [
+        { "label": "Repository", "url": "https://github.com/DwainSnickles/AutoUpdater.NET.XML-Creator-master" },
+        { "label": "AutoUpdater.NET", "url": "https://github.com/ravibpatel/AutoUpdater.NET" }
+      ],
+      "related": ["MOTW-Cleaner", "RibbonWinForms"]
+    }
+  }
+}

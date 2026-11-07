@@ -1,41 +1,298 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dwain's Website</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dwain Snickles — Desktop &amp; .NET Engineering</title>
+<meta name="description" content="Dwain Snickles builds Windows desktop tooling in C# and .NET — ribbon UI, design surfaces, media pipelines and the small utilities that keep machines honest.">
+<meta name="theme-color" content="#04060c">
+<meta property="og:title" content="Dwain Snickles — Desktop &amp; .NET Engineering">
+<meta property="og:description" content="Windows desktop tooling in C# and .NET. Ribbon UI, design surfaces, media pipelines, and 28 public repositories.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dwain's Website</title>
-<link rel="stylesheet" href="css/style.css">
-<header> </header>
-<h1>Dwain's Website</h1>
-<nav> </nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-<a href="contact.html"><br>
-</a> <main> <section> </section></main>
-<h2>Welcome</h2>
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progress"></span></div>
+<div class="spotlight" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Dwain Snickles — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+      </span>
+      <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a class="nav__link is-active" href="index.html">Home</a>
+      <a class="nav__link" href="projects.html">Repositories</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="btn btn--sm btn--ghost" href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══ hero ══════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <span class="hero__status"><i class="pulse" aria-hidden="true"></i> system online · shipping on .NET 10</span>
+        <p class="eyebrow">Desktop engineering · C# / .NET</p>
+        <h1><span class="grad">Dwain Snickles</span></h1>
+        <p class="hero__tagline">
+          I build Windows desktop tooling that behaves like real software — ribbon interfaces,
+          design surfaces, media pipelines, and the small utilities that make a machine stop
+          fighting its user.
+        </p>
+        <p class="hero__type" aria-live="off">
+          <span class="prompt">$</span><span id="typeTarget">building WinForms components</span><span class="cursor" aria-hidden="true"></span>
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="projects.html">Explore repositories</a>
+          <a class="btn" href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub profile ↗</a>
+        </div>
+      </div>
+
+      <div class="console" aria-hidden="true">
+        <div class="console__bar">
+          <div class="console__dots"><i></i><i></i><i></i></div>
+          <span class="console__title">dwain@workstation — zsh</span>
+        </div>
+        <pre class="console__body" id="console"></pre>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="stats" data-totals>
+        <div class="stat">
+          <div class="stat__num"><span data-count="28">28</span></div>
+          <div class="stat__label">Public repositories</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num"><span data-count="16">16</span></div>
+          <div class="stat__label">Stars earned</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">1<em>×</em></div>
+          <div class="stat__label">NuGet package</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">C#</div>
+          <div class="stat__label">Primary language</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ticker ═══════════════════════════════════════════════════════ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <div class="ticker__set">
+        <span class="ticker__item">C#</span>
+        <span class="ticker__item">.NET 10</span>
+        <span class="ticker__item">Windows Forms</span>
+        <span class="ticker__item">.NET MAUI</span>
+        <span class="ticker__item">LibVLCSharp</span>
+        <span class="ticker__item">ZXing</span>
+        <span class="ticker__item">GDI+</span>
+        <span class="ticker__item">NuGet</span>
+        <span class="ticker__item">Design Surfaces</span>
+        <span class="ticker__item">ffmpeg</span>
+        <span class="ticker__item">GitHub Pages</span>
+      </div>
+      <div class="ticker__set">
+        <span class="ticker__item">C#</span>
+        <span class="ticker__item">.NET 10</span>
+        <span class="ticker__item">Windows Forms</span>
+        <span class="ticker__item">.NET MAUI</span>
+        <span class="ticker__item">LibVLCSharp</span>
+        <span class="ticker__item">ZXing</span>
+        <span class="ticker__item">GDI+</span>
+        <span class="ticker__item">NuGet</span>
+        <span class="ticker__item">Design Surfaces</span>
+        <span class="ticker__item">ffmpeg</span>
+        <span class="ticker__item">GitHub Pages</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ featured ═════════════════════════════════════════════════════ -->
+  <section class="section" id="featured">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">01 / Selected work</p>
+          <h2>Built to be used,<br>not just committed.</h2>
+        </div>
+        <div>
+          <p>Six repositories that show how the pieces fit together: the control library, the
+             graphics workshop on top of it, and the utilities around the edges.</p>
+          <a class="btn btn--ghost btn--sm" href="projects.html">All 28 repositories →</a>
+        </div>
+      </div>
+
+      <div class="repo-grid" id="featuredGrid" aria-live="polite" aria-busy="true">
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ index preview ════════════════════════════════════════════════ -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">02 / Repository index</p>
+          <h2>Recent pushes</h2>
+        </div>
+        <p class="mono small" style="color:var(--muted)">source: <a href="data/repos.json">data/repos.json</a> · refreshed from the GitHub API</p>
+      </div>
+      <div class="index-list" id="indexList" aria-live="polite">
+        <div class="index-row is-head">
+          <span>Repository</span><span>Language</span><span>Stars</span><span>Updated</span><span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ capabilities ═════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">03 / Capabilities</p>
+          <h2>Where the hours go</h2>
+        </div>
+        <p>Mostly deep desktop work: custom controls, layout and painting at the GDI level,
+           plus the plumbing that moves bytes between a network, a codec and a window.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card" data-reveal>
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 9v11"/></svg></span>
+          </div>
+          <h3>Desktop UI engineering</h3>
+          <p>Ribbon frameworks, custom controls and MDI plumbing in Windows Forms, ported
+             forward to .NET 10 with a designer that still works.</p>
+        </article>
+
+        <article class="card" data-reveal style="--delay:60ms">
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V4h9l3 3h4v13z"/><path d="M8 12h8M8 16h5"/></svg></span>
+          </div>
+          <h3>Design surfaces &amp; graphics</h3>
+          <p>An object model for shapes that can be edited, dropped onto a canvas, rotated and
+             painted — GDI+ text effects, cropping, custom cursors.</p>
+        </article>
+
+        <article class="card" data-reveal style="--delay:120ms">
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 4 3 12l6 8"/><path d="m15 4 6 8-6 8"/></svg></span>
+          </div>
+          <h3>Media pipelines</h3>
+          <p>LibVLCSharp in MAUI and WinForms: MP4 and HLS playback, YouTube stream
+             handoff, screen recording, downloads and conversion.</p>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h4v4h-7z"/></svg></span>
+          </div>
+          <h3>Scanning &amp; vision</h3>
+          <p>ZXing integrations with custom overlays and runtime torch control, built for
+             real hardware — including Android 9 devices.</p>
+        </article>
+
+        <article class="card" data-reveal style="--delay:60ms">
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/></svg></span>
+          </div>
+          <h3>Update &amp; deploy plumbing</h3>
+          <p>Self-updaters that read a manifest, fetch a build and relaunch — plus the
+             generator that writes those XML manifests correctly.</p>
+        </article>
+
+        <article class="card" data-reveal style="--delay:120ms">
+          <div class="card__top">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 4 6.5v5c0 4.6 3.4 8.2 8 9.5 4.6-1.3 8-4.9 8-9.5v-5z"/><path d="m8.5 12 2.4 2.4 4.6-4.8"/></svg></span>
+          </div>
+          <h3>System-level fixes</h3>
+          <p>Mark-of-the-Web unblocking, Start-menu repair, registry-level troubleshooting
+             wrapped in a UI that explains what it changed.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ cta ══════════════════════════════════════════════════════════ -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta" data-reveal>
+        <div>
+          <p class="eyebrow eyebrow--muted">Open channel</p>
+          <h2>Got a desktop problem<br>that keeps coming back?</h2>
+          <p>Send the scenario. If it can be reproduced in a WinForms window, it can usually
+             be fixed there.</p>
+        </div>
+        <div class="hero__actions" style="margin:0">
+          <a class="btn btn--solid" href="contact.html">Start a conversation</a>
+          <a class="btn btn--ghost" href="about.html">Read the profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+          </span>
+          <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+        </a>
+        <p>Desktop software, .NET tooling and the occasional utility that should have
+           shipped with Windows.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Index</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Repositories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener">NuGet: Dwain.RibbonLib ↗</a>
+        <a href="https://github.com/DwainSnickles?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Dwain Snickles</span>
+      <span><span class="ok">●</span> static build · GitHub Pages · no trackers</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script src="js/repos.js" defer></script>
 </body>
 </html>
-
-
-      
-<p>This is my starter site built with KompoZer and hosted on GitHub Pages &#128640;.</p>
-
-    
-  
-
-  <footer>
-    </footer>
-<p>© 2025 Dwain. All rights reserved.</p>
-
-  
-
-</body></html>
