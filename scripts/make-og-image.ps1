@@ -143,7 +143,7 @@ $urlBrush.Dispose()
 $metaFont = [System.Drawing.Font]::new('Consolas', 17, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
 $metaBrush = [System.Drawing.SolidBrush]::new($muted)
 $g.DrawString('28 repositories  /  16 stars  /  NuGet: Dwain.RibbonLib', $metaFont, $metaBrush, [single]102, [single]508)
-$g.DrawString('GitHub Pages  /  static build  /  no trackers', $metaFont, $metaBrush, [single]102, [single]536)
+$g.DrawString('GitHub Pages  /  static build  /  no cookies', $metaFont, $metaBrush, [single]102, [single]536)
 $metaFont.Dispose()
 $metaBrush.Dispose()
 

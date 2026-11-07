@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page views — Dwain Snickles</title>
+<meta name="description" content="Private view counts for every page of dwainsnickles.github.io.">
+<meta name="theme-color" content="#04060c">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://dwainsnickles.github.io/stats.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="spotlight" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Dwain Snickles — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+      </span>
+      <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Stats">
+      <a class="nav__link" href="index.html">← Back to the site</a>
+      <a class="btn btn--sm btn--ghost" href="https://github.com/DwainSnickles/dwainsnickles.github.io" target="_blank" rel="noopener">Source</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Private · noindex</p>
+      <h1>Page views</h1>
+      <p class="detail-tagline">Every counter behind the footer badge, side by side. One increment per
+        visitor session, so a reader moving between pages counts once on each.</p>
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap">
+      <div class="panel">
+        <p class="panel__title">All counters</p>
+        <div class="stats" id="statsBody">
+          <p class="small">Reading counters…</p>
+        </div>
+        <p class="stat-total mono small" id="statsTotal">Reading counters…</p>
+      </div>
+
+      <p class="small" style="margin-top:1.2rem;color:var(--muted)">
+        These numbers come from a public counting API with no account and no cookie. Anyone who knows a
+        key can add to it, so treat them as a rough signal of interest, not a precise audit.
+        <a href="index.html">Back to the site</a>.
+      </p>
+    </div>
+  </section>
+</main>
+
+<script src="js/main.js" defer></script>
+<script src="js/stats.js" defer></script>
+</body>
+</html>

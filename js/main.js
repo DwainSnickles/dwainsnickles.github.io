@@ -9,6 +9,47 @@
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  /* ---------- page view counter ----------
+     Abacus (abacus.jasoncameron.dev) keeps one plain counter per page under this
+     site's namespace. No account, no cookie, no personal data: the request only
+     carries the page key, and the service sees the IP any request reveals.
+     One increment per page per session; repeat views read the same number back. */
+  function countPage(el, pageKey, noun) {
+    if (!el || !window.fetch || !pageKey) return;
+
+    var page = String(pageKey);
+    var thing = noun || "page";
+    var namespace = "dwainsnickles.github.io";
+    var isLocal = /^(localhost|127\.0\.0\.1|::1)$/.test(window.location.hostname);
+    var seen = false;
+    try { seen = window.sessionStorage.getItem("hit:" + page) === "1"; } catch (e) { seen = false; }
+
+    var url = "https://abacus.jasoncameron.dev/" + (seen || isLocal ? "get" : "hit")
+      + "/" + encodeURIComponent(namespace) + "/" + encodeURIComponent(page);
+
+    window.fetch(url, { mode: "cors" })
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (data) {
+        var n = data ? Number(data.value) : 0;
+        if (!n || !isFinite(n)) return;
+        var count = el.querySelector(".hits__count");
+        var label = el.querySelector(".hits__label");
+        var plural = n === 1 ? "view" : "views";
+        if (count) count.textContent = n.toLocaleString("en-US");
+        if (label) label.textContent = thing + " " + plural;
+        el.hidden = false;
+        el.title = n.toLocaleString("en-US") + " " + plural + " of this " + thing;
+        try { window.sessionStorage.setItem("hit:" + page, "1"); } catch (e) { /* ignore */ }
+      })
+      .catch(function () { /* decoration only: never surface an error to the reader */ });
+  }
+
+  /* Pages with a fixed key count themselves; repo.html has none, because repo.js
+     only learns which repository it is showing once data/repos.json has loaded. */
+  window.sitePageViews = countPage;
+  var autoHits = document.querySelector(".hits[data-page]");
+  if (autoHits) countPage(autoHits, autoHits.getAttribute("data-page"), "page");
+
   /* ---------- mobile nav ---------- */
   var nav = document.getElementById("nav");
   var navLinks = document.getElementById("navLinks");

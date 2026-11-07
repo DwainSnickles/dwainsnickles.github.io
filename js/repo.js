@@ -176,6 +176,13 @@
       return;
     }
 
+    /* Count this case study on its own key so the index shows which projects
+       people actually open, rather than one lump total for repo.html. */
+    if (window.sitePageViews) {
+      var hitsEl = document.querySelector(".hits");
+      if (hitsEl) window.sitePageViews(hitsEl, "repo-" + repo.name, "case study");
+    }
+
     var title = repo.title || repo.name;
     var pageTitle = title + " — Dwain Snickles";
     var canonical = "https://dwainsnickles.github.io/repo.html?r=" + encodeURIComponent(repo.name);

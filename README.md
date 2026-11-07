@@ -1,7 +1,12 @@
 # dwainsnickles.github.io
 
 Personal site, served by GitHub Pages. Static HTML, CSS and JavaScript — no build step,
-no framework, no trackers.
+no framework, no cookies.
+
+Page views come from a plain counter per page (Abacus, `abacus.jasoncameron.dev`) shown in the
+footer. There is no account and no tracking cookie; to see every number at once, read
+`https://abacus.jasoncameron.dev/get/dwainsnickles.github.io/<key>`, where the key is `home`,
+`projects`, `about`, `contact`, or `repo-<RepositoryName>` for an individual case study.
 
 ## Pages
 
@@ -30,6 +35,8 @@ scripts/make-og-image.ps1 redraws assets/og-image.png with GDI+ (Windows PowerSh
 favicon.svg              diamond "D" mark
 sitemap.xml              the five public pages, for search engines
 robots.txt               allows crawling and points at the sitemap
+stats.html               private, noindex view counts for every page (not linked or in the sitemap)
+js/stats.js              reads every counter back and ranks the pages
 ```
 
 Featured repositories open `repo.html?r=<repo name>`; everything else links straight to
