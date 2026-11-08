@@ -184,6 +184,29 @@
       "featuredRank": 3
     },
     {
+      "name": "dwainsnickles.github.io",
+      "title": "This Website",
+      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
+      "language": "HTML",
+      "category": "web",
+      "categoryLabel": "Web & admin",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "github-pages",
+        "html",
+        "portfolio",
+        "website"
+      ],
+      "updated": "2026-11-08",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
+      "featured": false,
+      "featuredRank": -1
+    },
+    {
       "name": "disk-defrag",
       "title": "Disk Defrag",
       "description": "Portable NTFS defragmentation for Windows with a live cluster map, driving the storage optimiser Windows already ships instead of a third-party engine.",
@@ -223,29 +246,6 @@
       "updated": "2026-11-07",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/DissolvingPanel",
-      "featured": false,
-      "featuredRank": -1
-    },
-    {
-      "name": "dwainsnickles.github.io",
-      "title": "This Website",
-      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
-      "language": "HTML",
-      "category": "web",
-      "categoryLabel": "Web & admin",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "github-pages",
-        "html",
-        "portfolio",
-        "website"
-      ],
-      "updated": "2026-11-07",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,
       "featuredRank": -1
     },
