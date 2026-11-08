@@ -345,23 +345,28 @@
 
     "pc-medic": {
       "eyebrow": "System utilities · portable Windows suite",
-      "tagline": "A portable maintenance console: startup control, registry and shortcut audits, winget upgrades and driver search in one window.",
+      "tagline": "A portable maintenance console: startup control, registry and shortcut audits, winget upgrades, driver search and benchmark rig setup in one window.",
       "summary": [
         "PC Medic is one executable with no installer, no background service and no telemetry. Each page is a job people actually run on a struggling machine: what starts with Windows, why the boot is slow, what is filling the disk, which applications are out of date, and which registry keys or shortcuts point at files that no longer exist.",
-        "The rule behind every destructive action is that it must be reversible or provable. Cleaned files go to the Recycle Bin, registry edits write a .reg backup first, boot tweaks store the previous values in JSON, and the audits list only entries whose target is genuinely missing rather than whatever looks suspicious."
+        "The rule behind every destructive action is that it must be reversible or provable. Cleaned files go to the Recycle Bin, registry edits write a .reg backup first, boot tweaks store the previous values in JSON, and the audits list only entries whose target is genuinely missing rather than whatever looks suspicious.",
+        "That proof is a missing file or folder on a mounted fixed drive, never a guess. A finding arrives with its switch already on, because the missing path was checked before the row was drawn; review-only rows stay off and untickable. Programs uninstall from a bin on their own row, and anything that takes time reports on itself rather than freezing the window."
       ],
       "highlights": [
         {
           "title": "Audits that prove what they claim",
-          "text": "The registry scan reports keys whose target file is gone and nothing else; the shortcut audit resolves every .lnk through IShellLinkW and flags only the ones that no longer point anywhere."
+          "text": "The registry audit reports keys whose target file or folder is gone and nothing else, and ticks each proven entry for removal; the shortcut audit resolves every .lnk through IShellLinkW and flags only the ones that no longer point anywhere."
         },
         {
           "title": "Updates with what Windows ships",
-          "text": "winget drives the application upgrades and its own removal route, the Windows Update agent supplies the driver search, and nothing is fetched from a third-party server."
+          "text": "winget streams each application upgrade into a progress bar on that row, and a bin on the row starts the app's own uninstaller, so removal is never a detour through another page. The Windows Update agent supplies the driver search, and nothing is fetched from a third-party server."
         },
         {
           "title": "Long jobs say what they are doing",
-          "text": "Every scan covers its results with a centred LOADING ##% plate: real counts where the work reports progress, an estimate that never finishes early where the call is opaque."
+          "text": "Every scan covers its results with a centred LOADING ##% plate: real counts where the work reports progress, an estimate that never finishes early where the call is opaque. Any wait that reports nothing at all raises a WORKING strip across the bottom of the shell."
+        },
+        {
+          "title": "Benchmark rigs that install themselves",
+          "text": "The benchmark grid shows which portable rigs are present and installs the missing ones through winget, one dialog with a bar per download, then re-detects the suite so nothing stays marked missing."
         },
         {
           "title": "Portable, and honest about rights",
@@ -399,8 +404,8 @@
         },
         {
           "src": "assets/repos/pcmedic/loading.png",
-          "alt": "A centred LOADING 33% plate covering the shortcut audit findings",
-          "caption": "The shortcut audit mid-scan — the centred plate every long job shares."
+          "alt": "The Registry Audit page mid-scan: a LOADING 55% plate over the Shortcuts card and the WORKING strip along the bottom of the shell",
+          "caption": "Registry Audit mid-scan: the shared LOADING plate over the Shortcuts card, and the WORKING strip every wait raises."
         }
       ],
       "links": [

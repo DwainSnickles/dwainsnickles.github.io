@@ -47,7 +47,7 @@ const OVERRIDES = {
   "pc-medic": {
     title: "PC Medic",
     description:
-      "Portable Windows maintenance console: startup control, registry and shortcut audits, winget upgrades and driver search, with reversible actions throughout.",
+      "Portable Windows maintenance console: startup control, registry and shortcut audits, winget upgrades, driver search and benchmark rig setup, with reversible actions and measured progress throughout.",
     category: "system"
   },
   "disk-defrag": {
