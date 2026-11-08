@@ -349,12 +349,12 @@
       "summary": [
         "PC Medic is one executable with no installer, no background service and no telemetry. Each page is a job people actually run on a struggling machine: what starts with Windows, why the boot is slow, what is filling the disk, which applications are out of date, and which registry keys or shortcuts point at files that no longer exist.",
         "The rule behind every destructive action is that it must be reversible or provable. Cleaned files go to the Recycle Bin, registry edits write a .reg backup first, boot tweaks store the previous values in JSON, and the audits list only entries whose target is genuinely missing rather than whatever looks suspicious.",
-        "That proof is a missing file or folder on a mounted fixed drive, never a guess. A finding arrives with its switch already on, because the missing path was checked before the row was drawn; review-only rows stay off and untickable. Programs uninstall from a bin on their own row, and anything that takes time reports on itself rather than freezing the window."
+        "That proof is a missing file or folder on a mounted fixed drive, never a guess. A finding arrives with its switch already on, because the missing path was checked before the row was drawn; review-only rows stay off and untickable, and their tooltip says why the target could not be resolved. Programs uninstall from a bin on their own row, and anything that takes time reports on itself rather than freezing the window."
       ],
       "highlights": [
         {
           "title": "Audits that prove what they claim",
-          "text": "The registry audit reports keys whose target file or folder is gone and nothing else, and ticks each proven entry for removal; the shortcut audit resolves every .lnk through IShellLinkW and flags only the ones that no longer point anywhere."
+          "text": "The registry audit reports keys whose target file or folder is gone and nothing else, and ticks each proven entry for removal; the shortcut audit resolves every .lnk through IShellLinkW and flags only the ones that no longer point anywhere, keeping a proven dead target apart from a link it could not resolve at all."
         },
         {
           "title": "Updates with what Windows ships",
@@ -406,6 +406,11 @@
           "src": "assets/repos/pcmedic/loading.png",
           "alt": "The Registry Audit page mid-scan: a LOADING 55% plate over the Shortcuts card and the WORKING strip along the bottom of the shell",
           "caption": "Registry Audit mid-scan: the shared LOADING plate over the Shortcuts card, and the WORKING strip every wait raises."
+        },
+        {
+          "src": "assets/repos/pcmedic/audit.png",
+          "alt": "The settled Registry Audit: proven-dead shortcuts ticked for recycling beside REVIEW rows left on their off switches",
+          "caption": "The audit's settled results: proven-dead targets arrive already ticked for RECYCLE, while REVIEW rows name the reason they could not be resolved and never move their switch."
         }
       ],
       "links": [
