@@ -13,6 +13,7 @@
 
   var ICONS = {
     graphics: '<path d="M4 20V4h9l3 3h4v13z"/><path d="M8 12h8M8 16h5"/>',
+    system: '<path d="M4 13h4l2-6 3 12 2-6h5"/>',
     media: '<path d="m9 4 11 8-11 8z"/>',
     qr: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h4v4h-7z"/>',
     updater: '<path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/>',

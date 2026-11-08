@@ -341,6 +341,74 @@
         { "label": "AutoUpdater.NET", "url": "https://github.com/ravibpatel/AutoUpdater.NET" }
       ],
       "related": ["MOTW-Cleaner", "RibbonWinForms"]
+    },
+
+    "pc-medic": {
+      "eyebrow": "System utilities · portable Windows suite",
+      "tagline": "A portable maintenance console: startup control, registry and shortcut audits, winget upgrades and driver search in one window.",
+      "summary": [
+        "PC Medic is one executable with no installer, no background service and no telemetry. Each page is a job people actually run on a struggling machine: what starts with Windows, why the boot is slow, what is filling the disk, which applications are out of date, and which registry keys or shortcuts point at files that no longer exist.",
+        "The rule behind every destructive action is that it must be reversible or provable. Cleaned files go to the Recycle Bin, registry edits write a .reg backup first, boot tweaks store the previous values in JSON, and the audits list only entries whose target is genuinely missing rather than whatever looks suspicious."
+      ],
+      "highlights": [
+        {
+          "title": "Audits that prove what they claim",
+          "text": "The registry scan reports keys whose target file is gone and nothing else; the shortcut audit resolves every .lnk through IShellLinkW and flags only the ones that no longer point anywhere."
+        },
+        {
+          "title": "Updates with what Windows ships",
+          "text": "winget drives the application upgrades and its own removal route, the Windows Update agent supplies the driver search, and nothing is fetched from a third-party server."
+        },
+        {
+          "title": "Long jobs say what they are doing",
+          "text": "Every scan covers its results with a centred LOADING ##% plate: real counts where the work reports progress, an estimate that never finishes early where the call is opaque."
+        },
+        {
+          "title": "Portable, and honest about rights",
+          "text": "asInvoker, no drivers and no scheduled tasks of its own; elevation is opt-in per action and the UI always states whether you are a standard user."
+        }
+      ],
+      "facts": [
+        { "label": "Platform", "value": "Windows 10/11 x64" },
+        { "label": "Build", "value": ".NET 10 · WinForms" },
+        { "label": "Distribution", "value": "portable zip · no installer" },
+        { "label": "Companion", "value": "Disk Defrag" }
+      ],
+      "quickstart": [
+        {
+          "label": "Download the portable build",
+          "code": "https://github.com/DwainSnickles/pc-medic/releases/latest",
+          "note": "Unzip it anywhere, a USB stick included, and run PC Medic.exe. The suite zip puts Disk Defrag next to it, and the Maintenance page finds it automatically."
+        },
+        {
+          "label": "Build it from source",
+          "code": "git clone https://github.com/DwainSnickles/pc-medic\ncd pc-medic\ndotnet build \"PC Medic.csproj\"",
+          "note": "The portable layout lands in bin/Debug/net10.0-windows/."
+        }
+      ],
+      "requirements": [
+        "Windows 10 or 11 (x64)",
+        ".NET 10 desktop runtime, or the SDK to build it",
+        "Administrator rights only for the actions that need them"
+      ],
+      "shots": [
+        {
+          "src": "assets/repos/pcmedic/overview.png",
+          "alt": "PC Medic dashboard with CPU, memory, disk, update and uptime tiles",
+          "caption": "The dashboard: live telemetry, one-click actions and the activity feed."
+        },
+        {
+          "src": "assets/repos/pcmedic/loading.png",
+          "alt": "A centred LOADING 33% plate covering the shortcut audit findings",
+          "caption": "The shortcut audit mid-scan — the centred plate every long job shares."
+        }
+      ],
+      "links": [
+        { "label": "Releases", "url": "https://github.com/DwainSnickles/pc-medic/releases" },
+        { "label": "Disk Defrag companion", "url": "https://github.com/DwainSnickles/disk-defrag" },
+        { "label": "Repository", "url": "https://github.com/DwainSnickles/pc-medic" }
+      ],
+      "related": ["disk-defrag", "MOTW-Cleaner"]
     }
   }
 }

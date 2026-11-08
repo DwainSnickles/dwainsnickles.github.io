@@ -25,7 +25,8 @@ const FEATURED = [
   "DesignSurfaceCSharp",
   "AutoUpdater.NET.XML-Creator-master",
   "MOTW-Cleaner",
-  "Maui-basic-VLC-Player-Tutorial"
+  "Maui-basic-VLC-Player-Tutorial",
+  "pc-medic"
 ];
 
 const OVERRIDES = {
@@ -42,6 +43,18 @@ const OVERRIDES = {
       "WinForms panel that dissolves its contents away and back with 21 PowerPoint-style transitions, an optional slide-in and a designer smart tag. Published as DissolvingPanel.",
     category: "ui",
     nuget: true
+  },
+  "pc-medic": {
+    title: "PC Medic",
+    description:
+      "Portable Windows maintenance console: startup control, registry and shortcut audits, winget upgrades and driver search, with reversible actions throughout.",
+    category: "system"
+  },
+  "disk-defrag": {
+    title: "Disk Defrag",
+    description:
+      "Portable NTFS defragmentation for Windows with a live cluster map, driving the storage optimiser Windows already ships instead of a third-party engine.",
+    category: "system"
   },
   GraphicsWorkshop: {
     title: "Graphics Workshop",
@@ -191,6 +204,7 @@ const OVERRIDES = {
 
 const CATEGORY_LABELS = {
   graphics: "Graphics & design",
+  system: "System utilities",
   ui: "UI components",
   media: "Media & video",
   qr: "Scanners & QR",

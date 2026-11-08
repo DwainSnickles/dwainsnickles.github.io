@@ -57,7 +57,7 @@
     if (body) {
       body.innerHTML = '<div class="notfound">'
         + "<h2>Case studies live in the index</h2>"
-        + "<p>Six repositories have a written case study: a summary, real screenshots, and install steps. "
+        + "<p>Seven repositories have a written case study: a summary, real screenshots, and install steps. "
         + "Everything else opens straight on GitHub.</p>"
         + '<a class="btn btn--solid" href="projects.html">Browse all repositories</a>'
         + "</div>";

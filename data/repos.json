@@ -1,13 +1,38 @@
 {
   "owner": "DwainSnickles",
-  "generated": "2026-11-07",
+  "generated": "2026-11-08",
   "totals": {
-    "repos": 29,
+    "repos": 31,
     "stars": 16,
     "forks": 7,
     "languages": 4
   },
   "repos": [
+    {
+      "name": "pc-medic",
+      "title": "PC Medic",
+      "description": "Portable Windows maintenance console: startup control, registry and shortcut audits, winget upgrades and driver search, with reversible actions throughout.",
+      "language": "C#",
+      "category": "system",
+      "categoryLabel": "System utilities",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "advanced-systemcare-alternative",
+        "ccleaner-alternative",
+        "disk-cleanup",
+        "disk-defrag",
+        "dotnet",
+        "freebuff"
+      ],
+      "updated": "2026-11-08",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/pc-medic",
+      "featured": true,
+      "featuredRank": 6
+    },
     {
       "name": "RibbonWinForms",
       "title": "Ribbon for WinForms",
@@ -27,7 +52,7 @@
         "office-ribbon",
         "ribbon"
       ],
-      "updated": "2026-10-30",
+      "updated": "2026-11-07",
       "homepage": "https://www.nuget.org/packages/Dwain.RibbonLib",
       "url": "https://github.com/DwainSnickles/RibbonWinForms",
       "featured": true,
@@ -157,6 +182,31 @@
       "url": "https://github.com/DwainSnickles/AutoUpdater.NET.XML-Creator-master",
       "featured": true,
       "featuredRank": 3
+    },
+    {
+      "name": "disk-defrag",
+      "title": "Disk Defrag",
+      "description": "Portable NTFS defragmentation for Windows with a live cluster map, driving the storage optimiser Windows already ships instead of a third-party engine.",
+      "language": "C#",
+      "category": "system",
+      "categoryLabel": "System utilities",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "advanced-systemcare-alternative",
+        "aml-disk-defrag-alternative",
+        "cluster-map",
+        "defraggler-alternative",
+        "defragmentation",
+        "disk-defrag"
+      ],
+      "updated": "2026-11-08",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/disk-defrag",
+      "featured": false,
+      "featuredRank": -1
     },
     {
       "name": "DissolvingPanel",
