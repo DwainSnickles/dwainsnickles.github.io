@@ -13,6 +13,12 @@ $assets = Join-Path $root 'assets'
 if (-not (Test-Path $assets)) { New-Item -ItemType Directory -Path $assets | Out-Null }
 $out = Join-Path $assets 'og-image.png'
 
+# Counts come from the generated index, so the card cannot drift from the site again.
+$index = Get-Content (Join-Path $root 'data/repos.json') -Raw | ConvertFrom-Json
+$repoList = @($index.repos)
+$repoCount = $repoList.Count
+$starCount = [int](($repoList | Measure-Object -Property stars -Sum).Sum)
+
 $W = 1200
 $H = 630
 
@@ -142,7 +148,7 @@ $urlBrush.Dispose()
 
 $metaFont = [System.Drawing.Font]::new('Consolas', 17, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
 $metaBrush = [System.Drawing.SolidBrush]::new($muted)
-$g.DrawString('28 repositories  /  16 stars  /  NuGet: Dwain.RibbonLib', $metaFont, $metaBrush, [single]102, [single]508)
+$g.DrawString("$repoCount repositories  /  $starCount stars  /  NuGet: Dwain.RibbonLib", $metaFont, $metaBrush, [single]102, [single]508)
 $g.DrawString('GitHub Pages  /  static build  /  no cookies', $metaFont, $metaBrush, [single]102, [single]536)
 $metaFont.Dispose()
 $metaBrush.Dispose()
@@ -206,7 +212,7 @@ foreach ($row in $rows) {
 }
 
 $g.DrawString('OK', $consoleFont, $promptBrush, [single]($panelX + 24), [single]($rowY + 8))
-$g.DrawString('28 repositories indexed', $consoleFont, $lineBrush, [single]($panelX + 64), [single]($rowY + 8))
+$g.DrawString("$repoCount repositories indexed", $consoleFont, $lineBrush, [single]($panelX + 64), [single]($rowY + 8))
 
 $consoleFont.Dispose()
 $promptBrush.Dispose()
