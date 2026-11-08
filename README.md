@@ -24,6 +24,7 @@ footer. There is no account and no tracking cookie; to see every number at once,
 css/style.css            theme, components, responsive + reduced-motion rules
 js/main.js               nav, scroll progress, reveals, hero console, canvas, contact form
 js/repos.js              renders data/repos.json into the featured grid, index list, filters
+downloads.html           the binary downloads page: portable builds and DLLs, no source archives
 js/repo.js               renders one case study from data/repos.json + data/details.json
 data/repos.json          generated repository index (committed)
 data/details.json        hand-written case studies: summary, highlights, install steps, shots

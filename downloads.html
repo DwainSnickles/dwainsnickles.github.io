@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Downloads — Dwain Snickles</title>
+<meta name="description" content="Download the compiled Windows builds directly: the portable PC Medic and Disk Defrag apps and the RibbonLib DLL. Binaries only — source stays on GitHub.">
+<meta name="theme-color" content="#04060c">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://dwainsnickles.github.io/downloads.html">
+<meta property="og:site_name" content="Dwain Snickles">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://dwainsnickles.github.io/downloads.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://dwainsnickles.github.io/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dark console-style card: Dwain Snickles, desktop engineering in C# and .NET, 31 repositories.">
+<meta name="twitter:image" content="https://dwainsnickles.github.io/assets/og-image.png">
+<meta name="twitter:image:alt" content="Dwain Snickles — desktop engineering in C# and .NET.">
+<meta property="og:title" content="Downloads — Dwain Snickles">
+<meta property="og:description" content="Compiled Windows builds: portable PC Medic and Disk Defrag, plus the RibbonLib DLL. Binaries only, no source archives.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progress"></span></div>
+<div class="spotlight" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Dwain Snickles — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+      </span>
+      <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="projects.html">Repositories</a>
+      <a class="nav__link is-active" href="downloads.html">Downloads</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="btn btn--sm btn--ghost" href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Downloads</p>
+      <h1>Binaries, <span class="grad">no source.</span></h1>
+      <p>
+        Everything below is a compiled build: unzip a portable app and run it, or drop a DLL next to a
+        project. Source code, issues and pull requests stay on GitHub — this page never links a source
+        archive, and every download is served from GitHub Releases over HTTPS.
+      </p>
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap grid-2">
+
+      <div class="card" data-reveal>
+        <p class="eyebrow eyebrow--muted">Portable app · Windows 10/11 x64</p>
+        <h3 style="font-size:1.5rem">PC Medic 1.0.2</h3>
+        <p>
+          One executable with no installer, no background service and no telemetry: startup control,
+          boot and sleep tuning, disk cleanup, installed programs, winget upgrades, Windows Update
+          driver search, the registry and shortcut audits, and benchmark rig setup. Every destructive
+          action goes through the Recycle Bin or a backup file.
+        </p>
+        <p class="mono small" style="color:var(--muted)">
+          PC-Medic-win-x64.zip · 69 MB · self-contained .NET 10 build
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem">
+          <a class="btn btn--solid" href="https://github.com/DwainSnickles/pc-medic/releases/latest/download/PC-Medic-win-x64.zip">Download PC Medic</a>
+          <a class="btn btn--ghost" href="https://github.com/DwainSnickles/pc-medic/releases/latest/download/PC-Medic-suite-win-x64.zip">Suite with Disk Defrag · 114 MB</a>
+          <a class="btn btn--ghost" href="https://github.com/DwainSnickles/pc-medic/releases" target="_blank" rel="noopener">All releases ↗</a>
+        </div>
+        <p class="small" style="margin-top:1rem;color:var(--muted)">
+          Unzip anywhere — a USB stick is fine — and run <span class="mono">PC Medic.exe</span>. The
+          suite zip puts Disk Defrag beside it, and the Maintenance page picks it up automatically.
+        </p>
+      </div>
+
+      <div class="card" data-reveal style="--delay:80ms">
+        <p class="eyebrow eyebrow--muted">Portable app · Windows 10/11 x64</p>
+        <h3 style="font-size:1.5rem">Disk Defrag 1.0.0</h3>
+        <p>
+          Portable NTFS defragmentation with a live cluster map read from the volume bitmap. It drives
+          the storage optimiser Windows already ships — <span class="mono">defrag /A</span>,
+          <span class="mono">/D</span>, <span class="mono">/O</span> — and reports the engine's own
+          percentage on a progress strip, so a long run is never a silent black box.
+        </p>
+        <p class="mono small" style="color:var(--muted)">
+          Disk-Defrag-win-x64.zip · 45 MB · self-contained .NET 10 build
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem">
+          <a class="btn btn--solid" href="https://github.com/DwainSnickles/disk-defrag/releases/latest/download/Disk-Defrag-win-x64.zip">Download Disk Defrag</a>
+          <a class="btn btn--ghost" href="https://github.com/DwainSnickles/disk-defrag/releases" target="_blank" rel="noopener">All releases ↗</a>
+        </div>
+        <p class="small" style="margin-top:1rem;color:var(--muted)">
+          Analysis is read-only; defragmentation needs an elevated window, which the app asks for when
+          you start one.
+        </p>
+      </div>
+
+      <div class="card" data-reveal>
+        <p class="eyebrow eyebrow--muted">DLL · .NET 10 Windows Forms</p>
+        <h3 style="font-size:1.5rem">RibbonLib 1.0.5</h3>
+        <p>
+          The ribbon control layer under Graphics Workshop: Office-style tabs, groups and galleries
+          drawn with GDI+, with out-of-process designer support so the control keeps working in the
+          Visual Studio designer. Take the standalone assembly or the package that carries it.
+        </p>
+        <p class="mono small" style="color:var(--muted)">
+          RibbonLib.dll · 383 KB · v1.0.0 build · package Dwain.RibbonLib 1.0.5-net10
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem">
+          <a class="btn btn--solid" href="https://github.com/DwainSnickles/RibbonWinForms/releases/latest/download/RibbonLib.dll">Download RibbonLib.dll</a>
+          <a class="btn btn--ghost" href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener">NuGet package ↗</a>
+          <a class="btn btn--ghost" href="https://github.com/DwainSnickles/RibbonWinForms" target="_blank" rel="noopener">Repository ↗</a>
+        </div>
+        <p class="small" style="margin-top:1rem;color:var(--muted)">
+          The assembly targets <span class="mono">net10.0-windows</span>. Add it with
+          <span class="mono">dotnet add package Dwain.RibbonLib</span> when you want the package
+          rather than a loose file.
+        </p>
+      </div>
+
+      <div class="card" data-reveal style="--delay:80ms">
+        <p class="eyebrow eyebrow--muted">What is not here</p>
+        <h3 style="font-size:1.5rem">No source archives,<br>no bundles</h3>
+        <p>
+          Source zips, clones and pull requests live on GitHub where they can be read, built and
+          reviewed. Nothing on this page ships a third-party installer, a bundled toolbar or a
+          downloader of its own.
+        </p>
+        <p class="small" style="color:var(--muted)">
+          MOTW Cleaner releases an <span class="mono">.msi</span> rather than a portable zip, so it is
+          left to its repository page instead of being listed as portable. Anything without a release
+          yet is source-only.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem">
+          <a class="btn btn--ghost" href="https://github.com/DwainSnickles?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+          <a class="btn btn--ghost" href="projects.html">Browse the index</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap">
+      <p class="mono small" style="color:var(--muted)">
+        Downloads resolve through <span class="mono">releases/latest</span>, so each link always serves
+        the newest published build of that asset. Release pages also publish a source archive
+        automatically — it is deliberately not linked here.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+          </span>
+          <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+        </a>
+        <p>Desktop software, .NET tooling and the occasional utility that should have
+           shipped with Windows.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Index</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Repositories</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener">NuGet: Dwain.RibbonLib ↗</a>
+        <a href="https://github.com/DwainSnickles?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Dwain Snickles</span>
+      <span class="hits" data-page="downloads" hidden><span class="hits__count">0</span> <span class="hits__label">page views</span></span> <span><span class="ok">●</span> static build · GitHub Pages · no cookies</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
