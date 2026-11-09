@@ -1,6 +1,112 @@
 {
   "updated": "2026-11-07",
   "repos": {
+    "Floating-Toolbar": {
+    "eyebrow": "UI components · Windows launcher",
+    "tagline": "A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.",
+    "summary": [
+      "Most launchers want a dock, a start menu or an installer. This one is a strip 52 pixels tall that stays on top of other windows and does nothing until you click: groups that open a list, entries pinned to the bar that launch in one click, and a right-click menu for adding, editing and removing both.",
+      "It is a .NET 8 WinForms app with no third-party packages — the bar, its buttons, the dark renderer, the icon loader and the fullscreen detector are all in the repository. Dropping a file, shortcut, folder or URL on the bar adds it as an entry and takes the target's own shell icon; an entry whose target has disappeared reports the failure instead of taking the app down.",
+      "Two things make it survive a working day: Ctrl+Alt+Space shows or hides the bar from any application, and an optional auto-hide pulls it out of the way while a fullscreen app has focus, then puts it back when focus returns. Settings are a single JSON file under %APPDATA%, so a whole layout can be copied between machines."
+    ],
+    "highlights": [
+      {
+        "title": "Groups that drop down",
+        "text": "Office, browsers and Windows tools each take one slot on the bar; clicking opens the list, and a group can append the user's own browser favourites as a sub-menu."
+      },
+      {
+        "title": "Drag to arrange, in both directions",
+        "text": "Entries reorder inside an open drop-down and groups reorder along the bar, with a blue insertion line showing where the item will land before you let go."
+      },
+      {
+        "title": "Drop files from Explorer",
+        "text": "Files, shortcuts, folders and URLs dropped on the bar become working buttons carrying the target's own icon; a target that no longer exists shows a message instead of crashing the launch."
+      },
+      {
+        "title": "Out of the way when it should be",
+        "text": "Ctrl+Alt+Space toggles the bar globally, and auto-hide restores it the moment the fullscreen app loses focus."
+      },
+      {
+        "title": "Small on purpose",
+        "text": "One executable, no NuGet packages and no background service: the self-contained single file is the same project published with one extra flag."
+      }
+    ],
+    "facts": [
+      {
+        "label": "Platform",
+        "value": "Windows 10/11 x64"
+      },
+      {
+        "label": "Build",
+        "value": ".NET 8 · WinForms"
+      },
+      {
+        "label": "Distribution",
+        "value": "portable zip · self-contained"
+      },
+      {
+        "label": "Dependencies",
+        "value": "none — no NuGet packages"
+      }
+    ],
+    "quickstart": [
+      {
+        "label": "Download and run",
+        "code": "https://github.com/DwainSnickles/Floating-Toolbar/releases/latest",
+        "note": "Unzip Floating-Toolbar-win-x64.zip anywhere and run FloatingToolbar.exe — the published build is self-contained, so nothing else needs installing."
+      },
+      {
+        "label": "Add your own buttons",
+        "code": "Right-click the bar for New group / Add application / Pin an application",
+        "note": "Dragging files from Explorer onto the bar works too. Right-click a group for Add application, Edit group, Rename group and Remove group."
+      },
+      {
+        "label": "Build from source",
+        "code": [
+          "git clone https://github.com/DwainSnickles/Floating-Toolbar",
+          "cd Floating-Toolbar",
+          "dotnet build Floating_Toolbar.csproj -c Release"
+        ],
+        "note": "The project targets net8.0-windows; the shipped single file is the same project published with -r win-x64 --self-contained."
+      }
+    ],
+    "requirements": [
+      "Windows 10 or 11 (x64)",
+      ".NET 8 desktop runtime, or the self-contained zip",
+      "No administrator rights needed"
+    ],
+    "shots": [
+      {
+        "src": "assets/repos/floatingtoolbar/group.png",
+        "alt": "The floating toolbar with the Office group open, listing Word, Excel, PowerPoint and Outlook above the group's Add application, Edit group and Remove entries",
+        "caption": "The bar with a group open: entries launch on click, and the same menu adds, edits, renames or removes them."
+      },
+      {
+        "src": "assets/repos/floatingtoolbar/bar.png",
+        "alt": "The dark floating toolbar with Office, Browsers and Windows groups beside its add, favourites, minimise and close buttons",
+        "caption": "The bar itself: 52 px tall, always on top, draggable by its grip and kept inside the current monitor."
+      }
+    ],
+    "links": [
+      {
+        "label": "Download the portable zip",
+        "url": "https://github.com/DwainSnickles/Floating-Toolbar/releases/latest"
+      },
+      {
+        "label": "Repository",
+        "url": "https://github.com/DwainSnickles/Floating-Toolbar"
+      },
+      {
+        "label": "Builds on GitHub Actions",
+        "url": "https://github.com/DwainSnickles/Floating-Toolbar/actions"
+      }
+    ],
+    "related": [
+      "RibbonWinForms",
+      "Windows_Forms_Dotnet_Controls"
+    ]
+    },
+
     "RibbonWinForms": {
       "eyebrow": "UI components · .NET 10",
       "tagline": "An Office-style ribbon for Windows Forms that still works inside the designer.",
