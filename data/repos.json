@@ -9,6 +9,31 @@
   },
   "repos": [
     {
+      "name": "Floating-Toolbar",
+      "title": "Floating Toolbar",
+      "description": "Compact always-on-top launcher for Windows: drop-down groups and pinned one-click icons, drag-to-reorder, drag files from Explorer to add them, Ctrl+Alt+Space to show or hide it, and an auto-hide mode for fullscreen apps.",
+      "language": "C#",
+      "category": "ui",
+      "categoryLabel": "UI components",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "csharp",
+        "desktop",
+        "dotnet",
+        "launcher",
+        "toolbar",
+        "winforms"
+      ],
+      "updated": "2026-11-09",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/Floating-Toolbar",
+      "featured": true,
+      "featuredRank": 7
+    },
+    {
       "name": "pc-medic",
       "title": "PC Medic",
       "description": "Portable Windows maintenance console: startup control, registry and shortcut audits, winget upgrades, driver search and benchmark rig setup, with reversible actions and measured progress throughout.",
@@ -184,27 +209,25 @@
       "featuredRank": 3
     },
     {
-      "name": "Floating-Toolbar",
-      "title": "Floating Toolbar",
-      "description": "Compact always-on-top launcher for Windows: drop-down groups and pinned one-click icons, drag-to-reorder, drag files from Explorer to add them, Ctrl+Alt+Space to show or hide it, and an auto-hide mode for fullscreen apps.",
-      "language": "C#",
-      "category": "ui",
-      "categoryLabel": "UI components",
+      "name": "dwainsnickles.github.io",
+      "title": "This Website",
+      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
+      "language": "HTML",
+      "category": "web",
+      "categoryLabel": "Web & admin",
       "stars": 0,
       "forks": 0,
       "fork": false,
       "nuget": false,
       "topics": [
-        "csharp",
-        "desktop",
-        "dotnet",
-        "launcher",
-        "toolbar",
-        "winforms"
+        "github-pages",
+        "html",
+        "portfolio",
+        "website"
       ],
       "updated": "2026-11-09",
       "homepage": null,
-      "url": "https://github.com/DwainSnickles/Floating-Toolbar",
+      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,
       "featuredRank": -1
     },
@@ -230,29 +253,6 @@
       "updated": "2026-11-08",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/disk-defrag",
-      "featured": false,
-      "featuredRank": -1
-    },
-    {
-      "name": "dwainsnickles.github.io",
-      "title": "This Website",
-      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
-      "language": "HTML",
-      "category": "web",
-      "categoryLabel": "Web & admin",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "github-pages",
-        "html",
-        "portfolio",
-        "website"
-      ],
-      "updated": "2026-11-08",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,
       "featuredRank": -1
     },

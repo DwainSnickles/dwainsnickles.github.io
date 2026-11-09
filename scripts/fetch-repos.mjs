@@ -26,7 +26,8 @@ const FEATURED = [
   "AutoUpdater.NET.XML-Creator-master",
   "MOTW-Cleaner",
   "Maui-basic-VLC-Player-Tutorial",
-  "pc-medic"
+  "pc-medic",
+  "Floating-Toolbar"
 ];
 
 const OVERRIDES = {
