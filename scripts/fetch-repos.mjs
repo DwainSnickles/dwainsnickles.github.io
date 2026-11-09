@@ -30,6 +30,12 @@ const FEATURED = [
 ];
 
 const OVERRIDES = {
+  "Floating-Toolbar": {
+    title: "Floating Toolbar",
+    description:
+      "Compact always-on-top launcher for Windows: drop-down groups and pinned one-click icons, drag-to-reorder, drag files from Explorer to add them, Ctrl+Alt+Space to show or hide it, and an auto-hide mode for fullscreen apps.",
+    category: "ui"
+  },
   RibbonWinForms: {
     title: "Ribbon for WinForms",
     description:

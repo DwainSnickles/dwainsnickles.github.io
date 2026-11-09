@@ -192,7 +192,7 @@
       markupLine("c-key", "MOTW-Cleaner") + "           HTML  unblock downloads",
       "",
       markupLine("c-prompt", "$") + " npm run index -- --refresh",
-      markupLine("c-ok", "✓") + " 31 repositories indexed",
+      markupLine("c-ok", "✓") + " 32 repositories indexed",
       markupLine("c-ok", "✓") + " nuget: " + markupLine("c-key", "Dwain.RibbonLib"),
       markupLine("c-dim", "→ ") + markupLine("c-arrow", "https://dwainsnickles.github.io")
     ];

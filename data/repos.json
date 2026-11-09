@@ -1,8 +1,8 @@
 {
   "owner": "DwainSnickles",
-  "generated": "2026-11-08",
+  "generated": "2026-11-09",
   "totals": {
-    "repos": 31,
+    "repos": 32,
     "stars": 16,
     "forks": 7,
     "languages": 4
@@ -27,7 +27,7 @@
         "dotnet",
         "freebuff"
       ],
-      "updated": "2026-11-08",
+      "updated": "2026-11-09",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/pc-medic",
       "featured": true,
@@ -184,25 +184,27 @@
       "featuredRank": 3
     },
     {
-      "name": "dwainsnickles.github.io",
-      "title": "This Website",
-      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
-      "language": "HTML",
-      "category": "web",
-      "categoryLabel": "Web & admin",
+      "name": "Floating-Toolbar",
+      "title": "Floating Toolbar",
+      "description": "Compact always-on-top launcher for Windows: drop-down groups and pinned one-click icons, drag-to-reorder, drag files from Explorer to add them, Ctrl+Alt+Space to show or hide it, and an auto-hide mode for fullscreen apps.",
+      "language": "C#",
+      "category": "ui",
+      "categoryLabel": "UI components",
       "stars": 0,
       "forks": 0,
       "fork": false,
       "nuget": false,
       "topics": [
-        "github-pages",
-        "html",
-        "portfolio",
-        "website"
+        "csharp",
+        "desktop",
+        "dotnet",
+        "launcher",
+        "toolbar",
+        "winforms"
       ],
-      "updated": "2026-11-08",
+      "updated": "2026-11-09",
       "homepage": null,
-      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
+      "url": "https://github.com/DwainSnickles/Floating-Toolbar",
       "featured": false,
       "featuredRank": -1
     },
@@ -228,6 +230,29 @@
       "updated": "2026-11-08",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/disk-defrag",
+      "featured": false,
+      "featuredRank": -1
+    },
+    {
+      "name": "dwainsnickles.github.io",
+      "title": "This Website",
+      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
+      "language": "HTML",
+      "category": "web",
+      "categoryLabel": "Web & admin",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "github-pages",
+        "html",
+        "portfolio",
+        "website"
+      ],
+      "updated": "2026-11-08",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,
       "featuredRank": -1
     },
