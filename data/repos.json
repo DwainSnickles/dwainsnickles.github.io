@@ -1,6 +1,6 @@
 {
   "owner": "DwainSnickles",
-  "generated": "2026-11-12",
+  "generated": "2026-11-13",
   "totals": {
     "repos": 32,
     "stars": 16,
@@ -8,6 +8,31 @@
     "languages": 4
   },
   "repos": [
+    {
+      "name": "RibbonWinForms",
+      "title": "Ribbon for WinForms",
+      "description": "Office-style ribbon control for Windows Forms, ported to .NET 10 with working out-of-process designer support. Published as Dwain.RibbonLib.",
+      "language": "C#",
+      "category": "ui",
+      "categoryLabel": "UI components",
+      "stars": 0,
+      "forks": 0,
+      "fork": true,
+      "nuget": true,
+      "topics": [
+        "csharp",
+        "dotnet",
+        "dotnet10",
+        "gui",
+        "microsoft-ribbon",
+        "office-ribbon"
+      ],
+      "updated": "2026-11-13",
+      "homepage": "https://www.nuget.org/packages/Dwain.RibbonLib",
+      "url": "https://github.com/DwainSnickles/RibbonWinForms",
+      "featured": true,
+      "featuredRank": 0
+    },
     {
       "name": "pc-medic",
       "title": "PC Medic",
@@ -57,42 +82,6 @@
       "url": "https://github.com/DwainSnickles/Floating-Toolbar",
       "featured": true,
       "featuredRank": 7
-    },
-    {
-      "name": "RibbonWinForms",
-      "title": "Ribbon for WinForms",
-      "description": "Office-style ribbon control for Windows Forms, ported to .NET 10 with working out-of-process designer support. A fork of WindowsRibbon and RibbonWinForms. Published as Dwain.RibbonLib.",
-      "language": "C#",
-      "category": "ui",
-      "categoryLabel": "UI components",
-      "stars": 0,
-      "forks": 0,
-      "fork": true,
-      "nuget": true,
-      "topics": [
-        "csharp",
-        "dotnet",
-        "dotnet10",
-        "gui",
-        "microsoft-ribbon",
-        "office-ribbon",
-        "ribbon",
-        "ribbon-framework",
-        "ribbon-tools",
-        "ribbon-ui",
-        "win-ribbon",
-        "winforms",
-        "winforms-designer",
-        "windows-forms",
-        "windows-ribbon",
-        "windowsribbon",
-        "winribbon"
-      ],
-      "updated": "2026-11-13",
-      "homepage": "https://www.nuget.org/packages/Dwain.RibbonLib",
-      "url": "https://github.com/DwainSnickles/RibbonWinForms",
-      "featured": true,
-      "featuredRank": 0
     },
     {
       "name": "GraphicsWorkshop",
@@ -236,7 +225,7 @@
         "portfolio",
         "website"
       ],
-      "updated": "2026-11-11",
+      "updated": "2026-11-13",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,
