@@ -133,12 +133,27 @@
         }
       ],
       "facts": [
-        { "label": "Package", "value": "Dwain.RibbonLib 1.0.14-net10" },
+        { "label": "Package", "value": "Dwain.RibbonLib 1.0.16-net10" },
         { "label": "Branch", "value": "net10" },
         { "label": "Framework", "value": ".NET 10 · WinForms" },
         { "label": "Published", "value": "nuget.org" }
       ],
       "changelog": [
+        {
+          "version": "1.0.16-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "The orb drop-down now autosizes to its content at runtime — width fits the menu, recent and option items, and the empty recent pane collapses.",
+            "The design-time orb menu sizes itself to its entries and button captions, so text no longer truncates."
+          ]
+        },
+        {
+          "version": "1.0.15-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "Widened the design-time orb menu to 300px so the add-button captions and longer item text no longer truncate."
+          ]
+        },
         {
           "version": "1.0.14-net10",
           "date": "2026-11-13",
@@ -243,7 +258,7 @@
       "quickstart": [
         {
           "label": "Install from NuGet",
-          "code": "dotnet add package Dwain.RibbonLib --version 1.0.14-net10",
+          "code": "dotnet add package Dwain.RibbonLib --version 1.0.16-net10",
           "note": "Add it to each project that needs the ribbon, then the control appears in the toolbox."
         },
         {
