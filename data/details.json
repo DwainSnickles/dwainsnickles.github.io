@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-13",
   "repos": {
     "Floating-Toolbar": {
     "eyebrow": "UI components · Windows launcher",
@@ -133,15 +133,102 @@
         }
       ],
       "facts": [
-        { "label": "Package", "value": "Dwain.RibbonLib 1.0.2-net10" },
+        { "label": "Package", "value": "Dwain.RibbonLib 1.0.12-net10" },
         { "label": "Branch", "value": "net10" },
         { "label": "Framework", "value": ".NET 10 · WinForms" },
         { "label": "Published", "value": "nuget.org" }
       ],
+      "changelog": [
+        {
+          "version": "1.0.12-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "Added Office/Microsoft ribbon keywords to the package tags and repository topics: microsoft-ribbon, ribbon-ui, winribbon."
+          ]
+        },
+        {
+          "version": "1.0.11-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "Package metadata now credits WindowsRibbon (github.com/harborsiem/WindowsRibbon) and RibbonWinForms in the description, authors and copyright.",
+            "Release notes cover the design-time orb menu work."
+          ]
+        },
+        {
+          "version": "1.0.10-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "An empty orb menu now shows the same blank frame and design-time add buttons (menu item, separator, recent, option) that the real drop-down paints in design mode; clicking them creates the matching entry."
+          ]
+        },
+        {
+          "version": "1.0.9-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "Removed the \"+ Menu / + Recent / + Options\" text rows from the design-time orb menu — they were designer affordances that do not exist in the real drop-down."
+          ]
+        },
+        {
+          "version": "1.0.8-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "Fixed the orb menu paint offset in the designer: glyph paint graphics are already in adorner coordinates, so the menu is now translated by +the ribbon's adorner offset."
+          ]
+        },
+        {
+          "version": "1.0.7-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "The design-time orb menu is now painted through the adorner glyph instead of OnPaintAdornments, so it is no longer clipped at the ribbon's bottom edge and can hang below the ribbon like the real drop-down."
+          ]
+        },
+        {
+          "version": "1.0.6-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "Clicking the orb in the designer opens the orb menu on the design surface: menu, recent and option items with their icons, row highlighting, click-to-select, and add-entry glyphs — the same approach the panel \"Add Control\" menu already used. Runtime behaviour is unchanged."
+          ]
+        },
+        {
+          "version": "1.0.5-net10",
+          "date": "2026-11-07",
+          "changes": [
+            "Clicking a ribbon tab in the designer now switches the tab and shows that tab's page, matched against the bounds the design surface draws."
+          ]
+        },
+        {
+          "version": "1.0.3-net10",
+          "date": "2026-11-07",
+          "changes": [
+            "Added SelectedIndex and SelectedIndexChanged to the Ribbon, so the visible tab can be chosen from the Properties window and is saved with the form."
+          ]
+        },
+        {
+          "version": "1.0.2-net10",
+          "date": "2026-10-29",
+          "changes": [
+            "Added discoverability tags (ribbon-framework, ribbon-tools, windows-ribbon, win-ribbon) alongside the existing package tags."
+          ]
+        },
+        {
+          "version": "1.0.1-net10",
+          "date": "2026-10-29",
+          "changes": [
+            "Package description aligned with the project tagline; same .NET 10 port as 1.0.0-net10."
+          ]
+        },
+        {
+          "version": "1.0.0-net10",
+          "date": "2026-10-28",
+          "changes": [
+            "First release: the .NET 10 port, with a working out-of-process designer, selectable tabs/panels/items, Add Tab / Add Panel / Add Control pills, collection editors in the Properties grid, and no design-time assembly loaded at runtime."
+          ]
+        }
+      ],
       "quickstart": [
         {
           "label": "Install from NuGet",
-          "code": "dotnet add package Dwain.RibbonLib --version 1.0.2-net10",
+          "code": "dotnet add package Dwain.RibbonLib --version 1.0.12-net10",
           "note": "Add it to each project that needs the ribbon, then the control appears in the toolbox."
         },
         {
