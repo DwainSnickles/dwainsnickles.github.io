@@ -133,12 +133,27 @@
         }
       ],
       "facts": [
-        { "label": "Package", "value": "Dwain.RibbonLib 1.0.17-net10" },
+        { "label": "Package", "value": "Dwain.RibbonLib 1.0.19-net10" },
         { "label": "Branch", "value": "net10" },
         { "label": "Framework", "value": ".NET 10 · WinForms" },
         { "label": "Published", "value": "nuget.org" }
       ],
       "changelog": [
+        {
+          "version": "1.0.19-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "Fixed orb menu item creation in the designer — RibbonOrbMenuItem had a collection editor declared as its ComponentDesigner, which broke both the design-surface add buttons and the Properties collection editor.",
+            "Added temporary design-time logging to %TEMP%\\RibbonLibDesign.log to capture designer failures the out-of-process designer cannot display."
+          ]
+        },
+        {
+          "version": "1.0.18-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "Diagnostic release: logs orb collection editor failures to %TEMP%\\RibbonLibDesign.log."
+          ]
+        },
         {
           "version": "1.0.17-net10",
           "date": "2026-11-13",
@@ -265,7 +280,7 @@
       "quickstart": [
         {
           "label": "Install from NuGet",
-          "code": "dotnet add package Dwain.RibbonLib --version 1.0.17-net10",
+          "code": "dotnet add package Dwain.RibbonLib --version 1.0.19-net10",
           "note": "Add it to each project that needs the ribbon, then the control appears in the toolbox."
         },
         {
