@@ -133,12 +133,20 @@
         }
       ],
       "facts": [
-        { "label": "Package", "value": "Dwain.RibbonLib 1.0.12-net10" },
+        { "label": "Package", "value": "Dwain.RibbonLib 1.0.13-net10" },
         { "label": "Branch", "value": "net10" },
         { "label": "Framework", "value": ".NET 10 · WinForms" },
         { "label": "Published", "value": "nuget.org" }
       ],
       "changelog": [
+        {
+          "version": "1.0.13-net10",
+          "date": "2026-11-13",
+          "changes": [
+            "Fixed a crash when clicking the blank orb menu's add buttons in the designer — the code touched the real drop-down window, which does not exist at design time.",
+            "The blank menu's add buttons now show text labels (New Menu Item, New Separator, New Recent Item, New Option Item) in a two-by-two grid."
+          ]
+        },
         {
           "version": "1.0.12-net10",
           "date": "2026-11-13",
@@ -228,7 +236,7 @@
       "quickstart": [
         {
           "label": "Install from NuGet",
-          "code": "dotnet add package Dwain.RibbonLib --version 1.0.12-net10",
+          "code": "dotnet add package Dwain.RibbonLib --version 1.0.13-net10",
           "note": "Add it to each project that needs the ribbon, then the control appears in the toolbox."
         },
         {
