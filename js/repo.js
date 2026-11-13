@@ -120,6 +120,21 @@
       + "</div>";
   }
 
+  function changelogPanel(detail) {
+    var entries = detail.changelog || [];
+    if (!entries.length) return "";
+    return '<div class="panel"><p class="panel__title">Changelog</p><div class="changelog">'
+      + entries.map(function (entry) {
+        return '<div class="cl-entry">'
+          + '<div class="cl-entry__head"><span class="cl-version">' + esc(entry.version) + "</span>"
+          + '<span class="cl-date">' + esc(prettyDate(entry.date)) + "</span></div>"
+          + "<ul>"
+          + (entry.changes || []).map(function (change) { return "<li>" + esc(change) + "</li>"; }).join("")
+          + "</ul></div>";
+      }).join("")
+      + "</div></div>";
+  }
+
   function requirementsPanel(detail) {
     var list = detail.requirements || [];
     if (!list.length) return "";
@@ -265,6 +280,7 @@
       + "</article>"
       + '<aside class="detail-side"><div class="detail-side__inner">'
       + specPanel(repo, detail)
+      + changelogPanel(detail)
       + quickstartPanel(detail)
       + requirementsPanel(detail)
       + linksPanel(detail)
