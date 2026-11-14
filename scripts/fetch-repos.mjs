@@ -44,6 +44,13 @@ const OVERRIDES = {
     category: "ui",
     nuget: true
   },
+  TextProgressbar: {
+    title: "Text Progress Bar",
+    description:
+      "WinForms ProgressBar with three-color gradient fill, background gradient, border styling and aligned text drawn over the bar. Published as Dwain.TextProgressbar.",
+    category: "ui",
+    nuget: true
+  },
   DissolvingPanel: {
     title: "DissolvingPanel",
     description:
