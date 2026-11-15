@@ -108,7 +108,7 @@
       rows.push({
         key: "repo-" + name,
         label: titles[name] || name,
-        href: "repo.html?r=" + encodeURIComponent(name),
+        href: "repo/" + name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") + ".html",
         caseStudy: true
       });
     });

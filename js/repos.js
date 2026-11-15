@@ -28,6 +28,10 @@
 
   var state = { repos: [], category: "all", language: "all", query: "", sort: "featured" };
 
+  var slugFor = function (name) {
+    return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  };
+
   var esc = function (value) {
     return String(value == null ? "" : value)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -70,7 +74,7 @@
     if (repo.fork) badges += '<span class="repo__badge">fork</span>';
 
     var hasStudy = !!repo.featured;
-    var href = hasStudy ? "repo.html?r=" + encodeURIComponent(repo.name) : repo.url;
+    var href = hasStudy ? "repo/" + slugFor(repo.name) + ".html" : repo.url;
     var attrs = hasStudy ? ' title="Open the case study"' : ' target="_blank" rel="noopener"';
 
     return '<a class="repo" href="' + esc(href) + '"' + attrs + ">"
@@ -104,7 +108,7 @@
     if (!list) return;
     var rows = data.repos.slice(0, 8).map(function (repo) {
       var hasStudy = !!repo.featured;
-      var href = hasStudy ? "repo.html?r=" + encodeURIComponent(repo.name) : repo.url;
+      var href = hasStudy ? "repo/" + slugFor(repo.name) + ".html" : repo.url;
       var attrs = hasStudy ? "" : ' target="_blank" rel="noopener"';
       return '<a class="index-row" href="' + esc(href) + '"' + attrs + ">"
         + '<span class="index-row__name"><i class="dot" style="background:' + langColor(repo.language) + ";color:" + langColor(repo.language) + '"></i><span>' + esc(repo.title || repo.name) + "</span></span>"

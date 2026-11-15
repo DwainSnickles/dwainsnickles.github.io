@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphics Workshop — Dwain Snickles</title>
+<meta name="description" content="A desktop graphics workstation: edit an image, place objects on a design surface, rotate them in place.">
+<meta name="author" content="Dwain Snickles">
+<meta name="theme-color" content="#04060c">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://dwainsnickles.github.io/repo/graphicsworkshop.html">
+<meta property="og:site_name" content="Dwain Snickles">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dwainsnickles.github.io/repo/graphicsworkshop.html">
+<meta property="og:title" content="Graphics Workshop — Dwain Snickles">
+<meta property="og:description" content="A desktop graphics workstation: edit an image, place objects on a design surface, rotate them in place.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@DwainsSoftware">
+<meta name="twitter:creator" content="@DwainsSoftware">
+<meta property="og:image" content="https://dwainsnickles.github.io/assets/repos/workshop/workshop.png">
+<meta property="og:image:alt" content="Graphics Workshop — A desktop graphics workstation: edit an image, place objects on a design surface, rotate them in place.">
+<meta name="twitter:image" content="https://dwainsnickles.github.io/assets/repos/workshop/workshop.png">
+<meta name="twitter:image:alt" content="Graphics Workshop — A desktop graphics workstation: edit an image, place objects on a design surface, rotate them in place.">
+<meta name="twitter:title" content="Graphics Workshop — Dwain Snickles">
+<meta name="twitter:description" content="A desktop graphics workstation: edit an image, place objects on a design surface, rotate them in place.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Graphics Workshop","description":"A desktop graphics workstation: edit an image, place objects on a design surface, rotate them in place.","url":"https://dwainsnickles.github.io/repo/graphicsworkshop.html","codeRepository":"https://github.com/DwainSnickles/GraphicsWorkshop","programmingLanguage":"C#","dateModified":"2026-10-29","keywords":"csharp, design-surface, dotnet10, graphics, image-editor, ribbon","author":{"@type":"Person","name":"Dwain Snickles","url":"https://dwainsnickles.github.io/about.html","sameAs":["https://github.com/DwainSnickles","https://www.linkedin.com/in/dwain-snickles-5a2a4370/","https://www.facebook.com/dwain.snickles/","https://x.com/DwainsSoftware","https://www.nuget.org/packages/Dwain.RibbonLib"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dwainsnickles.github.io/"},{"@type":"ListItem","position":2,"name":"Repositories","item":"https://dwainsnickles.github.io/projects.html"},{"@type":"ListItem","position":3,"name":"Graphics Workshop","item":"https://dwainsnickles.github.io/repo/graphicsworkshop.html"}]}</script>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progress"></span></div>
+<div class="spotlight" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="../index.html" aria-label="Dwain Snickles — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+      </span>
+      <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a class="nav__link" href="../index.html">Home</a>
+      <a class="nav__link is-active" href="../projects.html">Repositories</a>
+      <a class="nav__link" href="../downloads.html">Downloads</a>
+      <a class="nav__link" href="../about.html">About</a>
+      <a class="nav__link" href="../contact.html">Contact</a>
+      <a class="btn btn--sm btn--ghost" href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head detail-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="../projects.html">Repositories</a>
+        <a href="../downloads.html">Downloads</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Graphics Workshop</span>
+      </nav>
+      <div id="repoHead"><p class="eyebrow">Graphics &amp; design · work in progress</p><h1>Graphics Workshop</h1><p class="detail-tagline">A desktop graphics workstation: edit an image, place objects on a design surface, rotate them in place.</p><p class="mono small" style="color:var(--muted);margin:-0.6rem 0 1.2rem">GraphicsWorkshop · Graphics &amp; design · updated Oct 29, 2026</p><div class="detail-badges"><span class="badge badge--cyan">C#</span><span class="badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 9.8l6.5-.9z"/></svg>0 stars</span><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="19" r="2.4"/><path d="M6 8.4v3.2a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V8.4M12 14.6V16"/></svg>0 forks</span></div><div class="hero__actions"><a class="btn btn--solid" href="https://github.com/DwainSnickles/GraphicsWorkshop" target="_blank" rel="noopener">Open on GitHub ↗</a><a class="btn btn--ghost" href="../projects.html">← Repository index</a></div><div class="share" data-share data-url="https://dwainsnickles.github.io/repo/graphicsworkshop.html" data-title="Graphics Workshop"></div></div>
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap detail-grid" id="detailBody"><article class="detail-main"><figure class="shot"><img src="../assets/repos/workshop/workshop.png" alt="Graphics Workshop window with its ribbon and design surface" loading="lazy" decoding="async"><figcaption>Screenshot from the repository README.</figcaption></figure><h2 class="detail-h2">Overview</h2><p>Graphics Workshop started years ago in VB.NET as a collection of half-finished experiments. It was rebuilt in C# on top of the .NET 10 ribbon fork, which is why both languages are still visible in the tree.</p><p>The app has two halves: a canvas for drawing and editing graphics, and a design surface where objects are added, positioned and rotated. It is explicitly unfinished — the README says so plainly and asks for contributors rather than pretending the thing is done.</p><h2 class="detail-h2">What it does</h2><div class="hl-grid"><div class="hl"><h3>Design surface, not just a canvas</h3><p>Objects are added to a surface, moved to a position and rotated — the object model lives in a separate control repository.</p></div><div class="hl"><h3>Powered by the ribbon fork</h3><p>The whole shell was rebuilt around the .NET 10 ribbon, so the command bar is the same control that ships as Dwain.RibbonLib.</p></div><div class="hl"><h3>A long road, kept public</h3><p>VB.NET roots, then C#; the repository is open in its unfinished state so the work can continue with help.</p></div><div class="hl"><h3>Honest about status</h3><p>Described by its author as incomplete — not a demo dressed up as a release.</p></div></div><nav class="pager" aria-label="More case studies"><a href="ribbonwinforms.html"><span>← Previous</span>Ribbon for WinForms</a><a href="designsurfacecsharp.html" style="text-align:right"><span>Next →</span>Design Surface</a></nav><p class="mono small" style="margin-top:1.6rem"><a href="../projects.html">← Back to all 33 repositories</a></p></article><aside class="detail-side"><div class="detail-side__inner"><div class="panel"><p class="panel__title">At a glance</p><dl class="spec"><div><dt>Stars</dt><dd>0</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Updated</dt><dd>Oct 29, 2026</dd></div><div><dt>Branch</dt><dd>master</dd></div><div><dt>Framework</dt><dd>.NET 10 · WinForms</dd></div><div><dt>History</dt><dd>VB.NET, later C#</dd></div><div><dt>Status</dt><dd>work in progress</dd></div></dl></div><div class="panel"><p class="panel__title">Quick start</p><div class="step"><span class="step__label">Clone and open the solution</span><div class="code"><pre><code>git clone https://github.com/DwainSnickles/GraphicsWorkshop
+cd GraphicsWorkshop</code></pre><button class="copy" type="button" data-copy="git clone https://github.com/DwainSnickles/GraphicsWorkshop
+cd GraphicsWorkshop">copy</button></div><p class="step__note">Open GraphicsWorkshop.sln in Visual Studio and let it restore the packages.config references, then run frmGraphicDesigner.</p></div></div><div class="panel"><p class="panel__title">Requirements</p><ul class="req-list"><li>Windows 10 or 11</li><li>.NET 10 SDK</li><li>Visual Studio 2022 with the Windows Forms workload</li></ul></div><div class="panel"><p class="panel__title">Links</p><div class="link-list"><a href="https://github.com/DwainSnickles/GraphicsWorkshop" target="_blank" rel="noopener">Repository<span aria-hidden="true">↗</span></a></div></div></div></aside></div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="../index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+          </span>
+          <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+        </a>
+        <p>Desktop software, .NET tooling and the occasional utility that should have
+           shipped with Windows.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Index</h4>
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Repositories</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener">NuGet: Dwain.RibbonLib ↗</a>
+        <a href="https://github.com/DwainSnickles?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+        <div class="social">
+          <a class="social__link" href="https://github.com/DwainSnickles" target="_blank" rel="noopener" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a class="social__link" href="https://www.linkedin.com/in/dwain-snickles-5a2a4370/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a class="social__link" href="https://www.facebook.com/dwain.snickles/" target="_blank" rel="noopener" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a class="social__link" href="https://x.com/DwainsSoftware" target="_blank" rel="noopener" aria-label="X (Twitter) profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+          </a>
+          <a class="social__link" href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener" aria-label="NuGet package">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="17.5" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="currentColor">N</text></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Dwain Snickles</span>
+      <span class="hits" data-page="repo-GraphicsWorkshop" hidden><span class="hits__count">0</span> <span class="hits__label">case study views</span></span><span class="hits__count">0</span> <span class="hits__label">case study views</span></span> <span><span class="ok">●</span> static build · GitHub Pages · no cookies</span>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+<script src="../js/share.js" defer></script>
+<script>
+document.addEventListener("click", function (event) {
+  var button = event.target.closest(".copy");
+  if (!button) return;
+  var text = button.getAttribute("data-copy") || "";
+  var label = button.textContent;
+  var done = function () { button.textContent = "copied"; setTimeout(function () { button.textContent = label; }, 1400); };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done, function () { button.textContent = "select"; });
+  } else { button.textContent = "select"; }
+});
+</script>
+</body>
+</html>

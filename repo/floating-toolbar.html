@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floating Toolbar — Dwain Snickles</title>
+<meta name="description" content="A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.">
+<meta name="author" content="Dwain Snickles">
+<meta name="theme-color" content="#04060c">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://dwainsnickles.github.io/repo/floating-toolbar.html">
+<meta property="og:site_name" content="Dwain Snickles">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dwainsnickles.github.io/repo/floating-toolbar.html">
+<meta property="og:title" content="Floating Toolbar — Dwain Snickles">
+<meta property="og:description" content="A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@DwainsSoftware">
+<meta name="twitter:creator" content="@DwainsSoftware">
+<meta property="og:image" content="https://dwainsnickles.github.io/assets/repos/floatingtoolbar/group.png">
+<meta property="og:image:alt" content="Floating Toolbar — A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.">
+<meta name="twitter:image" content="https://dwainsnickles.github.io/assets/repos/floatingtoolbar/group.png">
+<meta name="twitter:image:alt" content="Floating Toolbar — A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.">
+<meta name="twitter:title" content="Floating Toolbar — Dwain Snickles">
+<meta name="twitter:description" content="A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Floating Toolbar","description":"A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.","url":"https://dwainsnickles.github.io/repo/floating-toolbar.html","codeRepository":"https://github.com/DwainSnickles/Floating-Toolbar","programmingLanguage":"C#","dateModified":"2026-11-09","keywords":"csharp, desktop, dotnet, launcher, toolbar, winforms","author":{"@type":"Person","name":"Dwain Snickles","url":"https://dwainsnickles.github.io/about.html","sameAs":["https://github.com/DwainSnickles","https://www.linkedin.com/in/dwain-snickles-5a2a4370/","https://www.facebook.com/dwain.snickles/","https://x.com/DwainsSoftware","https://www.nuget.org/packages/Dwain.RibbonLib"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dwainsnickles.github.io/"},{"@type":"ListItem","position":2,"name":"Repositories","item":"https://dwainsnickles.github.io/projects.html"},{"@type":"ListItem","position":3,"name":"Floating Toolbar","item":"https://dwainsnickles.github.io/repo/floating-toolbar.html"}]}</script>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progress"></span></div>
+<div class="spotlight" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="../index.html" aria-label="Dwain Snickles — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+      </span>
+      <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a class="nav__link" href="../index.html">Home</a>
+      <a class="nav__link is-active" href="../projects.html">Repositories</a>
+      <a class="nav__link" href="../downloads.html">Downloads</a>
+      <a class="nav__link" href="../about.html">About</a>
+      <a class="nav__link" href="../contact.html">Contact</a>
+      <a class="btn btn--sm btn--ghost" href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head detail-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="../projects.html">Repositories</a>
+        <a href="../downloads.html">Downloads</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Floating Toolbar</span>
+      </nav>
+      <div id="repoHead"><p class="eyebrow">UI components · Windows launcher</p><h1>Floating Toolbar</h1><p class="detail-tagline">A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.</p><p class="mono small" style="color:var(--muted);margin:-0.6rem 0 1.2rem">Floating-Toolbar · UI components · updated Nov 9, 2026</p><div class="detail-badges"><span class="badge badge--cyan">C#</span><span class="badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 9.8l6.5-.9z"/></svg>0 stars</span><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="19" r="2.4"/><path d="M6 8.4v3.2a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V8.4M12 14.6V16"/></svg>0 forks</span></div><div class="hero__actions"><a class="btn btn--solid" href="https://github.com/DwainSnickles/Floating-Toolbar" target="_blank" rel="noopener">Open on GitHub ↗</a><a class="btn btn--ghost" href="../projects.html">← Repository index</a></div><div class="share" data-share data-url="https://dwainsnickles.github.io/repo/floating-toolbar.html" data-title="Floating Toolbar"></div></div>
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap detail-grid" id="detailBody"><article class="detail-main"><figure class="shot"><img src="../assets/repos/floatingtoolbar/group.png" alt="The floating toolbar with the Office group open, listing Word, Excel, PowerPoint and Outlook above the group&#39;s Add application, Edit group and Remove entries" loading="lazy" decoding="async"><figcaption>The bar with a group open: entries launch on click, and the same menu adds, edits, renames or removes them.</figcaption></figure><figure class="shot"><img src="../assets/repos/floatingtoolbar/bar.png" alt="The dark floating toolbar with Office, Browsers and Windows groups beside its add, favourites, minimise and close buttons" loading="lazy" decoding="async"><figcaption>The bar itself: 52 px tall, always on top, draggable by its grip and kept inside the current monitor.</figcaption></figure><h2 class="detail-h2">Overview</h2><p>Most launchers want a dock, a start menu or an installer. This one is a strip 52 pixels tall that stays on top of other windows and does nothing until you click: groups that open a list, entries pinned to the bar that launch in one click, and a right-click menu for adding, editing and removing both.</p><p>It is a .NET 8 WinForms app with no third-party packages — the bar, its buttons, the dark renderer, the icon loader and the fullscreen detector are all in the repository. Dropping a file, shortcut, folder or URL on the bar adds it as an entry and takes the target&#39;s own shell icon; an entry whose target has disappeared reports the failure instead of taking the app down.</p><p>Two things make it survive a working day: Ctrl+Alt+Space shows or hides the bar from any application, and an optional auto-hide pulls it out of the way while a fullscreen app has focus, then puts it back when focus returns. Settings are a single JSON file under %APPDATA%, so a whole layout can be copied between machines.</p><h2 class="detail-h2">What it does</h2><div class="hl-grid"><div class="hl"><h3>Groups that drop down</h3><p>Office, browsers and Windows tools each take one slot on the bar; clicking opens the list, and a group can append the user&#39;s own browser favourites as a sub-menu.</p></div><div class="hl"><h3>Drag to arrange, in both directions</h3><p>Entries reorder inside an open drop-down and groups reorder along the bar, with a blue insertion line showing where the item will land before you let go.</p></div><div class="hl"><h3>Drop files from Explorer</h3><p>Files, shortcuts, folders and URLs dropped on the bar become working buttons carrying the target&#39;s own icon; a target that no longer exists shows a message instead of crashing the launch.</p></div><div class="hl"><h3>Out of the way when it should be</h3><p>Ctrl+Alt+Space toggles the bar globally, and auto-hide restores it the moment the fullscreen app loses focus.</p></div><div class="hl"><h3>Small on purpose</h3><p>One executable, no NuGet packages and no background service: the self-contained single file is the same project published with one extra flag.</p></div></div><nav class="pager" aria-label="More case studies"><a href="pcmedicsuite.html"><span>← Previous</span>PC Medic Suite</a><span></span></nav><p class="mono small" style="margin-top:1.6rem"><a href="../projects.html">← Back to all 33 repositories</a></p></article><aside class="detail-side"><div class="detail-side__inner"><div class="panel"><p class="panel__title">At a glance</p><dl class="spec"><div><dt>Stars</dt><dd>0</dd></div><div><dt>Forks</dt><dd>0</dd></div><div><dt>Updated</dt><dd>Nov 9, 2026</dd></div><div><dt>Platform</dt><dd>Windows 10/11 x64</dd></div><div><dt>Build</dt><dd>.NET 8 · WinForms</dd></div><div><dt>Distribution</dt><dd>portable zip · self-contained</dd></div><div><dt>Dependencies</dt><dd>none — no NuGet packages</dd></div></dl></div><div class="panel"><p class="panel__title">Quick start</p><div class="step"><span class="step__label">Download and run</span><div class="code"><pre><code>https://github.com/DwainSnickles/Floating-Toolbar/releases/latest</code></pre><button class="copy" type="button" data-copy="https://github.com/DwainSnickles/Floating-Toolbar/releases/latest">copy</button></div><p class="step__note">Unzip Floating-Toolbar-win-x64.zip anywhere and run FloatingToolbar.exe — the published build is self-contained, so nothing else needs installing.</p></div><div class="step"><span class="step__label">Add your own buttons</span><div class="code"><pre><code>Right-click the bar for New group / Add application / Pin an application</code></pre><button class="copy" type="button" data-copy="Right-click the bar for New group / Add application / Pin an application">copy</button></div><p class="step__note">Dragging files from Explorer onto the bar works too. Right-click a group for Add application, Edit group, Rename group and Remove group.</p></div><div class="step"><span class="step__label">Build from source</span><div class="code"><pre><code>git clone https://github.com/DwainSnickles/Floating-Toolbar,cd Floating-Toolbar,dotnet build Floating_Toolbar.csproj -c Release</code></pre><button class="copy" type="button" data-copy="git clone https://github.com/DwainSnickles/Floating-Toolbar,cd Floating-Toolbar,dotnet build Floating_Toolbar.csproj -c Release">copy</button></div><p class="step__note">The project targets net8.0-windows; the shipped single file is the same project published with -r win-x64 --self-contained.</p></div></div><div class="panel"><p class="panel__title">Requirements</p><ul class="req-list"><li>Windows 10 or 11 (x64)</li><li>.NET 8 desktop runtime, or the self-contained zip</li><li>No administrator rights needed</li></ul></div><div class="panel"><p class="panel__title">Links</p><div class="link-list"><a href="https://github.com/DwainSnickles/Floating-Toolbar/releases/latest" target="_blank" rel="noopener">Download the portable zip<span aria-hidden="true">↗</span></a><a href="https://github.com/DwainSnickles/Floating-Toolbar" target="_blank" rel="noopener">Repository<span aria-hidden="true">↗</span></a><a href="https://github.com/DwainSnickles/Floating-Toolbar/actions" target="_blank" rel="noopener">Builds on GitHub Actions<span aria-hidden="true">↗</span></a></div></div></div></aside></div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="../index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/><path d="M9.2 8.2h3.3a3.8 3.8 0 0 1 0 7.6H9.2z"/></svg>
+          </span>
+          <span class="brand__text">DWAIN<span class="brand__tail">.SNICKLES</span></span>
+        </a>
+        <p>Desktop software, .NET tooling and the occasional utility that should have
+           shipped with Windows.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Index</h4>
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Repositories</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Elsewhere</h4>
+        <a href="https://github.com/DwainSnickles" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener">NuGet: Dwain.RibbonLib ↗</a>
+        <a href="https://github.com/DwainSnickles?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
+        <div class="social">
+          <a class="social__link" href="https://github.com/DwainSnickles" target="_blank" rel="noopener" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a class="social__link" href="https://www.linkedin.com/in/dwain-snickles-5a2a4370/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a class="social__link" href="https://www.facebook.com/dwain.snickles/" target="_blank" rel="noopener" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a class="social__link" href="https://x.com/DwainsSoftware" target="_blank" rel="noopener" aria-label="X (Twitter) profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+          </a>
+          <a class="social__link" href="https://www.nuget.org/packages/Dwain.RibbonLib" target="_blank" rel="noopener" aria-label="NuGet package">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="17.5" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="currentColor">N</text></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Dwain Snickles</span>
+      <span class="hits" data-page="repo-Floating-Toolbar" hidden><span class="hits__count">0</span> <span class="hits__label">case study views</span></span><span class="hits__count">0</span> <span class="hits__label">case study views</span></span> <span><span class="ok">●</span> static build · GitHub Pages · no cookies</span>
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+<script src="../js/share.js" defer></script>
+<script>
+document.addEventListener("click", function (event) {
+  var button = event.target.closest(".copy");
+  if (!button) return;
+  var text = button.getAttribute("data-copy") || "";
+  var label = button.textContent;
+  var done = function () { button.textContent = "copied"; setTimeout(function () { button.textContent = label; }, 1400); };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done, function () { button.textContent = "select"; });
+  } else { button.textContent = "select"; }
+});
+</script>
+</body>
+</html>

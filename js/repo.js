@@ -32,6 +32,10 @@
     element.setAttribute("content", value);
   }
 
+  var slugFor = function (name) {
+    return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  };
+
   var slug = "";
   try {
     slug = (new URLSearchParams(window.location.search).get("r") || "").trim();
@@ -167,10 +171,10 @@
 
     return '<nav class="pager" aria-label="More case studies">'
       + (previous
-        ? '<a href="repo.html?r=' + encodeURIComponent(previous.name) + '"><span>← Previous</span>' + esc(previous.title || previous.name) + "</a>"
+        ? '<a href="repo/' + slugFor(previous.name) + '.html"><span>← Previous</span>' + esc(previous.title || previous.name) + "</a>"
         : "<span></span>")
       + (next
-        ? '<a href="repo.html?r=' + encodeURIComponent(next.name) + '" style="text-align:right"><span>Next →</span>' + esc(next.title || next.name) + "</a>"
+        ? '<a href="repo/' + slugFor(next.name) + '.html" style="text-align:right"><span>Next →</span>' + esc(next.title || next.name) + "</a>"
         : "<span></span>")
       + "</nav>";
   }
@@ -200,7 +204,7 @@
 
     var title = repo.title || repo.name;
     var pageTitle = title + " — Dwain Snickles";
-    var canonical = "https://dwainsnickles.github.io/repo.html?r=" + encodeURIComponent(repo.name);
+    var canonical = "https://dwainsnickles.github.io/repo/" + slugFor(repo.name) + ".html";
 
     document.title = pageTitle;
     setMeta("name", "description", detail.tagline);
