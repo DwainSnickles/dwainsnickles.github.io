@@ -1,6 +1,6 @@
 {
   "owner": "DwainSnickles",
-  "generated": "2026-11-14",
+  "generated": "2026-11-15",
   "totals": {
     "repos": 33,
     "stars": 16,
@@ -27,7 +27,7 @@
         "microsoft-ribbon",
         "office-ribbon"
       ],
-      "updated": "2026-11-13",
+      "updated": "2026-11-15",
       "homepage": "https://www.nuget.org/packages/Dwain.RibbonLib",
       "url": "https://github.com/DwainSnickles/RibbonWinForms",
       "featured": true,
@@ -209,25 +209,27 @@
       "featuredRank": 3
     },
     {
-      "name": "dwainsnickles.github.io",
-      "title": "This Website",
-      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
-      "language": "HTML",
-      "category": "web",
-      "categoryLabel": "Web & admin",
+      "name": "disk-defrag",
+      "title": "Disk Defrag",
+      "description": "Portable NTFS defragmentation for Windows with a live cluster map, driving the storage optimiser Windows already ships instead of a third-party engine.",
+      "language": "C#",
+      "category": "system",
+      "categoryLabel": "System utilities",
       "stars": 0,
       "forks": 0,
       "fork": false,
       "nuget": false,
       "topics": [
-        "github-pages",
-        "html",
-        "portfolio",
-        "website"
+        "advanced-systemcare-alternative",
+        "aml-disk-defrag-alternative",
+        "cluster-map",
+        "defraggler-alternative",
+        "defragmentation",
+        "disk-defrag"
       ],
       "updated": "2026-11-14",
       "homepage": null,
-      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
+      "url": "https://github.com/DwainSnickles/disk-defrag",
       "featured": false,
       "featuredRank": -1
     },
@@ -250,27 +252,25 @@
       "featuredRank": -1
     },
     {
-      "name": "disk-defrag",
-      "title": "Disk Defrag",
-      "description": "Portable NTFS defragmentation for Windows with a live cluster map, driving the storage optimiser Windows already ships instead of a third-party engine.",
-      "language": "C#",
-      "category": "system",
-      "categoryLabel": "System utilities",
+      "name": "dwainsnickles.github.io",
+      "title": "This Website",
+      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
+      "language": "HTML",
+      "category": "web",
+      "categoryLabel": "Web & admin",
       "stars": 0,
       "forks": 0,
       "fork": false,
       "nuget": false,
       "topics": [
-        "advanced-systemcare-alternative",
-        "aml-disk-defrag-alternative",
-        "cluster-map",
-        "defraggler-alternative",
-        "defragmentation",
-        "disk-defrag"
+        "github-pages",
+        "html",
+        "portfolio",
+        "website"
       ],
-      "updated": "2026-11-09",
+      "updated": "2026-11-14",
       "homepage": null,
-      "url": "https://github.com/DwainSnickles/disk-defrag",
+      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,
       "featuredRank": -1
     },
