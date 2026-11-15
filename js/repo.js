@@ -214,6 +214,16 @@
     setMeta("property", "og:image:alt", title + " — " + detail.tagline);
     setMeta("name", "twitter:image:alt", title + " — " + detail.tagline);
 
+    // Share the repo's own screenshot when it has one — a real preview beats the generic card.
+    var firstShot = (detail.shots || [])[0];
+    if (firstShot && firstShot.src) {
+      var shotUrl = firstShot.src.charAt(0) === "/" || firstShot.src.indexOf("http") === 0
+        ? firstShot.src
+        : "https://dwainsnickles.github.io/" + firstShot.src.replace(/^\//, "");
+      setMeta("property", "og:image", shotUrl);
+      setMeta("name", "twitter:image", shotUrl);
+    }
+
     var canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) canonicalLink.setAttribute("href", canonical);
 
