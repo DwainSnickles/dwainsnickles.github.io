@@ -242,7 +242,12 @@
         author: {
           "@type": "Person",
           name: "Dwain Snickles",
-          url: "https://dwainsnickles.github.io/about.html"
+          url: "https://dwainsnickles.github.io/about.html",
+          sameAs: [
+            "https://github.com/DwainSnickles",
+            "https://www.linkedin.com/in/dwain-snickles-5a2a4370/",
+            "https://www.nuget.org/packages/Dwain.RibbonLib"
+          ]
         }
       });
     }
