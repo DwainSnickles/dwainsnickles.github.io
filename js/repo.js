@@ -246,6 +246,7 @@
           sameAs: [
             "https://github.com/DwainSnickles",
             "https://www.linkedin.com/in/dwain-snickles-5a2a4370/",
+            "https://www.facebook.com/dwain.snickles/",
             "https://www.nuget.org/packages/Dwain.RibbonLib"
           ]
         }
