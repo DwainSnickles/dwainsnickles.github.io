@@ -26,7 +26,7 @@ const FEATURED = [
   "AutoUpdater.NET.XML-Creator-master",
   "MOTW-Cleaner",
   "Maui-basic-VLC-Player-Tutorial",
-  "pc-medic",
+  "PCMedicSuite",
   "Floating-Toolbar"
 ];
 
@@ -57,10 +57,10 @@ const OVERRIDES = {
       "WinForms panel that dissolves its contents away and back with 21 PowerPoint-style transitions, an optional slide-in and a designer smart tag.",
     category: "ui"
   },
-  "pc-medic": {
-    title: "PC Medic",
+  PCMedicSuite: {
+    title: "PC Medic Suite",
     description:
-      "Portable Windows maintenance console: startup control, registry and shortcut audits, winget upgrades, driver search and benchmark rig setup, with reversible actions and measured progress throughout.",
+      "Portable Windows maintenance suite: live telemetry dashboard, startup and sleep tuning, WIM disk-image backup and restore with boot repair, a bootable recovery-USB builder, registry audits, winget updates and benchmark rigs — every page designer-editable.",
     category: "system"
   },
   "disk-defrag": {

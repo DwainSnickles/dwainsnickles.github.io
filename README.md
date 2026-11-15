@@ -55,6 +55,9 @@ Add a `GITHUB_TOKEN` environment variable to avoid the unauthenticated rate limi
 titles, descriptions, categories and the featured order live in the `OVERRIDES`, `FEATURED`
 and `EXCLUDE` tables at the top of the script, so a refresh keeps the hand-written copy.
 
+Repositories that are not on GitHub yet go in `PENDING`: they are merged into the index with
+their curated copy, and the live API entry replaces them once they are pushed.
+
 `.github/workflows/refresh-repos.yml` runs the same script every day at 06:17 UTC (and on
 demand from the Actions tab), then commits `data/repos.json` if it changed. It uses the
 workflow's own `GITHUB_TOKEN`, so there is nothing to configure. Because the script stamps

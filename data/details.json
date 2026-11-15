@@ -2,111 +2,110 @@
   "updated": "2026-11-13",
   "repos": {
     "Floating-Toolbar": {
-    "eyebrow": "UI components · Windows launcher",
-    "tagline": "A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.",
-    "summary": [
-      "Most launchers want a dock, a start menu or an installer. This one is a strip 52 pixels tall that stays on top of other windows and does nothing until you click: groups that open a list, entries pinned to the bar that launch in one click, and a right-click menu for adding, editing and removing both.",
-      "It is a .NET 8 WinForms app with no third-party packages — the bar, its buttons, the dark renderer, the icon loader and the fullscreen detector are all in the repository. Dropping a file, shortcut, folder or URL on the bar adds it as an entry and takes the target's own shell icon; an entry whose target has disappeared reports the failure instead of taking the app down.",
-      "Two things make it survive a working day: Ctrl+Alt+Space shows or hides the bar from any application, and an optional auto-hide pulls it out of the way while a fullscreen app has focus, then puts it back when focus returns. Settings are a single JSON file under %APPDATA%, so a whole layout can be copied between machines."
-    ],
-    "highlights": [
-      {
-        "title": "Groups that drop down",
-        "text": "Office, browsers and Windows tools each take one slot on the bar; clicking opens the list, and a group can append the user's own browser favourites as a sub-menu."
-      },
-      {
-        "title": "Drag to arrange, in both directions",
-        "text": "Entries reorder inside an open drop-down and groups reorder along the bar, with a blue insertion line showing where the item will land before you let go."
-      },
-      {
-        "title": "Drop files from Explorer",
-        "text": "Files, shortcuts, folders and URLs dropped on the bar become working buttons carrying the target's own icon; a target that no longer exists shows a message instead of crashing the launch."
-      },
-      {
-        "title": "Out of the way when it should be",
-        "text": "Ctrl+Alt+Space toggles the bar globally, and auto-hide restores it the moment the fullscreen app loses focus."
-      },
-      {
-        "title": "Small on purpose",
-        "text": "One executable, no NuGet packages and no background service: the self-contained single file is the same project published with one extra flag."
-      }
-    ],
-    "facts": [
-      {
-        "label": "Platform",
-        "value": "Windows 10/11 x64"
-      },
-      {
-        "label": "Build",
-        "value": ".NET 8 · WinForms"
-      },
-      {
-        "label": "Distribution",
-        "value": "portable zip · self-contained"
-      },
-      {
-        "label": "Dependencies",
-        "value": "none — no NuGet packages"
-      }
-    ],
-    "quickstart": [
-      {
-        "label": "Download and run",
-        "code": "https://github.com/DwainSnickles/Floating-Toolbar/releases/latest",
-        "note": "Unzip Floating-Toolbar-win-x64.zip anywhere and run FloatingToolbar.exe — the published build is self-contained, so nothing else needs installing."
-      },
-      {
-        "label": "Add your own buttons",
-        "code": "Right-click the bar for New group / Add application / Pin an application",
-        "note": "Dragging files from Explorer onto the bar works too. Right-click a group for Add application, Edit group, Rename group and Remove group."
-      },
-      {
-        "label": "Build from source",
-        "code": [
-          "git clone https://github.com/DwainSnickles/Floating-Toolbar",
-          "cd Floating-Toolbar",
-          "dotnet build Floating_Toolbar.csproj -c Release"
-        ],
-        "note": "The project targets net8.0-windows; the shipped single file is the same project published with -r win-x64 --self-contained."
-      }
-    ],
-    "requirements": [
-      "Windows 10 or 11 (x64)",
-      ".NET 8 desktop runtime, or the self-contained zip",
-      "No administrator rights needed"
-    ],
-    "shots": [
-      {
-        "src": "assets/repos/floatingtoolbar/group.png",
-        "alt": "The floating toolbar with the Office group open, listing Word, Excel, PowerPoint and Outlook above the group's Add application, Edit group and Remove entries",
-        "caption": "The bar with a group open: entries launch on click, and the same menu adds, edits, renames or removes them."
-      },
-      {
-        "src": "assets/repos/floatingtoolbar/bar.png",
-        "alt": "The dark floating toolbar with Office, Browsers and Windows groups beside its add, favourites, minimise and close buttons",
-        "caption": "The bar itself: 52 px tall, always on top, draggable by its grip and kept inside the current monitor."
-      }
-    ],
-    "links": [
-      {
-        "label": "Download the portable zip",
-        "url": "https://github.com/DwainSnickles/Floating-Toolbar/releases/latest"
-      },
-      {
-        "label": "Repository",
-        "url": "https://github.com/DwainSnickles/Floating-Toolbar"
-      },
-      {
-        "label": "Builds on GitHub Actions",
-        "url": "https://github.com/DwainSnickles/Floating-Toolbar/actions"
-      }
-    ],
-    "related": [
-      "RibbonWinForms",
-      "Windows_Forms_Dotnet_Controls"
-    ]
+      "eyebrow": "UI components · Windows launcher",
+      "tagline": "A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.",
+      "summary": [
+        "Most launchers want a dock, a start menu or an installer. This one is a strip 52 pixels tall that stays on top of other windows and does nothing until you click: groups that open a list, entries pinned to the bar that launch in one click, and a right-click menu for adding, editing and removing both.",
+        "It is a .NET 8 WinForms app with no third-party packages — the bar, its buttons, the dark renderer, the icon loader and the fullscreen detector are all in the repository. Dropping a file, shortcut, folder or URL on the bar adds it as an entry and takes the target's own shell icon; an entry whose target has disappeared reports the failure instead of taking the app down.",
+        "Two things make it survive a working day: Ctrl+Alt+Space shows or hides the bar from any application, and an optional auto-hide pulls it out of the way while a fullscreen app has focus, then puts it back when focus returns. Settings are a single JSON file under %APPDATA%, so a whole layout can be copied between machines."
+      ],
+      "highlights": [
+        {
+          "title": "Groups that drop down",
+          "text": "Office, browsers and Windows tools each take one slot on the bar; clicking opens the list, and a group can append the user's own browser favourites as a sub-menu."
+        },
+        {
+          "title": "Drag to arrange, in both directions",
+          "text": "Entries reorder inside an open drop-down and groups reorder along the bar, with a blue insertion line showing where the item will land before you let go."
+        },
+        {
+          "title": "Drop files from Explorer",
+          "text": "Files, shortcuts, folders and URLs dropped on the bar become working buttons carrying the target's own icon; a target that no longer exists shows a message instead of crashing the launch."
+        },
+        {
+          "title": "Out of the way when it should be",
+          "text": "Ctrl+Alt+Space toggles the bar globally, and auto-hide restores it the moment the fullscreen app loses focus."
+        },
+        {
+          "title": "Small on purpose",
+          "text": "One executable, no NuGet packages and no background service: the self-contained single file is the same project published with one extra flag."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Platform",
+          "value": "Windows 10/11 x64"
+        },
+        {
+          "label": "Build",
+          "value": ".NET 8 · WinForms"
+        },
+        {
+          "label": "Distribution",
+          "value": "portable zip · self-contained"
+        },
+        {
+          "label": "Dependencies",
+          "value": "none — no NuGet packages"
+        }
+      ],
+      "quickstart": [
+        {
+          "label": "Download and run",
+          "code": "https://github.com/DwainSnickles/Floating-Toolbar/releases/latest",
+          "note": "Unzip Floating-Toolbar-win-x64.zip anywhere and run FloatingToolbar.exe — the published build is self-contained, so nothing else needs installing."
+        },
+        {
+          "label": "Add your own buttons",
+          "code": "Right-click the bar for New group / Add application / Pin an application",
+          "note": "Dragging files from Explorer onto the bar works too. Right-click a group for Add application, Edit group, Rename group and Remove group."
+        },
+        {
+          "label": "Build from source",
+          "code": [
+            "git clone https://github.com/DwainSnickles/Floating-Toolbar",
+            "cd Floating-Toolbar",
+            "dotnet build Floating_Toolbar.csproj -c Release"
+          ],
+          "note": "The project targets net8.0-windows; the shipped single file is the same project published with -r win-x64 --self-contained."
+        }
+      ],
+      "requirements": [
+        "Windows 10 or 11 (x64)",
+        ".NET 8 desktop runtime, or the self-contained zip",
+        "No administrator rights needed"
+      ],
+      "shots": [
+        {
+          "src": "assets/repos/floatingtoolbar/group.png",
+          "alt": "The floating toolbar with the Office group open, listing Word, Excel, PowerPoint and Outlook above the group's Add application, Edit group and Remove entries",
+          "caption": "The bar with a group open: entries launch on click, and the same menu adds, edits, renames or removes them."
+        },
+        {
+          "src": "assets/repos/floatingtoolbar/bar.png",
+          "alt": "The dark floating toolbar with Office, Browsers and Windows groups beside its add, favourites, minimise and close buttons",
+          "caption": "The bar itself: 52 px tall, always on top, draggable by its grip and kept inside the current monitor."
+        }
+      ],
+      "links": [
+        {
+          "label": "Download the portable zip",
+          "url": "https://github.com/DwainSnickles/Floating-Toolbar/releases/latest"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/DwainSnickles/Floating-Toolbar"
+        },
+        {
+          "label": "Builds on GitHub Actions",
+          "url": "https://github.com/DwainSnickles/Floating-Toolbar/actions"
+        }
+      ],
+      "related": [
+        "RibbonWinForms",
+        "Windows_Forms_Dotnet_Controls"
+      ]
     },
-
     "RibbonWinForms": {
       "eyebrow": "UI components · .NET 10",
       "tagline": "An Office-style ribbon for Windows Forms that still works inside the designer.",
@@ -133,10 +132,22 @@
         }
       ],
       "facts": [
-        { "label": "Package", "value": "Dwain.RibbonLib 1.0.20-net10" },
-        { "label": "Branch", "value": "net10" },
-        { "label": "Framework", "value": ".NET 10 · WinForms" },
-        { "label": "Published", "value": "nuget.org" }
+        {
+          "label": "Package",
+          "value": "Dwain.RibbonLib 1.0.20-net10"
+        },
+        {
+          "label": "Branch",
+          "value": "net10"
+        },
+        {
+          "label": "Framework",
+          "value": ".NET 10 · WinForms"
+        },
+        {
+          "label": "Published",
+          "value": "nuget.org"
+        }
       ],
       "changelog": [
         {
@@ -309,12 +320,20 @@
         }
       ],
       "links": [
-        { "label": "NuGet: Dwain.RibbonLib", "url": "https://www.nuget.org/packages/Dwain.RibbonLib" },
-        { "label": "Repository", "url": "https://github.com/DwainSnickles/RibbonWinForms" }
+        {
+          "label": "NuGet: Dwain.RibbonLib",
+          "url": "https://www.nuget.org/packages/Dwain.RibbonLib"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/DwainSnickles/RibbonWinForms"
+        }
       ],
-      "related": ["GraphicsWorkshop", "DesignSurfaceCSharp"]
+      "related": [
+        "GraphicsWorkshop",
+        "DesignSurfaceCSharp"
+      ]
     },
-
     "GraphicsWorkshop": {
       "eyebrow": "Graphics & design · work in progress",
       "tagline": "A desktop graphics workstation: edit an image, place objects on a design surface, rotate them in place.",
@@ -341,10 +360,22 @@
         }
       ],
       "facts": [
-        { "label": "Branch", "value": "master" },
-        { "label": "Framework", "value": ".NET 10 · WinForms" },
-        { "label": "History", "value": "VB.NET, later C#" },
-        { "label": "Status", "value": "work in progress" }
+        {
+          "label": "Branch",
+          "value": "master"
+        },
+        {
+          "label": "Framework",
+          "value": ".NET 10 · WinForms"
+        },
+        {
+          "label": "History",
+          "value": "VB.NET, later C#"
+        },
+        {
+          "label": "Status",
+          "value": "work in progress"
+        }
       ],
       "quickstart": [
         {
@@ -365,10 +396,17 @@
           "caption": "Screenshot from the repository README."
         }
       ],
-      "links": [{ "label": "Repository", "url": "https://github.com/DwainSnickles/GraphicsWorkshop" }],
-      "related": ["DesignSurfaceCSharp", "RibbonWinForms"]
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/DwainSnickles/GraphicsWorkshop"
+        }
+      ],
+      "related": [
+        "DesignSurfaceCSharp",
+        "RibbonWinForms"
+      ]
     },
-
     "DesignSurfaceCSharp": {
       "eyebrow": "Graphics & design · control library",
       "tagline": "The object model and surface control that Graphics Workshop is built on.",
@@ -395,10 +433,22 @@
         }
       ],
       "facts": [
-        { "label": "Branch", "value": "master" },
-        { "label": "Projects", "value": "GraphicObjects · GraphicsSurface" },
-        { "label": "Samples", "value": "WindowsFormsApp1–3" },
-        { "label": "Package", "value": "none — source only" }
+        {
+          "label": "Branch",
+          "value": "master"
+        },
+        {
+          "label": "Projects",
+          "value": "GraphicObjects · GraphicsSurface"
+        },
+        {
+          "label": "Samples",
+          "value": "WindowsFormsApp1–3"
+        },
+        {
+          "label": "Package",
+          "value": "none — source only"
+        }
       ],
       "quickstart": [
         {
@@ -407,13 +457,23 @@
           "note": "Open one of the sample projects directly in Visual Studio — there is no solution file."
         }
       ],
-      "requirements": ["Windows", "Visual Studio with the Windows Forms workload"],
+      "requirements": [
+        "Windows",
+        "Visual Studio with the Windows Forms workload"
+      ],
       "shots": [],
       "shotsNote": "This repository ships source only — no README and no images. Run one of the three sample apps to see the surface in action.",
-      "links": [{ "label": "Repository", "url": "https://github.com/DwainSnickles/DesignSurfaceCSharp" }],
-      "related": ["GraphicsWorkshop", "RibbonWinForms"]
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/DwainSnickles/DesignSurfaceCSharp"
+        }
+      ],
+      "related": [
+        "GraphicsWorkshop",
+        "RibbonWinForms"
+      ]
     },
-
     "MOTW-Cleaner": {
       "eyebrow": "Security & fixes · Windows utility",
       "tagline": "Strips Mark of the Web from downloaded files so Windows stops blocking them.",
@@ -440,10 +500,22 @@
         }
       ],
       "facts": [
-        { "label": "Installer", "value": "MOTW.Installer.msi · 1.3.0" },
-        { "label": "Built with", "value": "C# · WinForms" },
-        { "label": "Changelog", "value": "dwainsnickles.github.io/MOTW-Cleaner" },
-        { "label": "Platform", "value": "Windows" }
+        {
+          "label": "Installer",
+          "value": "MOTW.Installer.msi · 1.3.0"
+        },
+        {
+          "label": "Built with",
+          "value": "C# · WinForms"
+        },
+        {
+          "label": "Changelog",
+          "value": "dwainsnickles.github.io/MOTW-Cleaner"
+        },
+        {
+          "label": "Platform",
+          "value": "Windows"
+        }
       ],
       "quickstart": [
         {
@@ -457,7 +529,10 @@
           "note": "Open MOTW Cleaner.slnx in Visual Studio, restore packages.config, and run."
         }
       ],
-      "requirements": ["Windows 10 or 11", "Visual Studio, if you build it from source"],
+      "requirements": [
+        "Windows 10 or 11",
+        "Visual Studio, if you build it from source"
+      ],
       "shots": [
         {
           "src": "assets/repos/motw/ui.png",
@@ -476,13 +551,24 @@
         }
       ],
       "links": [
-        { "label": "Releases and installer", "url": "https://github.com/DwainSnickles/MOTW-Cleaner/releases" },
-        { "label": "What's new", "url": "https://dwainsnickles.github.io/MOTW-Cleaner/" },
-        { "label": "Repository", "url": "https://github.com/DwainSnickles/MOTW-Cleaner" }
+        {
+          "label": "Releases and installer",
+          "url": "https://github.com/DwainSnickles/MOTW-Cleaner/releases"
+        },
+        {
+          "label": "What's new",
+          "url": "https://dwainsnickles.github.io/MOTW-Cleaner/"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/DwainSnickles/MOTW-Cleaner"
+        }
       ],
-      "related": ["RibbonWinForms", "AutoUpdater.NET.XML-Creator-master"]
+      "related": [
+        "RibbonWinForms",
+        "AutoUpdater.NET.XML-Creator-master"
+      ]
     },
-
     "Maui-basic-VLC-Player-Tutorial": {
       "eyebrow": "Media & video · written walkthrough",
       "tagline": "How to get VLC playing MP4 and HLS streams inside a .NET MAUI app, written down so nobody else loses the weeks.",
@@ -509,10 +595,22 @@
         }
       ],
       "facts": [
-        { "label": "Format", "value": "written walkthrough" },
-        { "label": "Target", "value": ".NET 8 · MAUI" },
-        { "label": "Tooling", "value": "Visual Studio 2022" },
-        { "label": "Engine", "value": "LibVLCSharp" }
+        {
+          "label": "Format",
+          "value": "written walkthrough"
+        },
+        {
+          "label": "Target",
+          "value": ".NET 8 · MAUI"
+        },
+        {
+          "label": "Tooling",
+          "value": "Visual Studio 2022"
+        },
+        {
+          "label": "Engine",
+          "value": "LibVLCSharp"
+        }
       ],
       "quickstart": [
         {
@@ -533,10 +631,17 @@
       ],
       "shots": [],
       "shotsNote": "A written walkthrough: the README holds the explanation, the XAML layout and the code samples rather than screenshots.",
-      "links": [{ "label": "Repository", "url": "https://github.com/DwainSnickles/Maui-basic-VLC-Player-Tutorial" }],
-      "related": ["RibbonWinForms", "GraphicsWorkshop"]
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/DwainSnickles/Maui-basic-VLC-Player-Tutorial"
+        }
+      ],
+      "related": [
+        "RibbonWinForms",
+        "GraphicsWorkshop"
+      ]
     },
-
     "AutoUpdater.NET.XML-Creator-master": {
       "eyebrow": "Updaters · most starred",
       "tagline": "A form that writes the manifest XML AutoUpdater.NET needs, so you never hand-edit an update file again.",
@@ -563,10 +668,22 @@
         }
       ],
       "facts": [
-        { "label": "Solution", "value": "AutoUpdater.NET.sln" },
-        { "label": "Output", "value": "AutoUpdater.NET manifest XML" },
-        { "label": "Built with", "value": "C# · WinForms" },
-        { "label": "Sample", "value": "AutoUpdaterXML.xml" }
+        {
+          "label": "Solution",
+          "value": "AutoUpdater.NET.sln"
+        },
+        {
+          "label": "Output",
+          "value": "AutoUpdater.NET manifest XML"
+        },
+        {
+          "label": "Built with",
+          "value": "C# · WinForms"
+        },
+        {
+          "label": "Sample",
+          "value": "AutoUpdaterXML.xml"
+        }
       ],
       "quickstart": [
         {
@@ -575,7 +692,10 @@
           "note": "Open AutoUpdater.NET.sln, build AutoUpdaterTest, and run it. AutoUpdaterXML.xml in the root shows the shape of the output."
         }
       ],
-      "requirements": ["Windows", "Visual Studio with the Windows Forms workload"],
+      "requirements": [
+        "Windows",
+        "Visual Studio with the Windows Forms workload"
+      ],
       "shots": [
         {
           "src": "assets/repos/updater/creator.png",
@@ -589,36 +709,48 @@
         }
       ],
       "links": [
-        { "label": "Repository", "url": "https://github.com/DwainSnickles/AutoUpdater.NET.XML-Creator-master" },
-        { "label": "AutoUpdater.NET", "url": "https://github.com/ravibpatel/AutoUpdater.NET" }
+        {
+          "label": "Repository",
+          "url": "https://github.com/DwainSnickles/AutoUpdater.NET.XML-Creator-master"
+        },
+        {
+          "label": "AutoUpdater.NET",
+          "url": "https://github.com/ravibpatel/AutoUpdater.NET"
+        }
       ],
-      "related": ["MOTW-Cleaner", "RibbonWinForms"]
+      "related": [
+        "MOTW-Cleaner",
+        "RibbonWinForms"
+      ]
     },
-
-    "pc-medic": {
+    "PCMedicSuite": {
       "eyebrow": "System utilities · portable Windows suite",
-      "tagline": "A portable maintenance console: startup control, registry and shortcut audits, winget upgrades, driver search and benchmark rig setup in one window.",
+      "tagline": "One portable console for keeping a PC healthy: live telemetry, startup and sleep tuning, WIM disk images with bare-metal restore, a bootable recovery stick, registry audits, winget updates and benchmark rigs — with every destructive action reversible or provable.",
       "summary": [
-        "PC Medic is one executable with no installer, no background service and no telemetry. Each page is a job people actually run on a struggling machine: what starts with Windows, why the boot is slow, what is filling the disk, which applications are out of date, and which registry keys or shortcuts point at files that no longer exist.",
-        "The rule behind every destructive action is that it must be reversible or provable. Cleaned files go to the Recycle Bin, registry edits write a .reg backup first, boot tweaks store the previous values in JSON, and the audits list only entries whose target is genuinely missing rather than whatever looks suspicious.",
-        "That proof is a missing file or folder on a mounted fixed drive, never a guess. A finding arrives with its switch already on, because the missing path was checked before the row was drawn; review-only rows stay off and untickable, and their tooltip says why the target could not be resolved. Programs uninstall from a bin on their own row, and anything that takes time reports on itself rather than freezing the window."
+        "PC Medic Suite is one executable with no installer, no background service and no telemetry. Twelve pages cover the jobs people actually run on a struggling machine: what is using the CPU right now, what starts with Windows, why the boot is slow, what is filling the disk, which applications are out of date, and which registry keys or shortcuts point at files that no longer exist.",
+        "The backup page is the heavyweight: wimlib captures a whole-drive .wim image to any target, applies it back with boot repair through bcdboot, and verifies the component store with DISM — while a separate builder formats a USB stick, lays down the machine's own WinRE and writes a real BCD store, producing recovery media that never touches the firmware boot order.",
+        "The rule behind every destructive action is that it must be reversible or provable. Cleaned files go to the Recycle Bin, registry edits write a .reg backup first, boot and sleep tweaks store previous values in JSON, and the audits list only entries whose target is genuinely missing rather than whatever looks suspicious."
       ],
       "highlights": [
         {
+          "title": "Disk images, boot repair and recovery media",
+          "text": "The Backup & Restore page captures and applies whole-drive WIM images with wimlib, repairs a target's boot files with bcdboot, and runs DISM health checks on the live component store. The bootable-disk builder formats a USB drive, copies WinRE and writes a BCD store — recovery media without touching firmware boot order."
+        },
+        {
           "title": "Audits that prove what they claim",
-          "text": "The registry audit reports keys whose target file or folder is gone and nothing else, and ticks each proven entry for removal; the shortcut audit resolves every .lnk through IShellLinkW and flags only the ones that no longer point anywhere, keeping a proven dead target apart from a link it could not resolve at all."
+          "text": "The registry audit reports keys whose target file or folder is gone and nothing else, and ticks each proven entry for removal; the shortcut audit resolves every .lnk through IShellLinkW and flags only the ones that no longer point anywhere."
         },
         {
           "title": "Updates with what Windows ships",
-          "text": "winget streams each application upgrade into a progress bar on that row, and a bin on the row starts the app's own uninstaller, so removal is never a detour through another page. The Windows Update agent supplies the driver search, and nothing is fetched from a third-party server."
+          "text": "winget streams each application upgrade into a progress bar on that row, and a bin on the row starts the app's own uninstaller. The Windows Update agent supplies the driver search, and nothing is fetched from a third-party server."
         },
         {
           "title": "Long jobs say what they are doing",
-          "text": "Every scan covers its results with a centred LOADING ##% plate: real counts where the work reports progress, an estimate that never finishes early where the call is opaque. Any wait that reports nothing at all raises a WORKING strip across the bottom of the shell."
+          "text": "Every scan covers its results with a centred LOADING ##% plate, and any wait that reports nothing at all raises a WORKING strip across the bottom of the shell. The activity feed autoscrolls and copies to the clipboard on demand."
         },
         {
-          "title": "Benchmark rigs that install themselves",
-          "text": "The benchmark grid shows which portable rigs are present and installs the missing ones through winget, one dialog with a bar per download, then re-detects the suite so nothing stays marked missing."
+          "title": "Every window is designer-editable",
+          "text": "All forms and pages split cleanly into .Designer.cs control definitions and code-behind behaviour, so the whole suite opens in the Visual Studio Windows Forms designer."
         },
         {
           "title": "Portable, and honest about rights",
@@ -626,21 +758,33 @@
         }
       ],
       "facts": [
-        { "label": "Platform", "value": "Windows 10/11 x64" },
-        { "label": "Build", "value": ".NET 10 · WinForms" },
-        { "label": "Distribution", "value": "portable zip · no installer" },
-        { "label": "Companion", "value": "Disk Defrag" }
+        {
+          "label": "Platform",
+          "value": "Windows 10/11 x64"
+        },
+        {
+          "label": "Build",
+          "value": ".NET 10 · WinForms"
+        },
+        {
+          "label": "Distribution",
+          "value": "portable · no installer"
+        },
+        {
+          "label": "Pages",
+          "value": "12 modules + Disk Defrag host"
+        }
       ],
       "quickstart": [
         {
-          "label": "Download the portable build",
-          "code": "https://github.com/DwainSnickles/pc-medic/releases/latest",
-          "note": "Unzip it anywhere, a USB stick included, and run PC Medic.exe. The suite zip puts Disk Defrag next to it, and the Maintenance page finds it automatically."
+          "label": "Build it from source",
+          "code": "git clone https://github.com/DwainSnickles/PCMedicSuite\ncd PCMedicSuite\ndotnet build PCMedicSuite.csproj",
+          "note": "The portable layout lands in bin/Debug/net10.0-windows/, with wimlib bundled under tools/."
         },
         {
-          "label": "Build it from source",
-          "code": "git clone https://github.com/DwainSnickles/pc-medic\ncd pc-medic\ndotnet build \"PC Medic.csproj\"",
-          "note": "The portable layout lands in bin/Debug/net10.0-windows/."
+          "label": "Run it",
+          "code": "PCMedicSuite.exe",
+          "note": "No installer and nothing written outside the per-user app-data folder — settings, logs and the catalogue cache."
         }
       ],
       "requirements": [
@@ -666,11 +810,23 @@
         }
       ],
       "links": [
-        { "label": "Releases", "url": "https://github.com/DwainSnickles/pc-medic/releases" },
-        { "label": "Disk Defrag companion", "url": "https://github.com/DwainSnickles/disk-defrag" },
-        { "label": "Repository", "url": "https://github.com/DwainSnickles/pc-medic" }
+        {
+          "label": "Releases",
+          "url": "https://github.com/DwainSnickles/PCMedicSuite/releases"
+        },
+        {
+          "label": "Disk Defrag companion",
+          "url": "https://github.com/DwainSnickles/disk-defrag"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/DwainSnickles/PCMedicSuite"
+        }
       ],
-      "related": ["disk-defrag", "MOTW-Cleaner"]
+      "related": [
+        "disk-defrag",
+        "MOTW-Cleaner"
+      ]
     }
   }
 }

@@ -9,6 +9,31 @@
   },
   "repos": [
     {
+      "name": "PCMedicSuite",
+      "title": "PC Medic Suite",
+      "description": "Portable Windows maintenance suite: live telemetry dashboard, startup and sleep tuning, WIM disk-image backup and restore with boot repair, a bootable recovery-USB builder, registry audits, winget updates and benchmark rigs — every page designer-editable.",
+      "language": "C#",
+      "category": "system",
+      "categoryLabel": "System utilities",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "advanced-systemcare-alternative",
+        "ccleaner-alternative",
+        "disk-cleanup",
+        "disk-defrag",
+        "dotnet",
+        "freebuff"
+      ],
+      "updated": "2026-11-15",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/PCMedicSuite",
+      "featured": true,
+      "featuredRank": 6
+    },
+    {
       "name": "RibbonWinForms",
       "title": "Ribbon for WinForms",
       "description": "Office-style ribbon control for Windows Forms, ported to .NET 10 with working out-of-process designer support. Published as Dwain.RibbonLib.",
@@ -32,31 +57,6 @@
       "url": "https://github.com/DwainSnickles/RibbonWinForms",
       "featured": true,
       "featuredRank": 0
-    },
-    {
-      "name": "pc-medic",
-      "title": "PC Medic",
-      "description": "Portable Windows maintenance console: startup control, registry and shortcut audits, winget upgrades, driver search and benchmark rig setup, with reversible actions and measured progress throughout.",
-      "language": "C#",
-      "category": "system",
-      "categoryLabel": "System utilities",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "advanced-systemcare-alternative",
-        "ccleaner-alternative",
-        "disk-cleanup",
-        "disk-defrag",
-        "dotnet",
-        "freebuff"
-      ],
-      "updated": "2026-11-09",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/pc-medic",
-      "featured": true,
-      "featuredRank": 6
     },
     {
       "name": "Floating-Toolbar",
@@ -209,6 +209,29 @@
       "featuredRank": 3
     },
     {
+      "name": "dwainsnickles.github.io",
+      "title": "This Website",
+      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
+      "language": "HTML",
+      "category": "web",
+      "categoryLabel": "Web & admin",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "github-pages",
+        "html",
+        "portfolio",
+        "website"
+      ],
+      "updated": "2026-11-15",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
+      "featured": false,
+      "featuredRank": -1
+    },
+    {
       "name": "disk-defrag",
       "title": "Disk Defrag",
       "description": "Portable NTFS defragmentation for Windows with a live cluster map, driving the storage optimiser Windows already ships instead of a third-party engine.",
@@ -248,29 +271,6 @@
       "updated": "2026-11-14",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/TextProgressbar",
-      "featured": false,
-      "featuredRank": -1
-    },
-    {
-      "name": "dwainsnickles.github.io",
-      "title": "This Website",
-      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
-      "language": "HTML",
-      "category": "web",
-      "categoryLabel": "Web & admin",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "github-pages",
-        "html",
-        "portfolio",
-        "website"
-      ],
-      "updated": "2026-11-14",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,
       "featuredRank": -1
     },
