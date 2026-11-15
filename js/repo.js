@@ -264,7 +264,8 @@
         + '<a class="btn btn--ghost" href="projects.html">← Repository index</a>'
         + (repo.homepage ? '<a class="btn btn--ghost" href="' + esc(repo.homepage) + '" target="_blank" rel="noopener">'
           + esc(homepageLabel(repo.homepage)) + " ↗</a>" : "")
-        + "</div>";
+        + "</div>"
+        + '<div class="share" data-share data-url="' + esc(canonical) + '" data-title="' + esc(title) + '"></div>';
     }
 
     if (!body) return;
@@ -285,6 +286,8 @@
       + requirementsPanel(detail)
       + linksPanel(detail)
       + "</div></aside>";
+
+    if (window.MountShare) window.MountShare();
 
     body.addEventListener("click", function (event) {
       var button = event.target.closest(".copy");

@@ -1473,3 +1473,33 @@ strong { color: var(--ink); font-weight: 600; }
 .code { overflow: hidden; }
 .detail-side__inner > .panel { min-width: 0; }
 .spec dd { min-width: 0; overflow-wrap: anywhere; }
+
+/* share buttons + footer social icons */
+.share { display: flex; align-items: center; gap: 0.4rem; margin-top: 1rem; flex-wrap: wrap; }
+.share__label {
+  font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--muted); margin-right: 0.15rem;
+}
+.share__btn {
+  width: 30px; height: 30px; padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line); border-radius: 8px;
+  background: transparent; color: var(--muted);
+  cursor: pointer; text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.share__btn svg { width: 14px; height: 14px; fill: currentColor; }
+.share__btn--copy svg { fill: none; stroke: currentColor; }
+.share__btn:hover { color: var(--cyan); border-color: rgba(140, 190, 240, 0.55); }
+.share__btn.is-copied { color: var(--good, #5ee0a0); border-color: rgba(94, 224, 160, 0.5); }
+
+.social { display: flex; gap: 0.45rem; margin-top: 0.7rem; }
+.social__link {
+  width: 30px; height: 30px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line); border-radius: 8px;
+  color: var(--muted); text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.social__link svg { width: 15px; height: 15px; fill: currentColor; }
+.social__link:hover { color: var(--cyan); border-color: rgba(140, 190, 240, 0.55); }
