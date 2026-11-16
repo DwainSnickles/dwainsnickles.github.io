@@ -1,6 +1,6 @@
 {
   "owner": "DwainSnickles",
-  "generated": "2026-11-15",
+  "generated": "2026-11-16",
   "totals": {
     "repos": 33,
     "stars": 16,
@@ -21,11 +21,11 @@
       "nuget": false,
       "topics": [
         "advanced-systemcare-alternative",
+        "backup",
         "ccleaner-alternative",
         "disk-cleanup",
         "disk-defrag",
-        "dotnet",
-        "freebuff"
+        "disk-imaging"
       ],
       "updated": "2026-11-15",
       "homepage": null,
@@ -209,6 +209,31 @@
       "featuredRank": 3
     },
     {
+      "name": "disk-defrag",
+      "title": "Disk Defrag",
+      "description": "Portable NTFS defragmentation for Windows with a live cluster map, driving the storage optimiser Windows already ships instead of a third-party engine.",
+      "language": "C#",
+      "category": "system",
+      "categoryLabel": "System utilities",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "advanced-systemcare-alternative",
+        "aml-disk-defrag-alternative",
+        "cluster-map",
+        "defraggler-alternative",
+        "defragmentation",
+        "disk-defrag"
+      ],
+      "updated": "2026-11-15",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/disk-defrag",
+      "featured": false,
+      "featuredRank": -1
+    },
+    {
       "name": "dwainsnickles.github.io",
       "title": "This Website",
       "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
@@ -232,31 +257,6 @@
       "featuredRank": -1
     },
     {
-      "name": "disk-defrag",
-      "title": "Disk Defrag",
-      "description": "Portable NTFS defragmentation for Windows with a live cluster map, driving the storage optimiser Windows already ships instead of a third-party engine.",
-      "language": "C#",
-      "category": "system",
-      "categoryLabel": "System utilities",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "advanced-systemcare-alternative",
-        "aml-disk-defrag-alternative",
-        "cluster-map",
-        "defraggler-alternative",
-        "defragmentation",
-        "disk-defrag"
-      ],
-      "updated": "2026-11-14",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/disk-defrag",
-      "featured": false,
-      "featuredRank": -1
-    },
-    {
       "name": "TextProgressbar",
       "title": "Text Progress Bar",
       "description": "WinForms ProgressBar with three-color gradient fill, background gradient, border styling and aligned text drawn over the bar. Published as Dwain.TextProgressbar.",
@@ -267,7 +267,14 @@
       "forks": 0,
       "fork": false,
       "nuget": true,
-      "topics": [],
+      "topics": [
+        "csharp",
+        "custom-control",
+        "dotnet",
+        "progressbar",
+        "windows-forms",
+        "winforms"
+      ],
       "updated": "2026-11-14",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/TextProgressbar",
@@ -285,7 +292,14 @@
       "forks": 0,
       "fork": false,
       "nuget": false,
-      "topics": [],
+      "topics": [
+        "csharp",
+        "dotnet",
+        "nuget",
+        "panel-control",
+        "ui-animation",
+        "windows-forms"
+      ],
       "updated": "2026-11-07",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/DissolvingPanel",
