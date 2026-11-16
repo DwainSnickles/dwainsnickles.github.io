@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Downloads — Dwain Snickles</title>
-<meta name="description" content="Download the compiled Windows builds directly: the portable PC Medic, Disk Defrag and Floating Toolbar apps and the RibbonLib DLL. Binaries only — source stays on GitHub.">
+<meta name="description" content="Download the compiled Windows builds directly: the portable PC Medic, Disk Defrag, Floating Toolbar and MOTW Cleaner apps and the RibbonLib DLL. Binaries only — source stays on GitHub.">
 <meta name="author" content="Dwain Snickles">
 <meta name="theme-color" content="#04060c">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -23,10 +23,10 @@
 <meta name="twitter:image" content="https://dwainsnickles.github.io/assets/og-image.png">
 <meta name="twitter:image:alt" content="Dwain Snickles — desktop engineering in C# and .NET.">
 <meta property="og:title" content="Downloads — Dwain Snickles">
-<meta property="og:description" content="Compiled Windows builds: portable PC Medic, Disk Defrag and Floating Toolbar, plus the RibbonLib DLL. Binaries only, no source archives.">
+<meta property="og:description" content="Compiled Windows builds: portable PC Medic, Disk Defrag, Floating Toolbar and MOTW Cleaner, plus the RibbonLib DLL. Binaries only, no source archives.">
 <meta property="og:type" content="website">
 <meta name="twitter:title" content="Downloads — Dwain Snickles">
-<meta name="twitter:description" content="Compiled Windows builds: portable PC Medic Suite, Disk Defrag and Floating Toolbar. Binaries only, no source archives.">
+<meta name="twitter:description" content="Compiled Windows builds: portable PC Medic Suite, Disk Defrag, Floating Toolbar and MOTW Cleaner. Binaries only, no source archives.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -66,6 +66,16 @@
         "operatingSystem": "Windows 10, Windows 11",
         "downloadUrl": "https://github.com/DwainSnickles/Floating-Toolbar/releases/latest/download/Floating-Toolbar-win-x64.zip",
         "url": "https://github.com/DwainSnickles/Floating-Toolbar",
+        "author": { "@type": "Person", "name": "Dwain Snickles" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 4,
+        "name": "MOTW Cleaner",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "downloadUrl": "https://github.com/DwainSnickles/MOTW-Cleaner/releases/latest/download/MOTW-Cleaner-Portable.zip",
+        "url": "https://github.com/DwainSnickles/MOTW-Cleaner",
         "author": { "@type": "Person", "name": "Dwain Snickles" }
       }
     ]
@@ -205,6 +215,32 @@
         </p>
       </div>
 
+      <div class="card" data-reveal>
+        <p class="eyebrow eyebrow--muted">Utility · Windows 10/11 x64</p>
+        <h3 style="font-size:1.5rem">MOTW Cleaner 1.3.1</h3>
+        <p>
+          Clears the Mark-of-the-Web flag Windows stamps on files downloaded from the internet —
+          the <span class="mono">Zone.Identifier</span> stream behind SmartScreen warnings and
+          "unblock this file" prompts. Browse recent folders, preview what is flagged, and strip
+          the marks in one pass.
+        </p>
+        <p class="mono small" style="color:var(--muted)">
+          MOTW-Cleaner-Portable.zip · 63 MB · self-contained .NET 8 build · or MOTW.Installer.msi · 3 MB
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem">
+          <a class="btn btn--solid" href="https://github.com/DwainSnickles/MOTW-Cleaner/releases/latest/download/MOTW.Installer.msi">Install — MOTW.Installer.msi</a>
+          <a class="btn btn--ghost" href="https://github.com/DwainSnickles/MOTW-Cleaner/releases/latest/download/MOTW-Cleaner-Portable.zip">Portable — MOTW-Cleaner-Portable.zip</a>
+          <a class="btn btn--ghost" href="https://github.com/DwainSnickles/MOTW-Cleaner/releases" target="_blank" rel="noopener">All releases ↗</a>
+          <a class="btn btn--ghost" href="https://github.com/DwainSnickles/MOTW-Cleaner" target="_blank" rel="noopener">Repository ↗</a>
+        </div>
+        <div class="share" data-share data-url="https://github.com/DwainSnickles/MOTW-Cleaner" data-title="MOTW Cleaner — remove Mark-of-the-Web flags on Windows"></div>
+        <p class="small" style="margin-top:1rem;color:var(--muted)">
+          The installer puts it in Program Files with Start menu and desktop shortcuts; the portable
+          zip is a single self-contained exe — unzip anywhere and run
+          <span class="mono">MOTW Cleaner.exe</span>, no .NET install needed.
+        </p>
+      </div>
+
 <div class="card" data-reveal>
         <p class="eyebrow eyebrow--muted">DLL · .NET 10 Windows Forms</p>
         <h3 style="font-size:1.5rem">RibbonLib 1.0.5</h3>
@@ -237,9 +273,8 @@
           downloader of its own.
         </p>
         <p class="small" style="color:var(--muted)">
-          MOTW Cleaner releases an <span class="mono">.msi</span> rather than a portable zip, so it is
-          left to its repository page instead of being listed as portable. Anything without a release
-          yet is source-only.
+          MOTW Cleaner is listed above with both of its builds — the <span class="mono">.msi</span>
+          installer and the portable zip. Anything without a release yet is source-only.
         </p>
         <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem">
           <a class="btn btn--ghost" href="https://github.com/DwainSnickles?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a>
