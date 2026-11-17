@@ -9,6 +9,31 @@
   },
   "repos": [
     {
+      "name": "Floating-Toolbar",
+      "title": "Floating Toolbar",
+      "description": "Compact always-on-top launcher for Windows: drop-down groups and pinned one-click icons, drag-to-reorder, drag files from Explorer to add them, Ctrl+Alt+Space to show or hide it, and an auto-hide mode for fullscreen apps.",
+      "language": "C#",
+      "category": "ui",
+      "categoryLabel": "UI components",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "csharp",
+        "desktop",
+        "dotnet",
+        "launcher",
+        "toolbar",
+        "winforms"
+      ],
+      "updated": "2026-11-17",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/Floating-Toolbar",
+      "featured": true,
+      "featuredRank": 8
+    },
+    {
       "name": "DesignSurfaceCSharp",
       "title": "Design Surface",
       "description": "Design-surface control and graphic object model (GraphicObjects + GraphicsSurface) for .NET Framework 4.8 — used by Graphics Workshop, with Avery label presets and Office template import.",
@@ -152,31 +177,6 @@
       "featuredRank": 0
     },
     {
-      "name": "Floating-Toolbar",
-      "title": "Floating Toolbar",
-      "description": "Compact always-on-top launcher for Windows: drop-down groups and pinned one-click icons, drag-to-reorder, drag files from Explorer to add them, Ctrl+Alt+Space to show or hide it, and an auto-hide mode for fullscreen apps.",
-      "language": "C#",
-      "category": "ui",
-      "categoryLabel": "UI components",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "csharp",
-        "desktop",
-        "dotnet",
-        "launcher",
-        "toolbar",
-        "winforms"
-      ],
-      "updated": "2026-11-09",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/Floating-Toolbar",
-      "featured": true,
-      "featuredRank": 8
-    },
-    {
       "name": "Maui-basic-VLC-Player-Tutorial",
       "title": "MAUI VLC Player Tutorial",
       "description": "Starter .NET MAUI app that plays MP4 and HLS streams with LibVLCSharp, walking through wiring VLC into MAUI on .NET 8.",
@@ -227,6 +227,31 @@
       "featuredRank": 4
     },
     {
+      "name": "DissolvingPanel",
+      "title": "DissolvingPanel",
+      "description": "WinForms panel that dissolves its contents away and back with 21 PowerPoint-style transitions, an optional slide-in and a designer smart tag.",
+      "language": "C#",
+      "category": "ui",
+      "categoryLabel": "UI components",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "csharp",
+        "dotnet",
+        "nuget",
+        "panel-control",
+        "ui-animation",
+        "windows-forms"
+      ],
+      "updated": "2026-11-17",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/DissolvingPanel",
+      "featured": false,
+      "featuredRank": -1
+    },
+    {
       "name": "dwainsnickles.github.io",
       "title": "This Website",
       "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
@@ -243,7 +268,7 @@
         "portfolio",
         "website"
       ],
-      "updated": "2026-11-16",
+      "updated": "2026-11-17",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,
@@ -296,31 +321,6 @@
       "updated": "2026-11-14",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/TextProgressbar",
-      "featured": false,
-      "featuredRank": -1
-    },
-    {
-      "name": "DissolvingPanel",
-      "title": "DissolvingPanel",
-      "description": "WinForms panel that dissolves its contents away and back with 21 PowerPoint-style transitions, an optional slide-in and a designer smart tag.",
-      "language": "C#",
-      "category": "ui",
-      "categoryLabel": "UI components",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "csharp",
-        "dotnet",
-        "nuget",
-        "panel-control",
-        "ui-animation",
-        "windows-forms"
-      ],
-      "updated": "2026-11-07",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/DissolvingPanel",
       "featured": false,
       "featuredRank": -1
     },
