@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#9db8d2" opacity="0.55"/>
+    </pattern>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="1.4" cy="1.4" r="1" fill="#3a4a5f"/>
+    </pattern>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="960" height="600" rx="14" fill="#0d1117"/>
+  <rect x="1" y="1" width="958" height="598" rx="13" fill="none" stroke="#1f2a3a" stroke-width="2"/>
+
+  <!-- header -->
+  <text x="40" y="52" font-size="26" font-weight="700" fill="#e6edf3">DesignSurface</text>
+  <text x="40" y="78" font-size="13" fill="#8b98a9">A scrollable, zoomable WinForms canvas for .NET 8 and higher — placing and editing graphic objects</text>
+  <rect x="40" y="96" width="880" height="2" fill="#1f2a3a"/>
+
+  <!-- ============ LEFT: the surface ============ -->
+  <text x="40" y="128" font-size="12" font-weight="700" letter-spacing="2" fill="#58a6ff">THE SURFACE</text>
+
+  <!-- app frame -->
+  <rect x="40" y="140" width="520" height="420" rx="10" fill="#161b22" stroke="#2d3748" stroke-width="1.5"/>
+  <!-- property grid strip on right of frame -->
+  <rect x="508" y="140" width="52" height="420" rx="0" fill="#0f141b" stroke="#2d3748"/>
+  <text x="534" y="180" font-size="10" fill="#5b6b80" text-anchor="middle" transform="rotate(-90 534 300)">PROPERTY GRID</text>
+  <rect x="516" y="160" width="36" height="380" rx="4" fill="#11161d" stroke="#242e3d"/>
+  <rect x="521" y="170" width="26" height="7" rx="2" fill="#2f88c9"/>
+  <rect x="521" y="184" width="18" height="5" rx="2" fill="#3a4a5f"/>
+  <rect x="521" y="196" width="22" height="5" rx="2" fill="#3a4a5f"/>
+  <rect x="521" y="216" width="26" height="7" rx="2" fill="#7d5fd3"/>
+  <rect x="521" y="230" width="14" height="5" rx="2" fill="#3a4a5f"/>
+
+  <!-- page / printable area -->
+  <rect x="72" y="176" width="396" height="332" rx="3" fill="#eef1f4" stroke="#c3ccd6" stroke-width="1.5"/>
+  <!-- non-printing margin zone shading -->
+  <rect x="72" y="176" width="396" height="332" rx="3" fill="url(#dots)" opacity="0.5"/>
+  <!-- printable margins (dashed) -->
+  <rect x="100" y="204" width="340" height="276" rx="2" fill="none" stroke="#3f9d4e" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="470" y="300" font-size="10" fill="#3f9d4e" text-anchor="end">non-print margins</text>
+  <line x1="468" y1="296" x2="448" y2="290" stroke="#3f9d4e" stroke-width="1"/>
+
+  <!-- grid dots clipped to page -->
+  <rect x="72" y="176" width="396" height="332" rx="3" fill="url(#grid)"/>
+
+  <!-- objects on the surface -->
+  <!-- image object -->
+  <rect x="120" y="230" width="110" height="80" rx="4" fill="#dbe7f3" stroke="#7ea6c4" stroke-width="1.5"/>
+  <path d="M132 296 l22 -26 16 18 14 -12 26 20 v20 h-78 z" fill="#9db8d2"/>
+  <circle cx="158" cy="252" r="9" fill="#e8b64c"/>
+  <text x="175" y="318" font-size="9" fill="#5b6b80" text-anchor="middle">image</text>
+
+  <!-- text object -->
+  <text x="252" y="262" font-size="22" font-weight="700" fill="#1f2937" font-family="Georgia, serif">SPRING</text>
+  <text x="252" y="288" font-size="22" font-weight="700" fill="#c0392b" font-family="Georgia, serif">SALE</text>
+  <text x="252" y="308" font-size="9" fill="#5b6b80">text object</text>
+
+  <!-- selected rectangle with handles -->
+  <g>
+    <rect x="120" y="330" width="150" height="70" rx="4" fill="#e8dff5" stroke="#7d5fd3" stroke-width="2"/>
+    <rect x="120" y="330" width="150" height="70" rx="4" fill="none" stroke="#7d5fd3" stroke-width="1" stroke-dasharray="4 3"/>
+    <!-- 8 handles -->
+    <g fill="#fff" stroke="#7d5fd3" stroke-width="1.6">
+      <rect x="114" y="324" width="9" height="9" rx="1.5"/>
+      <rect x="189" y="324" width="9" height="9" rx="1.5"/>
+      <rect x="114" y="395" width="9" height="9" rx="1.5"/>
+      <rect x="189" y="395" width="9" height="9" rx="1.5"/>
+      <rect x="161" y="324" width="9" height="9" rx="1.5"/>
+      <rect x="161" y="395" width="9" height="9" rx="1.5"/>
+      <rect x="114" y="359" width="9" height="9" rx="1.5"/>
+      <rect x="189" y="359" width="9" height="9" rx="1.5"/>
+    </g>
+    <path d="M262 336 l10 -14" stroke="#7d5fd3" stroke-width="1.4" fill="none"/>
+    <text x="276" y="330" font-size="9" fill="#7d5fd3">selected — drag, resize, rotate</text>
+  </g>
+
+  <!-- star + line objects -->
+  <path d="M392 250 l7 15 16 2 -12 11 3 16 -14 -8 -14 8 3 -16 -12 -11 16 -2 z" fill="#e8b64c" stroke="#c98f22" stroke-width="1"/>
+  <line x1="300" y1="380" x2="420" y2="350" stroke="#2f6fb2" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="420" cy="350" r="4" fill="#2f6fb2"/>
+
+  <!-- zoom / scroll chrome -->
+  <rect x="72" y="512" width="396" height="26" rx="5" fill="#1c2330" stroke="#2d3748"/>
+  <text x="86" y="529" font-size="11" fill="#8b98a9">zoom 50%</text>
+  <rect x="180" y="517" width="180" height="8" rx="4" fill="#2d3748"/>
+  <rect x="180" y="517" width="90" height="8" rx="4" fill="#58a6ff"/>
+  <text x="442" y="529" font-size="11" fill="#8b98a9" text-anchor="end">scroll / pan</text>
+
+  <!-- callouts -->
+  <g font-size="11" fill="#8b98a9">
+    <line x1="60" y1="180" x2="96" y2="186" stroke="#58a6ff" stroke-width="1"/>
+    <text x="40" y="172" fill="#58a6ff">page bounds</text>
+    <line x1="60" y1="330" x2="96" y2="310" stroke="#3f9d4e" stroke-width="1"/>
+    <text x="40" y="352" fill="#3f9d4e">print margins</text>
+  </g>
+
+  <!-- ============ RIGHT: capabilities ============ -->
+  <text x="600" y="128" font-size="12" font-weight="700" letter-spacing="2" fill="#58a6ff">CAPABILITIES</text>
+
+  <g font-size="12.5" fill="#c9d4e0">
+    <!-- canvas -->
+    <rect x="600" y="146" width="320" height="128" rx="8" fill="#11161d" stroke="#232c3a"/>
+    <text x="616" y="170" font-size="11" font-weight="700" letter-spacing="1.5" fill="#e6edf3">CANVAS</text>
+    <text x="616" y="192">• Dot grid + non-print margin guides</text>
+    <text x="616" y="212">• Portrait / landscape page setup</text>
+    <text x="616" y="232">• Smooth zoom, scroll &amp; pan</text>
+    <text x="616" y="252">• Double-buffered custom painting</text>
+
+    <!-- objects -->
+    <rect x="600" y="286" width="320" height="152" rx="8" fill="#11161d" stroke="#232c3a"/>
+    <text x="616" y="310" font-size="11" font-weight="700" letter-spacing="1.5" fill="#e6edf3">OBJECTS</text>
+    <text x="616" y="332">• Text, image, shape, line &amp; star</text>
+    <text x="616" y="352">• Linked &amp; embedded images</text>
+    <text x="616" y="372">• Drag, resize, rotate, z-order</text>
+    <text x="616" y="392">• Multi-select, undo / redo, copy/paste</text>
+    <text x="616" y="412">• PropertyGrid edits the selection</text>
+
+    <!-- output -->
+    <rect x="600" y="450" width="320" height="110" rx="8" fill="#11161d" stroke="#232c3a"/>
+    <text x="616" y="474" font-size="11" font-weight="700" letter-spacing="1.5" fill="#e6edf3">OUTPUT</text>
+    <text x="616" y="496">• Print &amp; print preview pipeline</text>
+    <text x="616" y="516">• Save / open design documents</text>
+    <text x="616" y="536">• Status + selection events for hosts</text>
+    <text x="616" y="556" fill="#6b7a8d">drop-in UserControl — any WinForms app</text>
+  </g>
+
+  <!-- object type chips -->
+  <text x="40" y="578" font-size="11" font-weight="700" letter-spacing="1.5" fill="#5b6b80">OBJECT MODEL — GraphicObjects</text>
+  <g font-size="11" fill="#8b98a9">
+    <rect x="250" y="560" width="64" height="24" rx="12" fill="#11161d" stroke="#2d3748"/><text x="282" y="576" text-anchor="middle">TextGraphic</text>
+    <rect x="322" y="560" width="76" height="24" rx="12" fill="#11161d" stroke="#2d3748"/><text x="360" y="576" text-anchor="middle">ImageGraphic</text>
+    <rect x="406" y="560" width="84" height="24" rx="12" fill="#11161d" stroke="#2d3748"/><text x="448" y="576" text-anchor="middle">ShapeGraphic</text>
+    <rect x="498" y="560" width="56" height="24" rx="12" fill="#11161d" stroke="#2d3748"/><text x="526" y="576" text-anchor="middle">LineGraphic</text>
+    <rect x="562" y="560" width="64" height="24" rx="12" fill="#11161d" stroke="#2d3748"/><text x="594" y="576" text-anchor="middle">StarGraphic</text>
+  </g>
+</svg>

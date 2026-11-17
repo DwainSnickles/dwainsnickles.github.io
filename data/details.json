@@ -890,8 +890,13 @@
         "Windows",
         ".NET 8 SDK or newer"
       ],
-      "shots": [],
-      "shotsNote": "This repository ships source only \u2014 no screenshots yet. Drop the DesignSurface control on a form to see it in action.",
+      "shots": [
+        {
+          "src": "assets/repos/designsurface/design-surface.svg",
+          "alt": "DesignSurface diagram for .NET 8 and higher \u2014 scrollable zoomable WinForms canvas with dot grid, page bounds, graphic objects and property grid",
+          "caption": "The same surface and object model as the .NET Framework 4.8 build, retargeted for .NET 8 and higher."
+        }
+      ],
       "links": [
         {
           "label": "Repository",
