@@ -54,6 +54,7 @@ node scripts/fetch-shots.mjs
 Add a `GITHUB_TOKEN` environment variable to avoid the unauthenticated rate limit. Curated
 titles, descriptions, categories and the featured order live in the `OVERRIDES`, `FEATURED`
 and `EXCLUDE` tables at the top of the script, so a refresh keeps the hand-written copy.
+Private repositories omitted by GitHub's public API are kept in the `PENDING` table.
 
 Repositories that are not on GitHub yet go in `PENDING`: they are merged into the index with
 their curated copy, and the live API entry replaces them once they are pushed.

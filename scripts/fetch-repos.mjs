@@ -18,6 +18,30 @@ const OUT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "data", "repo
 /** Repos to leave out of the index. */
 const EXCLUDE = new Set(["DwainSnickles", "TestGithub"]);
 
+/** Curated private repositories to include even though the public GitHub API omits them. */
+const PENDING = [
+  {
+    name: "MemoryOptimizerPro",
+    title: "Memory Optimizer Pro",
+    description:
+      "Windows Forms dashboard for live CPU, memory, network and GPU telemetry, with light/heavy memory optimization actions and system-tray monitoring.",
+    language: "C#",
+    category: "system",
+    categoryLabel: "System utilities",
+    stars: 0,
+    forks: 0,
+    fork: false,
+    nuget: false,
+    topics: ["csharp", "memory-optimizer", "system-monitor", "winforms", "windows"],
+    updated: "2026-11-17",
+    homepage: "https://dwainsnickles.github.io/repo/memoryoptimizerpro.html",
+    url: "https://github.com/DwainSnickles/MemoryOptimizerPro",
+    featured: true,
+    featuredRank: 5,
+    private: true
+  }
+];
+
 /** Featured order (first is the lead card). */
 const FEATURED = [
   "RibbonWinForms",
@@ -25,6 +49,7 @@ const FEATURED = [
   "DesignSurfaceCSharp",
   "DesignSurface.NET",
   "AutoUpdater.NET.XML-Creator-master",
+  "MemoryOptimizerPro",
   "MOTW-Cleaner",
   "Maui-basic-VLC-Player-Tutorial",
   "PCMedicSuite",
@@ -342,11 +367,17 @@ async function main() {
         featured: featuredIndex > -1,
         featuredRank: featuredIndex
       };
-    })
-    .sort((a, b) => {
-      if (a.featured !== b.featured) return a.featured ? -1 : 1;
-      return b.updated.localeCompare(a.updated);
     });
+
+  const publicNames = new Set(repos.map((repo) => repo.name));
+  for (const repo of PENDING) {
+    if (!publicNames.has(repo.name)) repos.push(repo);
+  }
+  repos.sort((a, b) => {
+    if (a.featured !== b.featured) return a.featured ? -1 : 1;
+    if (a.featured && b.featured) return a.featuredRank - b.featuredRank;
+    return b.updated.localeCompare(a.updated);
+  });
 
   const languages = new Set(repos.map((repo) => repo.language));
   const payload = {

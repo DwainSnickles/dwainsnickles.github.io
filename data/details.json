@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "repos": {
     "Floating-Toolbar": {
       "eyebrow": "UI components \u00b7 Windows launcher",
@@ -911,6 +911,80 @@
         "DesignSurfaceCSharp",
         "GraphicsWorkshop",
         "RibbonWinForms"
+      ]
+    },
+    "MemoryOptimizerPro": {
+      "eyebrow": "System utilities \u00b7 private Windows app",
+      "tagline": "A live system-telemetry dashboard with one-click memory optimization and tray-based background monitoring.",
+      "summary": [
+        "Memory Optimizer Pro is a Windows Forms desktop application targeting .NET Framework 4.8. Its dark dashboard reports CPU and committed-memory usage, network transfer rate and GPU memory where Windows exposes those counters.",
+        "The app offers light optimization for managed garbage collection and its own working-set trim, plus a heavier set of operations that also attempts a Windows standby-list purge and NVIDIA accounting-statistics reset. The heavier actions are optional and may require administrator rights or supported NVIDIA software.",
+        "The repository is private. The screenshot and project summary are public, but source access requires GitHub repository permission."
+      ],
+      "highlights": [
+        {
+          "title": "Live telemetry",
+          "text": "Updates CPU, committed memory, network transfer and GPU memory readings where supported."
+        },
+        {
+          "title": "Light and heavy actions",
+          "text": "Separates a lighter current-process cleanup from heavier system operations, with the heavier path clearly labeled."
+        },
+        {
+          "title": "Keeps running in the tray",
+          "text": "Closing the dashboard hides the window while background monitoring continues; the tray menu provides an explicit exit command."
+        },
+        {
+          "title": "A focused WinForms app",
+          "text": "A .NET Framework 4.8 desktop application with a custom embedded memory-chip icon and dark telemetry interface."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Platform",
+          "value": "Windows"
+        },
+        {
+          "label": "Framework",
+          "value": ".NET Framework 4.8"
+        },
+        {
+          "label": "UI",
+          "value": "Windows Forms"
+        },
+        {
+          "label": "Repository access",
+          "value": "Private \u00b7 permission required"
+        }
+      ],
+      "quickstart": [
+        {
+          "label": "Run the published project",
+          "code": "Open MemoryOptimizerPro.slnx in Visual Studio and run the MemoryOptimizerPro project.",
+          "note": "Requires Windows and .NET Framework 4.8 targeting tools. The repository is private, so GitHub access is required to obtain the source."
+        }
+      ],
+      "requirements": [
+        "Windows",
+        ".NET Framework 4.8 targeting tools",
+        "Administrator rights may be needed for the standby-list purge"
+      ],
+      "shots": [
+        {
+          "src": "assets/repos/memoryoptimizerpro/dashboard.png",
+          "alt": "Memory Optimizer Pro dashboard in use showing live CPU, memory, network and GPU telemetry",
+          "caption": "Live dashboard with CPU and memory readings, captured while the application was running."
+        }
+      ],
+      "links": [
+        {
+          "label": "Private GitHub repository (access required)",
+          "url": "https://github.com/DwainSnickles/MemoryOptimizerPro"
+        }
+      ],
+      "related": [
+        "PCMedicSuite",
+        "disk-defrag"
       ]
     }
   }

@@ -72,6 +72,7 @@
     var badges = "";
     if (repo.nuget) badges += '<span class="repo__badge">nuget</span>';
     if (repo.fork) badges += '<span class="repo__badge">fork</span>';
+    if (repo.private) badges += '<span class="repo__badge">private</span>';
 
     var hasStudy = !!repo.featured;
     var href = hasStudy ? "repo/" + slugFor(repo.name) + ".html" : repo.url;
@@ -99,6 +100,7 @@
     if (!grid) return;
     var featured = data.repos.filter(function (repo) { return repo.featured; });
     if (!featured.length) featured = data.repos.slice(0, 6);
+    featured.sort(function (a, b) { return a.featuredRank - b.featuredRank; });
     grid.innerHTML = featured.slice(0, 6).map(repoCard).join("");
     grid.setAttribute("aria-busy", "false");
   }
