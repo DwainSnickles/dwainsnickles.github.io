@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-16",
   "repos": {
     "Floating-Toolbar": {
-      "eyebrow": "UI components · Windows launcher",
+      "eyebrow": "UI components \u00b7 Windows launcher",
       "tagline": "A 52-pixel launcher bar that floats above everything: groups that drop down, icons that stay put, and files you can drag straight onto it.",
       "summary": [
         "Most launchers want a dock, a start menu or an installer. This one is a strip 52 pixels tall that stays on top of other windows and does nothing until you click: groups that open a list, entries pinned to the bar that launch in one click, and a right-click menu for adding, editing and removing both.",
-        "It is a .NET 8 WinForms app with no third-party packages — the bar, its buttons, the dark renderer, the icon loader and the fullscreen detector are all in the repository. Dropping a file, shortcut, folder or URL on the bar adds it as an entry and takes the target's own shell icon; an entry whose target has disappeared reports the failure instead of taking the app down.",
+        "It is a .NET 8 WinForms app with no third-party packages \u2014 the bar, its buttons, the dark renderer, the icon loader and the fullscreen detector are all in the repository. Dropping a file, shortcut, folder or URL on the bar adds it as an entry and takes the target's own shell icon; an entry whose target has disappeared reports the failure instead of taking the app down.",
         "Two things make it survive a working day: Ctrl+Alt+Space shows or hides the bar from any application, and an optional auto-hide pulls it out of the way while a fullscreen app has focus, then puts it back when focus returns. Settings are a single JSON file under %APPDATA%, so a whole layout can be copied between machines."
       ],
       "highlights": [
@@ -38,22 +38,22 @@
         },
         {
           "label": "Build",
-          "value": ".NET 8 · WinForms"
+          "value": ".NET 8 \u00b7 WinForms"
         },
         {
           "label": "Distribution",
-          "value": "portable zip · self-contained"
+          "value": "portable zip \u00b7 self-contained"
         },
         {
           "label": "Dependencies",
-          "value": "none — no NuGet packages"
+          "value": "none \u2014 no NuGet packages"
         }
       ],
       "quickstart": [
         {
           "label": "Download and run",
           "code": "https://github.com/DwainSnickles/Floating-Toolbar/releases/latest",
-          "note": "Unzip Floating-Toolbar-win-x64.zip anywhere and run FloatingToolbar.exe — the published build is self-contained, so nothing else needs installing."
+          "note": "Unzip Floating-Toolbar-win-x64.zip anywhere and run FloatingToolbar.exe \u2014 the published build is self-contained, so nothing else needs installing."
         },
         {
           "label": "Add your own buttons",
@@ -107,16 +107,16 @@
       ]
     },
     "RibbonWinForms": {
-      "eyebrow": "UI components · .NET 10",
+      "eyebrow": "UI components \u00b7 .NET 10",
       "tagline": "An Office-style ribbon for Windows Forms that still works inside the designer.",
       "summary": [
-        "The ribbon draws a tabbed command bar — tabs, panels, buttons — on top of an ordinary Windows Forms window. The point of this fork is that it behaves the same at runtime and inside Visual Studio's out-of-process designer, which is where ribbon controls usually fall apart.",
+        "The ribbon draws a tabbed command bar \u2014 tabs, panels, buttons \u2014 on top of an ordinary Windows Forms window. The point of this fork is that it behaves the same at runtime and inside Visual Studio's out-of-process designer, which is where ribbon controls usually fall apart.",
         "It is published as a package rather than a loose DLL: the package is what puts the control in the toolbox, so a project that adds the package and a project that references a DLL end up in different places. Per-panel spacing and padding knobs control how densely the groups sit."
       ],
       "highlights": [
         {
           "title": "Designer-safe by design",
-          "text": "Ported to .NET 10 and repaired so the control renders in the designer, not just at runtime — including the toolbox entry."
+          "text": "Ported to .NET 10 and repaired so the control renders in the designer, not just at runtime \u2014 including the toolbox entry."
         },
         {
           "title": "One package, every project",
@@ -142,7 +142,7 @@
         },
         {
           "label": "Framework",
-          "value": ".NET 10 · WinForms"
+          "value": ".NET 10 \u00b7 WinForms"
         },
         {
           "label": "Published",
@@ -161,7 +161,7 @@
           "version": "1.0.19-net10",
           "date": "2026-11-13",
           "changes": [
-            "Fixed orb menu item creation in the designer — RibbonOrbMenuItem had a collection editor declared as its ComponentDesigner, which broke both the design-surface add buttons and the Properties collection editor.",
+            "Fixed orb menu item creation in the designer \u2014 RibbonOrbMenuItem had a collection editor declared as its ComponentDesigner, which broke both the design-surface add buttons and the Properties collection editor.",
             "Added temporary design-time logging to %TEMP%\\RibbonLibDesign.log to capture designer failures the out-of-process designer cannot display."
           ]
         },
@@ -183,7 +183,7 @@
           "version": "1.0.16-net10",
           "date": "2026-11-13",
           "changes": [
-            "The orb drop-down now autosizes to its content at runtime — width fits the menu, recent and option items, and the empty recent pane collapses.",
+            "The orb drop-down now autosizes to its content at runtime \u2014 width fits the menu, recent and option items, and the empty recent pane collapses.",
             "The design-time orb menu sizes itself to its entries and button captions, so text no longer truncates."
           ]
         },
@@ -198,14 +198,14 @@
           "version": "1.0.14-net10",
           "date": "2026-11-13",
           "changes": [
-            "Fixed a second design-server crash when creating orb menu items in the designer — layout code tried to get a graphics handle from the drop-down window, which has no handle at design time."
+            "Fixed a second design-server crash when creating orb menu items in the designer \u2014 layout code tried to get a graphics handle from the drop-down window, which has no handle at design time."
           ]
         },
         {
           "version": "1.0.13-net10",
           "date": "2026-11-13",
           "changes": [
-            "Fixed a crash when clicking the blank orb menu's add buttons in the designer — the code touched the real drop-down window, which does not exist at design time.",
+            "Fixed a crash when clicking the blank orb menu's add buttons in the designer \u2014 the code touched the real drop-down window, which does not exist at design time.",
             "The blank menu's add buttons now show text labels (New Menu Item, New Separator, New Recent Item, New Option Item) in a two-by-two grid."
           ]
         },
@@ -235,7 +235,7 @@
           "version": "1.0.9-net10",
           "date": "2026-11-13",
           "changes": [
-            "Removed the \"+ Menu / + Recent / + Options\" text rows from the design-time orb menu — they were designer affordances that do not exist in the real drop-down."
+            "Removed the \"+ Menu / + Recent / + Options\" text rows from the design-time orb menu \u2014 they were designer affordances that do not exist in the real drop-down."
           ]
         },
         {
@@ -256,7 +256,7 @@
           "version": "1.0.6-net10",
           "date": "2026-11-13",
           "changes": [
-            "Clicking the orb in the designer opens the orb menu on the design surface: menu, recent and option items with their icons, row highlighting, click-to-select, and add-entry glyphs — the same approach the panel \"Add Control\" menu already used. Runtime behaviour is unchanged."
+            "Clicking the orb in the designer opens the orb menu on the design surface: menu, recent and option items with their icons, row highlighting, click-to-select, and add-entry glyphs \u2014 the same approach the panel \"Add Control\" menu already used. Runtime behaviour is unchanged."
           ]
         },
         {
@@ -316,7 +316,7 @@
         {
           "src": "assets/repos/ribbon/ribbon.png",
           "alt": "The ribbon control rendering tabs, groups and buttons in a Windows Forms window",
-          "caption": "docs/ribbon.png from the repository — the ribbon hosted in a WinForms window."
+          "caption": "docs/ribbon.png from the repository \u2014 the ribbon hosted in a WinForms window."
         }
       ],
       "links": [
@@ -335,16 +335,16 @@
       ]
     },
     "GraphicsWorkshop": {
-      "eyebrow": "Graphics & design · work in progress",
+      "eyebrow": "Graphics & design \u00b7 work in progress",
       "tagline": "A desktop graphics workstation: edit an image, place objects on a design surface, rotate them in place.",
       "summary": [
         "Graphics Workshop started years ago in VB.NET as a collection of half-finished experiments. It was rebuilt in C# on top of the .NET 10 ribbon fork, which is why both languages are still visible in the tree.",
-        "The app has two halves: a canvas for drawing and editing graphics, and a design surface where objects are added, positioned and rotated. It is explicitly unfinished — the README says so plainly and asks for contributors rather than pretending the thing is done."
+        "The app has two halves: a canvas for drawing and editing graphics, and a design surface where objects are added, positioned and rotated. It is explicitly unfinished \u2014 the README says so plainly and asks for contributors rather than pretending the thing is done."
       ],
       "highlights": [
         {
           "title": "Design surface, not just a canvas",
-          "text": "Objects are added to a surface, moved to a position and rotated — the object model lives in a separate control repository."
+          "text": "Objects are added to a surface, moved to a position and rotated \u2014 the object model lives in a separate control repository."
         },
         {
           "title": "Powered by the ribbon fork",
@@ -356,7 +356,7 @@
         },
         {
           "title": "Honest about status",
-          "text": "Described by its author as incomplete — not a demo dressed up as a release."
+          "text": "Described by its author as incomplete \u2014 not a demo dressed up as a release."
         }
       ],
       "facts": [
@@ -366,7 +366,7 @@
         },
         {
           "label": "Framework",
-          "value": ".NET 10 · WinForms"
+          "value": ".NET 10 \u00b7 WinForms"
         },
         {
           "label": "History",
@@ -408,28 +408,29 @@
       ]
     },
     "DesignSurfaceCSharp": {
-      "eyebrow": "Graphics & design · control library",
-      "tagline": "The object model and surface control that Graphics Workshop is built on.",
+      "eyebrow": "Graphics & design \u00b7 control library",
+      "tagline": "The .NET Framework 4.8 build of the design surface that Graphics Workshop runs on.",
       "summary": [
-        "Two projects do the real work here: GraphicObjects holds the shapes and their properties, and GraphicsSurface is the control that paints them, hit-tests them and hosts the rotation handles.",
-        "It ships as source rather than a package. There is no README, so the three sample apps — WindowsFormsApp1, WindowsFormsApp2 and WindowsFormsApp3 — are the documentation: each one drops the surface on a form so you can see what it does."
+        "Two projects do the real work: GraphicObjects holds the shapes, their properties and a full set of image filters; GraphicsSurface is the control that paints them, hit-tests them, hosts the property grid and drives the print pipeline.",
+        "This is the .NET Framework 4.8 edition \u2014 the build Graphics Workshop consumes today. A .NET 8+ port of the same code lives in DesignSurface.NET.",
+        "Recent additions include LabelSheet presets for most common Avery label sheets, and importers that turn .docx/.dotx/.xlsx/.xlsm documents into label-sheet templates or pinned cell guides. Office template import is still in progress \u2014 some files may not import correctly."
       ],
       "highlights": [
         {
           "title": "Reusable object model",
-          "text": "GraphicObjects describes the shapes independently of any window, so the model can be reused by another host."
+          "text": "GraphicObjects describes shapes independently of any window \u2014 text, images, shapes, lines and stars \u2014 so the model can be hosted by any WinForms app."
         },
         {
-          "title": "A surface control",
-          "text": "GraphicsSurface owns painting, selection and manipulation, with its own rotation cursor art in the resources folder."
+          "title": "Avery label presets",
+          "text": "LabelSheet ships Microsoft's published Avery dimensions for the common 5160\u20135664, 5195\u20135395 and 5305\u20135389 sheets, and the surface snaps objects to cell bounds."
         },
         {
-          "title": "Three runnable samples",
-          "text": "The sample apps are the quickest way in: open one, run it, watch the surface behave."
+          "title": "Office template import",
+          "text": "Word and Excel documents import as templates: a uniform grid becomes the sheet template, an irregular layout drops pinned guide rectangles that cannot be moved or resized."
         },
         {
           "title": "Source-only, deliberately",
-          "text": "No package and no README — copy the projects you need rather than taking a dependency."
+          "text": "No package \u2014 copy the two projects you need. DesignSurface.slnx builds both libraries with no sample apps attached."
         }
       ],
       "facts": [
@@ -439,46 +440,52 @@
         },
         {
           "label": "Projects",
-          "value": "GraphicObjects · GraphicsSurface"
+          "value": "GraphicObjects \u00b7 GraphicsSurface"
         },
         {
-          "label": "Samples",
-          "value": "WindowsFormsApp1–3"
+          "label": "Target",
+          "value": ".NET Framework 4.8"
         },
         {
           "label": "Package",
-          "value": "none — source only"
+          "value": "none \u2014 source only"
         }
       ],
       "quickstart": [
         {
-          "label": "Clone the source",
+          "label": "Clone and open",
           "code": "git clone https://github.com/DwainSnickles/DesignSurfaceCSharp\ncd DesignSurfaceCSharp",
-          "note": "Open one of the sample projects directly in Visual Studio — there is no solution file."
+          "note": "Open GraphicsSurface/DesignSurface.slnx in Visual Studio \u2014 it contains both library projects."
         }
       ],
       "requirements": [
         "Windows",
-        "Visual Studio with the Windows Forms workload"
+        "Visual Studio 2022 17.10+ with the Windows Forms workload",
+        ".NET Framework 4.8"
       ],
       "shots": [],
-      "shotsNote": "This repository ships source only — no README and no images. Run one of the three sample apps to see the surface in action.",
+      "shotsNote": "This repository ships source only \u2014 no screenshots yet. Drop the DesignSurface control on a form to see it in action.",
       "links": [
         {
           "label": "Repository",
           "url": "https://github.com/DwainSnickles/DesignSurfaceCSharp"
+        },
+        {
+          "label": ".NET 8+ edition",
+          "url": "https://github.com/DwainSnickles/DesignSurface.NET"
         }
       ],
       "related": [
         "GraphicsWorkshop",
-        "RibbonWinForms"
+        "RibbonWinForms",
+        "DesignSurface.NET"
       ]
     },
     "MOTW-Cleaner": {
-      "eyebrow": "Security & fixes · Windows utility",
+      "eyebrow": "Security & fixes \u00b7 Windows utility",
       "tagline": "Strips Mark of the Web from downloaded files so Windows stops blocking them.",
       "summary": [
-        "Files that arrive from the internet carry a Zone.Identifier stream — Mark of the Web. Windows uses it to open documents in Protected View and to refuse to run what it does not trust, which is why a perfectly fine download sits there refusing to open.",
+        "Files that arrive from the internet carry a Zone.Identifier stream \u2014 Mark of the Web. Windows uses it to open documents in Protected View and to refuse to run what it does not trust, which is why a perfectly fine download sits there refusing to open.",
         "MOTW Cleaner removes that marker from the files and folders you choose, in a small WinForms window, and reports progress while it works. It is distributed as an MSI installer, with its own changelog page hosted on GitHub Pages."
       ],
       "highlights": [
@@ -488,7 +495,7 @@
         },
         {
           "title": "Made for downloaded archives",
-          "text": "Drop a zip, extract, clean — the workflow the tool was built around."
+          "text": "Drop a zip, extract, clean \u2014 the workflow the tool was built around."
         },
         {
           "title": "Installer, not a zip of DLLs",
@@ -502,11 +509,11 @@
       "facts": [
         {
           "label": "Installer",
-          "value": "MOTW.Installer.msi · 1.3.0"
+          "value": "MOTW.Installer.msi \u00b7 1.3.0"
         },
         {
           "label": "Built with",
-          "value": "C# · WinForms"
+          "value": "C# \u00b7 WinForms"
         },
         {
           "label": "Changelog",
@@ -537,17 +544,17 @@
         {
           "src": "assets/repos/motw/ui.png",
           "alt": "MOTW Cleaner main window",
-          "caption": "The main window — images/page1.png from the repository."
+          "caption": "The main window \u2014 images/page1.png from the repository."
         },
         {
           "src": "assets/repos/motw/blocked.png",
           "alt": "A downloaded file blocked by Windows",
-          "caption": "What it fixes: a file carrying Mark of the Web — images/Blocked.png."
+          "caption": "What it fixes: a file carrying Mark of the Web \u2014 images/Blocked.png."
         },
         {
           "src": "assets/repos/motw/completed.png",
           "alt": "MOTW Cleaner reporting a completed clean",
-          "caption": "Finished run — images/Completed.png."
+          "caption": "Finished run \u2014 images/Completed.png."
         }
       ],
       "links": [
@@ -570,10 +577,10 @@
       ]
     },
     "Maui-basic-VLC-Player-Tutorial": {
-      "eyebrow": "Media & video · written walkthrough",
+      "eyebrow": "Media & video \u00b7 written walkthrough",
       "tagline": "How to get VLC playing MP4 and HLS streams inside a .NET MAUI app, written down so nobody else loses the weeks.",
       "summary": [
-        "This repository is a write-up, not a codebase: the README is the whole thing. It walks through wiring LibVLCSharp into .NET MAUI — the packages, the handler registration in MauiProgram.cs, the MediaPlayer setup, and the Grid layout with a control bar over a VideoView.",
+        "This repository is a write-up, not a codebase: the README is the whole thing. It walks through wiring LibVLCSharp into .NET MAUI \u2014 the packages, the handler registration in MauiProgram.cs, the MediaPlayer setup, and the Grid layout with a control bar over a VideoView.",
         "The author's note is refreshingly direct: MAUI video support was still rough, it took weeks to reach a working player, and this is part one of what is meant to become a series."
       ],
       "highlights": [
@@ -587,7 +594,7 @@
         },
         {
           "title": "A usable layout",
-          "text": "A two-row Grid — volume, mute, fullscreen and title-bar toggles above a VideoView that fills the rest."
+          "text": "A two-row Grid \u2014 volume, mute, fullscreen and title-bar toggles above a VideoView that fills the rest."
         },
         {
           "title": "HLS, not just MP4",
@@ -601,7 +608,7 @@
         },
         {
           "label": "Target",
-          "value": ".NET 8 · MAUI"
+          "value": ".NET 8 \u00b7 MAUI"
         },
         {
           "label": "Tooling",
@@ -643,7 +650,7 @@
       ]
     },
     "AutoUpdater.NET.XML-Creator-master": {
-      "eyebrow": "Updaters · most starred",
+      "eyebrow": "Updaters \u00b7 most starred",
       "tagline": "A form that writes the manifest XML AutoUpdater.NET needs, so you never hand-edit an update file again.",
       "summary": [
         "AutoUpdater.NET decides whether to update an app by reading an XML manifest: version, download URL, checksum, changelog. Getting that file right by hand is where self-updating desktop apps break.",
@@ -660,7 +667,7 @@
         },
         {
           "title": "Guided, and it enforces it",
-          "text": "The first two steps cannot be skipped — they are the minimum a manifest needs to work."
+          "text": "The first two steps cannot be skipped \u2014 they are the minimum a manifest needs to work."
         },
         {
           "title": "Every tag, including optional ones",
@@ -678,7 +685,7 @@
         },
         {
           "label": "Built with",
-          "value": "C# · WinForms"
+          "value": "C# \u00b7 WinForms"
         },
         {
           "label": "Sample",
@@ -700,7 +707,7 @@
         {
           "src": "assets/repos/updater/creator.png",
           "alt": "The XML creator form with update type options",
-          "caption": "The creator form — from AutoUpdaterTest/Resources in the repository."
+          "caption": "The creator form \u2014 from AutoUpdaterTest/Resources in the repository."
         },
         {
           "src": "assets/repos/updater/manifest.png",
@@ -724,17 +731,17 @@
       ]
     },
     "PCMedicSuite": {
-      "eyebrow": "System utilities · portable Windows suite",
-      "tagline": "One portable console for keeping a PC healthy: live telemetry, startup and sleep tuning, WIM disk images with bare-metal restore, a bootable recovery stick, registry audits, winget updates and benchmark rigs — with every destructive action reversible or provable.",
+      "eyebrow": "System utilities \u00b7 portable Windows suite",
+      "tagline": "One portable console for keeping a PC healthy: live telemetry, startup and sleep tuning, WIM disk images with bare-metal restore, a bootable recovery stick, registry audits, winget updates and benchmark rigs \u2014 with every destructive action reversible or provable.",
       "summary": [
         "PC Medic Suite is one executable with no installer, no background service and no telemetry. Twelve pages cover the jobs people actually run on a struggling machine: what is using the CPU right now, what starts with Windows, why the boot is slow, what is filling the disk, which applications are out of date, and which registry keys or shortcuts point at files that no longer exist.",
-        "The backup page is the heavyweight: wimlib captures a whole-drive .wim image to any target, applies it back with boot repair through bcdboot, and verifies the component store with DISM — while a separate builder formats a USB stick, lays down the machine's own WinRE and writes a real BCD store, producing recovery media that never touches the firmware boot order.",
+        "The backup page is the heavyweight: wimlib captures a whole-drive .wim image to any target, applies it back with boot repair through bcdboot, and verifies the component store with DISM \u2014 while a separate builder formats a USB stick, lays down the machine's own WinRE and writes a real BCD store, producing recovery media that never touches the firmware boot order.",
         "The rule behind every destructive action is that it must be reversible or provable. Cleaned files go to the Recycle Bin, registry edits write a .reg backup first, boot and sleep tweaks store previous values in JSON, and the audits list only entries whose target is genuinely missing rather than whatever looks suspicious."
       ],
       "highlights": [
         {
           "title": "Disk images, boot repair and recovery media",
-          "text": "The Backup & Restore page captures and applies whole-drive WIM images with wimlib, repairs a target's boot files with bcdboot, and runs DISM health checks on the live component store. The bootable-disk builder formats a USB drive, copies WinRE and writes a BCD store — recovery media without touching firmware boot order."
+          "text": "The Backup & Restore page captures and applies whole-drive WIM images with wimlib, repairs a target's boot files with bcdboot, and runs DISM health checks on the live component store. The bootable-disk builder formats a USB drive, copies WinRE and writes a BCD store \u2014 recovery media without touching firmware boot order."
         },
         {
           "title": "Audits that prove what they claim",
@@ -764,11 +771,11 @@
         },
         {
           "label": "Build",
-          "value": ".NET 10 · WinForms"
+          "value": ".NET 10 \u00b7 WinForms"
         },
         {
           "label": "Distribution",
-          "value": "portable · no installer"
+          "value": "portable \u00b7 no installer"
         },
         {
           "label": "Pages",
@@ -784,7 +791,7 @@
         {
           "label": "Run it",
           "code": "PCMedicSuite.exe",
-          "note": "No installer and nothing written outside the per-user app-data folder — settings, logs and the catalogue cache."
+          "note": "No installer and nothing written outside the per-user app-data folder \u2014 settings, logs and the catalogue cache."
         }
       ],
       "requirements": [
@@ -826,6 +833,79 @@
       "related": [
         "disk-defrag",
         "MOTW-Cleaner"
+      ]
+    },
+    "DesignSurface.NET": {
+      "eyebrow": "Graphics & design \u00b7 control library",
+      "tagline": "The .NET 8+ edition of the design surface \u2014 same canvas and object model in modern SDK-style projects.",
+      "summary": [
+        "A straight port of DesignSurfaceCSharp to net8.0-windows: GraphicObjects keeps the shapes, filters and undo history, and GraphicsSurface keeps the surface, selection, zoom, print and PropertyGrid pane.",
+        "It builds on the .NET 8 SDK and runs on .NET 9 and 10. Saved design documents use the same BinaryFormatter format as the Framework build, so files move between editions.",
+        "The port required real changes: the legacy ContextMenu/MenuItem classes became ContextMenuStrip/ToolStripMenuItem, and BinaryFormatter had to be explicitly re-enabled for .NET 8+."
+      ],
+      "highlights": [
+        {
+          "title": "Modern SDK-style projects",
+          "text": "Two net8.0-windows class libraries with UseWindowsForms \u2014 dotnet build DesignSurface.slnx and you're done."
+        },
+        {
+          "title": "Same Avery & Office import",
+          "text": "LabelSheet presets and the .docx/.dotx/.xlsx/.xlsm importers came across unchanged \u2014 uniform grids become templates, irregular layouts become pinned guides."
+        },
+        {
+          "title": "Compatible save format",
+          "text": "Design documents serialize identically to the Framework build, so a file saved in GraphicsWorkshop opens here."
+        },
+        {
+          "title": "Forward-compatible",
+          "text": "Targets net8.0-windows, so the same binaries run on .NET 9 and .NET 10 without rebuilding."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Branch",
+          "value": "main"
+        },
+        {
+          "label": "Projects",
+          "value": "GraphicObjects \u00b7 GraphicsSurface"
+        },
+        {
+          "label": "Target",
+          "value": "net8.0-windows"
+        },
+        {
+          "label": "Package",
+          "value": "none \u2014 source only"
+        }
+      ],
+      "quickstart": [
+        {
+          "label": "Clone and build",
+          "code": "git clone https://github.com/DwainSnickles/DesignSurface.NET\ncd \"DesignSurface Core\"\ndotnet build DesignSurface.slnx",
+          "note": "Requires the .NET 8 SDK (or newer) on Windows \u2014 WinForms is Windows-only."
+        }
+      ],
+      "requirements": [
+        "Windows",
+        ".NET 8 SDK or newer"
+      ],
+      "shots": [],
+      "shotsNote": "This repository ships source only \u2014 no screenshots yet. Drop the DesignSurface control on a form to see it in action.",
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/DwainSnickles/DesignSurface.NET"
+        },
+        {
+          "label": "Framework 4.8 edition",
+          "url": "https://github.com/DwainSnickles/DesignSurfaceCSharp"
+        }
+      ],
+      "related": [
+        "DesignSurfaceCSharp",
+        "GraphicsWorkshop",
+        "RibbonWinForms"
       ]
     }
   }

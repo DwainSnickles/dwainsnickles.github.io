@@ -1,13 +1,106 @@
 {
   "owner": "DwainSnickles",
-  "generated": "2026-11-16",
+  "generated": "2026-11-17",
   "totals": {
-    "repos": 33,
+    "repos": 34,
     "stars": 16,
     "forks": 7,
     "languages": 4
   },
   "repos": [
+    {
+      "name": "DesignSurfaceCSharp",
+      "title": "Design Surface",
+      "description": "Design-surface control and graphic object model (GraphicObjects + GraphicsSurface) for .NET Framework 4.8 — used by Graphics Workshop, with Avery label presets and Office template import.",
+      "language": "C#",
+      "category": "graphics",
+      "categoryLabel": "Graphics & design",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "csharp",
+        "custom-control",
+        "design-surface",
+        "dotnet",
+        "graphics",
+        "winforms"
+      ],
+      "updated": "2026-11-17",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/DesignSurfaceCSharp",
+      "featured": true,
+      "featuredRank": 2
+    },
+    {
+      "name": "DesignSurface.NET",
+      "title": "Design Surface .NET",
+      "description": ".NET 8+ edition of the design-surface control and graphic object model — SDK-style projects with the same Avery label presets and Office template import.",
+      "language": "C#",
+      "category": "graphics",
+      "categoryLabel": "Graphics & design",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [],
+      "updated": "2026-11-17",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/DesignSurface.NET",
+      "featured": true,
+      "featuredRank": 3
+    },
+    {
+      "name": "GraphicsWorkshop",
+      "title": "Graphics Workshop",
+      "description": "Work-in-progress WinForms graphics workstation: edit graphics, place the objects on a design surface and rotate them in place.",
+      "language": "C#",
+      "category": "graphics",
+      "categoryLabel": "Graphics & design",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "csharp",
+        "design-surface",
+        "dotnet10",
+        "graphics",
+        "image-editor",
+        "ribbon"
+      ],
+      "updated": "2026-11-17",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/GraphicsWorkshop",
+      "featured": true,
+      "featuredRank": 1
+    },
+    {
+      "name": "MOTW-Cleaner",
+      "title": "MOTW Cleaner",
+      "description": "Strips Mark of the Web from downloaded files so Windows stops blocking them.",
+      "language": "C#",
+      "category": "security",
+      "categoryLabel": "Security & fixes",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "mark-of-the-web",
+        "motw",
+        "security",
+        "unblock",
+        "windows",
+        "zone-identifier"
+      ],
+      "updated": "2026-11-17",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/MOTW-Cleaner",
+      "featured": true,
+      "featuredRank": 5
+    },
     {
       "name": "PCMedicSuite",
       "title": "PC Medic Suite",
@@ -31,7 +124,7 @@
       "homepage": null,
       "url": "https://github.com/DwainSnickles/PCMedicSuite",
       "featured": true,
-      "featuredRank": 6
+      "featuredRank": 7
     },
     {
       "name": "RibbonWinForms",
@@ -81,82 +174,7 @@
       "homepage": null,
       "url": "https://github.com/DwainSnickles/Floating-Toolbar",
       "featured": true,
-      "featuredRank": 7
-    },
-    {
-      "name": "GraphicsWorkshop",
-      "title": "Graphics Workshop",
-      "description": "Work-in-progress WinForms graphics workstation: edit graphics, place the objects on a design surface and rotate them in place.",
-      "language": "C#",
-      "category": "graphics",
-      "categoryLabel": "Graphics & design",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "csharp",
-        "design-surface",
-        "dotnet10",
-        "graphics",
-        "image-editor",
-        "ribbon"
-      ],
-      "updated": "2026-10-29",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/GraphicsWorkshop",
-      "featured": true,
-      "featuredRank": 1
-    },
-    {
-      "name": "DesignSurfaceCSharp",
-      "title": "Design Surface",
-      "description": "Design-surface control and graphic object model (GraphicObjects + GraphicsSurface) used by Graphics Workshop.",
-      "language": "C#",
-      "category": "graphics",
-      "categoryLabel": "Graphics & design",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "csharp",
-        "custom-control",
-        "design-surface",
-        "dotnet",
-        "graphics",
-        "winforms"
-      ],
-      "updated": "2026-10-29",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/DesignSurfaceCSharp",
-      "featured": true,
-      "featuredRank": 2
-    },
-    {
-      "name": "MOTW-Cleaner",
-      "title": "MOTW Cleaner",
-      "description": "Strips Mark of the Web from downloaded files so Windows stops blocking them.",
-      "language": "HTML",
-      "category": "security",
-      "categoryLabel": "Security & fixes",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "mark-of-the-web",
-        "motw",
-        "security",
-        "unblock",
-        "windows",
-        "zone-identifier"
-      ],
-      "updated": "2026-04-30",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/MOTW-Cleaner",
-      "featured": true,
-      "featuredRank": 4
+      "featuredRank": 8
     },
     {
       "name": "Maui-basic-VLC-Player-Tutorial",
@@ -181,7 +199,7 @@
       "homepage": null,
       "url": "https://github.com/DwainSnickles/Maui-basic-VLC-Player-Tutorial",
       "featured": true,
-      "featuredRank": 5
+      "featuredRank": 6
     },
     {
       "name": "AutoUpdater.NET.XML-Creator-master",
@@ -206,7 +224,30 @@
       "homepage": null,
       "url": "https://github.com/DwainSnickles/AutoUpdater.NET.XML-Creator-master",
       "featured": true,
-      "featuredRank": 3
+      "featuredRank": 4
+    },
+    {
+      "name": "dwainsnickles.github.io",
+      "title": "This Website",
+      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
+      "language": "HTML",
+      "category": "web",
+      "categoryLabel": "Web & admin",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "github-pages",
+        "html",
+        "portfolio",
+        "website"
+      ],
+      "updated": "2026-11-16",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
+      "featured": false,
+      "featuredRank": -1
     },
     {
       "name": "disk-defrag",
@@ -230,29 +271,6 @@
       "updated": "2026-11-15",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/disk-defrag",
-      "featured": false,
-      "featuredRank": -1
-    },
-    {
-      "name": "dwainsnickles.github.io",
-      "title": "This Website",
-      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
-      "language": "HTML",
-      "category": "web",
-      "categoryLabel": "Web & admin",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "github-pages",
-        "html",
-        "portfolio",
-        "website"
-      ],
-      "updated": "2026-11-15",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,
       "featuredRank": -1
     },
