@@ -104,14 +104,18 @@ const OVERRIDES = {
   DesignSurfaceCSharp: {
     title: "Design Surface",
     description:
-      "Design-surface control and graphic object model (GraphicObjects + GraphicsSurface) for .NET Framework 4.8 — used by Graphics Workshop, with Avery label presets and Office template import.",
-    category: "graphics"
+      "Design-surface control and graphic object model (GraphicObjects + GraphicsSurface) for .NET Framework 4.8 — used by Graphics Workshop, with Avery label presets and Office template import. Published on NuGet.",
+    category: "graphics",
+    nuget: true,
+    homepage: "https://www.nuget.org/packages/GraphicsSurface/"
   },
   "DesignSurface.NET": {
     title: "Design Surface .NET",
     description:
-      ".NET 8+ edition of the design-surface control and graphic object model — SDK-style projects with the same Avery label presets and Office template import.",
-    category: "graphics"
+      ".NET 8+ edition of the design-surface control and graphic object model — SDK-style projects with the same Avery label presets and Office template import. Published on NuGet.",
+    category: "graphics",
+    nuget: true,
+    homepage: "https://www.nuget.org/packages/GraphicsSurface/"
   },
   "AutoUpdater.NET.XML-Creator-master": {
     title: "AutoUpdater XML Creator",
@@ -362,7 +366,7 @@ async function main() {
         nuget: Boolean(override.nuget) || Boolean(repo.homepage && repo.homepage.includes("nuget.org")),
         topics: (repo.topics || []).slice(0, 6),
         updated: repo.pushed_at.slice(0, 10),
-        homepage: repo.homepage || null,
+        homepage: override.homepage || repo.homepage || null,
         url: repo.html_url,
         featured: featuredIndex > -1,
         featuredRank: featuredIndex

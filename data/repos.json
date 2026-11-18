@@ -36,14 +36,14 @@
     {
       "name": "DesignSurfaceCSharp",
       "title": "Design Surface",
-      "description": "Design-surface control and graphic object model (GraphicObjects + GraphicsSurface) for .NET Framework 4.8 \u2014 used by Graphics Workshop, with Avery label presets and Office template import.",
+      "description": "Design-surface control and graphic object model (GraphicObjects + GraphicsSurface) for .NET Framework 4.8 \u2014 used by Graphics Workshop, with Avery label presets and Office template import. Published on NuGet.",
       "language": "C#",
       "category": "graphics",
       "categoryLabel": "Graphics & design",
       "stars": 0,
       "forks": 0,
       "fork": false,
-      "nuget": false,
+      "nuget": true,
       "topics": [
         "csharp",
         "custom-control",
@@ -53,7 +53,7 @@
         "winforms"
       ],
       "updated": "2026-11-17",
-      "homepage": null,
+      "homepage": "https://www.nuget.org/packages/GraphicsSurface/",
       "url": "https://github.com/DwainSnickles/DesignSurfaceCSharp",
       "featured": true,
       "featuredRank": 2
@@ -61,17 +61,17 @@
     {
       "name": "DesignSurface.NET",
       "title": "Design Surface .NET",
-      "description": ".NET 8+ edition of the design-surface control and graphic object model \u2014 SDK-style projects with the same Avery label presets and Office template import.",
+      "description": ".NET 8+ edition of the design-surface control and graphic object model \u2014 SDK-style projects with the same Avery label presets and Office template import. Published on NuGet.",
       "language": "C#",
       "category": "graphics",
       "categoryLabel": "Graphics & design",
       "stars": 0,
       "forks": 0,
       "fork": false,
-      "nuget": false,
+      "nuget": true,
       "topics": [],
       "updated": "2026-11-17",
-      "homepage": null,
+      "homepage": "https://www.nuget.org/packages/GraphicsSurface/",
       "url": "https://github.com/DwainSnickles/DesignSurface.NET",
       "featured": true,
       "featuredRank": 3

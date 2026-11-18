@@ -448,7 +448,11 @@
         },
         {
           "label": "Package",
-          "value": "none \u2014 source only"
+          "value": "GraphicObjects + GraphicsSurface 1.0.1"
+        },
+        {
+          "label": "Published",
+          "value": "nuget.org"
         }
       ],
       "quickstart": [
@@ -466,6 +470,14 @@
       "shots": [],
       "shotsNote": "This repository ships source only \u2014 no screenshots yet. Drop the DesignSurface control on a form to see it in action.",
       "links": [
+        {
+          "label": "NuGet: GraphicObjects",
+          "url": "https://www.nuget.org/packages/GraphicObjects/"
+        },
+        {
+          "label": "NuGet: GraphicsSurface",
+          "url": "https://www.nuget.org/packages/GraphicsSurface/"
+        },
         {
           "label": "Repository",
           "url": "https://github.com/DwainSnickles/DesignSurfaceCSharp"
@@ -876,7 +888,11 @@
         },
         {
           "label": "Package",
-          "value": "none \u2014 source only"
+          "value": "GraphicObjects + GraphicsSurface 1.0.1"
+        },
+        {
+          "label": "Published",
+          "value": "nuget.org"
         }
       ],
       "quickstart": [
@@ -898,6 +914,14 @@
         }
       ],
       "links": [
+        {
+          "label": "NuGet: GraphicObjects",
+          "url": "https://www.nuget.org/packages/GraphicObjects/"
+        },
+        {
+          "label": "NuGet: GraphicsSurface",
+          "url": "https://www.nuget.org/packages/GraphicsSurface/"
+        },
         {
           "label": "Repository",
           "url": "https://github.com/DwainSnickles/DesignSurface.NET"
