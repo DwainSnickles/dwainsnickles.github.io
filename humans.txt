@@ -4,8 +4,10 @@ Role: Desktop & .NET Engineer
 Location: United States
 Contact: https://dwainsnickles.github.io/contact.html
 GitHub: https://github.com/DwainSnickles
+Site: https://dwainsnickles.github.io/
+Repo: https://github.com/DwainSnickles/dwainsnickles.github.io
 
 /* SITE */
 Built with: plain HTML, CSS and vanilla JavaScript
 Hosting: GitHub Pages
-Last updated: 2026-11-15
+Last updated: 2026-11-18
