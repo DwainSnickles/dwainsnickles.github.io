@@ -341,7 +341,9 @@
     var target = document.getElementById(decodeURIComponent(id));
     if (!target) return;
     var top = target.getBoundingClientRect().top + window.pageYOffset - 24;
-    window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? "instant" : "smooth" });
+    /* instant on purpose: body is the scroller here, and a smooth request on it
+       does not move the page at all, so the link would appear dead. */
+    window.scrollTo({ top: Math.max(0, top), behavior: "instant" });
   }
 
   window.addEventListener("hashchange", scrollToHash);
