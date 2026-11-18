@@ -239,6 +239,24 @@ strong { color: var(--ink); font-weight: 600; }
 .btn--ghost:hover { color: var(--ink); border-color: rgba(140, 190, 240, 0.55); }
 .btn--sm { padding: 0.55rem 0.95rem; font-size: 0.72rem; }
 
+/* --- action rows inside cards --------------------------------------------
+   .btn is nowrap, which is right for nav and hero but wrong for a download
+   label longer than a narrow card: it overflowed the pill instead of fitting. */
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+}
+.card-actions .btn {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
 /* --- nav ----------------------------------------------------------------- */
 .scroll-progress {
   position: fixed;
