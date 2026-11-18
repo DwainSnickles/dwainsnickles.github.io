@@ -331,4 +331,21 @@
       });
     }
   }
+
+  /* ---------- fragment links ----------
+     body is the box that actually scrolls here, so the browser's own #fragment
+     jump moves nothing. Send same-page links to their section by hand. */
+  function scrollToHash() {
+    var id = window.location.hash.replace(/^#/, "");
+    if (!id) return;
+    var target = document.getElementById(decodeURIComponent(id));
+    if (!target) return;
+    var top = target.getBoundingClientRect().top + window.pageYOffset - 24;
+    window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? "instant" : "smooth" });
+  }
+
+  window.addEventListener("hashchange", scrollToHash);
+  window.addEventListener("load", function () {
+    if (window.location.hash) scrollToHash();
+  });
 })();
