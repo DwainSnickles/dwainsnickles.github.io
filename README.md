@@ -82,3 +82,9 @@ Then open <http://localhost:8000/>.
 ## Deploy
 
 Commit and push to `main`; GitHub Pages publishes from the repository root.
+
+## Support this project
+
+If this project saved you some time, you can leave a tip at
+[ko-fi.com/dwainhsnickles](https://ko-fi.com/dwainhsnickles) (cards, no account needed) or
+[paypal.me/YTDPlatinum](https://paypal.me/YTDPlatinum). Bug reports and pull requests are welcome too.
