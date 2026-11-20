@@ -1,6 +1,6 @@
 {
   "owner": "DwainSnickles",
-  "generated": "2026-11-19",
+  "generated": "2026-11-20",
   "totals": {
     "repos": 39,
     "stars": 16,
@@ -250,6 +250,29 @@
       "url": "https://github.com/DwainSnickles/Floating-Toolbar",
       "featured": true,
       "featuredRank": 9
+    },
+    {
+      "name": "dwainsnickles.github.io",
+      "title": "This Website",
+      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
+      "language": "HTML",
+      "category": "web",
+      "categoryLabel": "Web & admin",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "github-pages",
+        "html",
+        "portfolio",
+        "website"
+      ],
+      "updated": "2026-11-19",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
+      "featured": false,
+      "featuredRank": -1
     },
     {
       "name": "Bifrost",
@@ -723,29 +746,6 @@
       "updated": "2026-11-18",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/WinRibbon-4X",
-      "featured": false,
-      "featuredRank": -1
-    },
-    {
-      "name": "dwainsnickles.github.io",
-      "title": "This Website",
-      "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
-      "language": "HTML",
-      "category": "web",
-      "categoryLabel": "Web & admin",
-      "stars": 0,
-      "forks": 0,
-      "fork": false,
-      "nuget": false,
-      "topics": [
-        "github-pages",
-        "html",
-        "portfolio",
-        "website"
-      ],
-      "updated": "2026-11-18",
-      "homepage": null,
-      "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,
       "featuredRank": -1
     },
