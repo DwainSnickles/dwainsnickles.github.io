@@ -53,7 +53,8 @@ const FEATURED = [
   "MOTW-Cleaner",
   "Maui-basic-VLC-Player-Tutorial",
   "PCMedicSuite",
-  "Floating-Toolbar"
+  "Floating-Toolbar",
+  "WinL-Panel"
 ];
 
 const OVERRIDES = {
@@ -69,6 +70,12 @@ const OVERRIDES = {
       "Office-style ribbon control for Windows Forms, ported to .NET 10 with working out-of-process designer support. Published as Dwain.RibbonLib.",
     category: "ui",
     nuget: true
+  },
+  "WinL-Panel": {
+    title: "WinL",
+    description:
+      "L-shaped ImagePanel control for WinForms: a design-time editor for colors, gradients and images with filters, rotation/flipping and undo/redo — .NET 10, no dependencies.",
+    category: "ui"
   },
   TextProgressbar: {
     title: "Text Progress Bar",

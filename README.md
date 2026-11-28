@@ -1,5 +1,8 @@
 # dwainsnickles.github.io
 
+[![Support this project on Ko-fi](https://img.shields.io/badge/Ko--fi-Support-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/dwainhsnickles)
+[![Donate on PayPal](https://img.shields.io/badge/PayPal-Donate-003087?logo=paypal&logoColor=white)](https://paypal.me/YTDPlatinum)
+
 Personal site, served by GitHub Pages. Static HTML, CSS and JavaScript — no build step,
 no framework, no cookies.
 

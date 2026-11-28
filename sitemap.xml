@@ -37,62 +37,68 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dwainsnickles.github.io/repo/floating-toolbar.html</loc>
-    <lastmod>2026-11-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dwainsnickles.github.io/repo/designsurfacecsharp.html</loc>
-    <lastmod>2026-11-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dwainsnickles.github.io/repo/designsurface-net.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <loc>https://dwainsnickles.github.io/repo/ribbonwinforms.html</loc>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dwainsnickles.github.io/repo/graphicsworkshop.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dwainsnickles.github.io/repo/motw-cleaner.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <loc>https://dwainsnickles.github.io/repo/designsurfacecsharp.html</loc>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dwainsnickles.github.io/repo/memoryoptimizerpro.html</loc>
-    <lastmod>2026-11-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dwainsnickles.github.io/repo/pcmedicsuite.html</loc>
-    <lastmod>2026-11-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dwainsnickles.github.io/repo/ribbonwinforms.html</loc>
-    <lastmod>2026-11-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dwainsnickles.github.io/repo/maui-basic-vlc-player-tutorial.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <loc>https://dwainsnickles.github.io/repo/designsurface-net.html</loc>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dwainsnickles.github.io/repo/autoupdater-net-xml-creator-master.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dwainsnickles.github.io/repo/memoryoptimizerpro.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dwainsnickles.github.io/repo/motw-cleaner.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dwainsnickles.github.io/repo/maui-basic-vlc-player-tutorial.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dwainsnickles.github.io/repo/pcmedicsuite.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dwainsnickles.github.io/repo/floating-toolbar.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dwainsnickles.github.io/repo/winl-panel.html</loc>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

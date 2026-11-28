@@ -1,8 +1,8 @@
 {
   "owner": "DwainSnickles",
-  "generated": "2026-11-27",
+  "generated": "2026-11-28",
   "totals": {
-    "repos": 39,
+    "repos": 40,
     "stars": 16,
     "forks": 7,
     "languages": 4
@@ -252,6 +252,31 @@
       "featuredRank": 9
     },
     {
+      "name": "WinL-Panel",
+      "title": "WinL",
+      "description": "L-shaped ImagePanel control for WinForms: a design-time editor for colors, gradients and images with filters, rotation/flipping and undo/redo — .NET 10, no dependencies.",
+      "language": "C#",
+      "category": "ui",
+      "categoryLabel": "UI components",
+      "stars": 0,
+      "forks": 0,
+      "fork": false,
+      "nuget": false,
+      "topics": [
+        "csharp",
+        "custom-controls",
+        "dotnet",
+        "graphics",
+        "ui",
+        "winforms"
+      ],
+      "updated": "2026-11-28",
+      "homepage": null,
+      "url": "https://github.com/DwainSnickles/WinL-Panel",
+      "featured": true,
+      "featuredRank": 10
+    },
+    {
       "name": "dwainsnickles.github.io",
       "title": "This Website",
       "description": "Source of this site: static HTML, CSS and JavaScript, with the repository index in data/repos.json.",
@@ -268,7 +293,7 @@
         "portfolio",
         "website"
       ],
-      "updated": "2026-11-26",
+      "updated": "2026-11-27",
       "homepage": null,
       "url": "https://github.com/DwainSnickles/dwainsnickles.github.io",
       "featured": false,

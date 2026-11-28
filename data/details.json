@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-28",
   "repos": {
     "Floating-Toolbar": {
       "eyebrow": "UI components \u00b7 Windows launcher",
@@ -1009,6 +1009,95 @@
       "related": [
         "PCMedicSuite",
         "disk-defrag"
+      ]
+    },
+    "WinL-Panel": {
+      "eyebrow": "UI components \u00b7 Windows Forms control",
+      "tagline": "An L-shaped panel that edits itself \u2014 colors, gradients, images, filters, rotation and undo, all inside the Visual Studio designer.",
+      "summary": [
+        "WinL is a single WinForms control that paints an L-shaped surface and hosts its own editing surface. Drop ImagePanel on a form and, at design time, you get a full editor for colors, gradients and images; at runtime the control paints only the finished design. The editor lives inside the control, so there is nothing extra to host or wire up.",
+        "The master panel switches between three background styles \u2014 Colors, Images and None \u2014 and shows the matching editor. ColorsEditor handles the back color, four color shades and eight gradient fill modes with per-shade weight bars. ImagesEditor browses, applies and removes a picture, adjusts brightness, contrast, saturation, sharpen and blur, pans the image, and rotates or flips it.",
+        "Under the hood it is a .NET 10 project with no third-party packages: orientation is stored as dihedral state (quarter-turns plus mirror) and baked losslessly into the display cache, every edit is an undoable PanelState snapshot, and the custom TechTrackBar and BrightnessTrackBar sliders keep the whole toolbox to a single entry \u2014 ImagePanel."
+      ],
+      "highlights": [
+        {
+          "title": "A design surface inside a control",
+          "text": "The editing UI is hosted by ImagePanel itself and exists only on the design surface \u2014 the running application shows nothing but the finished L-shaped design."
+        },
+        {
+          "title": "Colors and Images pages",
+          "text": "One master panel, three background styles. Colors gets swatches, hex entry, gradient fill modes and shade weights; Images gets browse/use/remove, five filter sliders, pan controls and orientation tools."
+        },
+        {
+          "title": "Rotation and flipping",
+          "text": "Rotate either way, mirror horizontally or vertically, or reset \u2014 stored as transformation settings rather than baked pixels, composed through the dihedral group, and fully undoable."
+        },
+        {
+          "title": "Everything is undoable",
+          "text": "Sliders, orientation, image swaps and resets all flow through the same ApplyDesignEdit snapshot path, so Ctrl-style history buttons restore any earlier state exactly."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Platform",
+          "value": "Windows 10/11"
+        },
+        {
+          "label": "Build",
+          "value": ".NET 10 \u00b7 WinForms"
+        },
+        {
+          "label": "Distribution",
+          "value": "source \u00b7 add the project to your solution"
+        },
+        {
+          "label": "Dependencies",
+          "value": "none \u2014 no NuGet packages"
+        }
+      ],
+      "quickstart": [
+        {
+          "label": "Drop it on a form",
+          "code": "var panel = new ImagePanel { Dock = DockStyle.Fill, BackgroundStyle = ImagePanel.LBackgroundStyle.Image, SourceImagePath = @\"C:\\Photos\\bg.png\" };",
+          "note": "ImagePanel is the only WinL entry in the Toolbox. Open the form designer and the editing surface appears inside the control \u2014 pick a background style and the matching editor opens."
+        },
+        {
+          "label": "Build from source",
+          "code": [
+            "git clone https://github.com/DwainSnickles/WinL-Panel",
+            "cd WinL-Panel",
+            "dotnet build \"WinL Test.csproj\" -c Release"
+          ],
+          "note": "Targets net10.0-windows; open winRibbon Test.slnx in Visual Studio 2022 or later for the full designer experience."
+        },
+        {
+          "label": "Run the demo",
+          "code": "dotnet run --project \"WinL Test.csproj\"",
+          "note": "Form1 hosts a panel with an image background and the welcome page \u2014 the editor itself lives on the design surface."
+        }
+      ],
+      "requirements": [
+        "Windows 10 or 11",
+        ".NET 10 SDK (net10.0-windows)",
+        "Visual Studio 2022 or later for the design-time editor"
+      ],
+      "shots": [
+        {
+          "src": "assets/repos/winl/panel.png",
+          "alt": "The WinL ImagePanel showing its L-shaped surface with the image editing panel open",
+          "caption": "The L-shaped panel with its editing surface \u2014 image loaded, filters and orientation controls at hand."
+        }
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/DwainSnickles/WinL-Panel"
+        }
+      ],
+      "related": [
+        "RibbonWinForms",
+        "GraphicsWorkshop",
+        "DesignSurfaceCSharp"
       ]
     }
   }

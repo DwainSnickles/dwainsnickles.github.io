@@ -6,6 +6,7 @@
  */
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const RAW = "https://raw.githubusercontent.com/DwainSnickles";
 
@@ -28,10 +29,11 @@ const SHOTS = [
   [
     "updater/manifest.png",
     `${RAW}/AutoUpdater.NET.XML-Creator-master/master/AutoUpdaterTest/Resources/xml_featured.png`
-  ]
+  ],
+  ["winl/panel.png", `${RAW}/WinL-Panel/main/screenshot.png`]
 ];
 
-const root = new URL("..", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1");
+const root = fileURLToPath(new URL("..", import.meta.url));
 const outDir = join(root, "assets", "repos");
 
 let ok = 0;
